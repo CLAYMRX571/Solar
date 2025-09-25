@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRENA</title>
+    <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/eco.css' %}">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">
+        <a href="{% url 'index' %}">
+            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            <a>{% trans 'ENERGY TRANSITION' %}</a>
+            <div class="mega-menu1">
+                <div class="container">
+                    <div class="content1">
+                        <a href="{% url 'outlook' %}">{% trans 'OUTLOOK' %}</a>
+                        <a href="{% url 'plan' %}">{% trans 'PLANNING' %}</a>
+                        <a href="{% url 'policy' %}">{% trans 'POLICY' %}</a>
+                        <a href="{% url 'techno' %}">{% trans 'TECHNOLOGY' %}</a>
+                        <a href="{% url 'eco' %}">{% trans 'ECONOMIC IMPACT' %}</a>
+                        <a href="{% url 'finance' %}">{% trans 'FINANCE INVESTMENT' %}</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a>{% trans 'ABOUT' %}</a>
+            <div class="mega-menu3">
+                <div class="content3">
+                    <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
+                    <a href="{% url 'part' %}">{% trans 'PARTNERSHIPS' %}</a>
+                    <a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a>
+                    <a href="{% url 'project' %}">{% trans 'PROJECT' %}</a>
+                    <a href="{% url 'inno' %}">{% trans 'INNOVATION' %}</a>
+                </div>
+            </div>
+        </li>
+        <li>    
+            <a>{% trans 'LANGUAGES' %}</a>
+            <div class="mega-menu2">
+                <div class="content2">
+                    <a href="{% url 'lan_switch_eco' 'uz' %}">UZBEK</a>
+                    <a href="{% url 'lan_switch_eco' 'en' %}">ENGLISH</a>
+                    <a href="{% url 'lan_switch_eco' 'tr' %}">TURKCHA</a>
+                    <a href="{% url 'lan_switch_eco' 'kk' %}">QOZOQCHA</a>
+                    <a href="{% url 'lan_switch_eco' 'tg' %}">TOJIKCHA</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'education' %}">{% trans 'EDUCATION' %}</a></li>
+        <li><a href="{% url 'data' %}">{% trans 'DATA' %}</a></li>
+        <li><a href="{% url 'event' %}">{% trans 'EVENTS' %}</a></li>
+    </ul>
+</header>
+
+<div class="container"><br>
+    {% for ens in eco %}
+    <p>{{ ens.desc }}</p>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="{{ ens.image.url }}" alt="Wind turbines">
+            <div class="card-content">
+                <h3>{{ ens.name }}</h3>
+                <p>{{ ens.eco_desc }}</p>
+            </div>
+        </div>
+    </div><br>
+    {% endfor %}
+</div>
+
+<section class="footer-section">
+    <div class="footer">
+        <div class="essentials">
+            <div>
+                <ul>
+                    <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
+                    <li><a href="{% url 'eco' %}">{% trans 'Economic' %}</a></li>
+                    <li><a href="{% url 'project' %}">{% trans 'Project' %}</a></li>
+                    <li><a href="{% url 'event' %}">{% trans 'Event' %}</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="{% url 'membership' %}">{% trans 'Membership' %}</a></li>
+                    <li><a href="{% url 'inno' %}">{% trans 'Innovation' %}</a></li>
+                    <li><a href="{% url 'part' %}">{% trans 'Partnerships' %}</a></li>
+                    <li><a href="{% url 'outlook' %}">{% trans 'Outlook' %}</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="{% url 'news' %}">{% trans 'News' %}</a></li>
+                    <li><a href="{% url 'event' %}">{% trans 'Technology' %}</a></li>
+                    <li><a href="{% url 'data' %}">{% trans 'Data' %}</a></li>
+                    <li><a href="{% url 'education' %}">{% trans 'Education' %}</a></li>
+                </ul>
+            </div>
+        </div>  
+
+        <div class="social-links">
+            <a href="https://www.itm-llc.uz/uz/home/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google">
+            </a>
+            <a href="https://www.youtube.com/watch?v=JlDJVOnEM8o" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+            </a>
+            <a href="https://t.me/ITMRasmiy" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>2025 ITM MCHJ</p>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'assets/js/eco.js' %}"></script>
+</body>
+</html>
