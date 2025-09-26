@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/membership.css' %}">
 </head>
 <body>
 
@@ -65,11 +65,11 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_about' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
-                    <a href="{% url 'lan_switch_about' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
-                    <a href="{% url 'lan_switch_about' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
-                    <a href="{% url 'lan_switch_about' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
-                    <a href="{% url 'lan_switch_about' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
+                    <a href="{% url 'lan_switch_membership' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_membership' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_membership' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_membership' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_membership' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
@@ -79,17 +79,69 @@
     </ul>
 </header>
 
+<div class="container">
+    <h1>Join our global solar community!</h1>
+
+    <div class="intro-text">
+      The journey towards advancing renewable energy technology, fostering acceptance, and driving education is a shared mission—one that requires passion and dedication. But you don’t have to do it alone. By becoming part of our global community, you’ll connect with a vibrant network of like-minded individuals and organizations, all working together to bring about meaningful change.
+      <br><br>
+      Here, you'll find endless opportunities for collaboration, idea exchange, and support as we unite to accelerate the transition to a 100% renewable energy future. Whether you’re a researcher, an innovator, or a passionate advocate, you’ll be welcomed with open arms into a community that’s committed to making a lasting impact on our planet.
+      <br><br>
+      Together, we can make this vision a reality—join us and be part of the solar revolution!
+    </div>
+
+    <div class="section">
+        <div class="column">
+            <h2>Professionals and students</h2>
+            <p>Professionals and students can register as ISES Individual Members. Categories include Gold (lifetime), Silver (5 years) and standard professional (1-4 years).</p>
+            <a href="#" class="btn">Individual membership</a>
+        </div>
+
+        <div class="column">
+            <h2>Companies and institutions</h2>
+            <p>Companies and institutions can register as ISES Corporate Members. Categories include Company (over 20 staff), Small Company (less than 20 staff) and Institution (Universities, NGO’s). Silver memberships, that are valid for 5 years are also available.</p>
+            <a href="#" class="btn">Corporate membership</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="text-content">
+      <p><strong>The International Solar Energy Society (ISES)</strong> is a non-profit, UN-accredited organization founded in 1954, with a proud history of being a trusted global advisor on renewable energy. At the heart of ISES’s mission is a commitment to achieving 100% renewable energy for all, used wisely and efficiently.</p>
+
+      <p>Our community is vast and diverse, with a growing network of members, partners, and collaborators from all corners of the world. One of the most exciting aspects of ITM today is Young ITM, a dynamic network that connects students and young professionals passionate about solar energy. This network is helping to empower the next generation of solar leaders, providing them with valuable opportunities for collaboration and growth.</p>
+
+      <p>We’d love to stay connected with you! Subscribe to the ISES mailing list at the bottom of this page and stay up-to-date with all the latest news, events, and opportunities from ISES. Join us on this exciting journey towards a brighter, sustainable future!</p>
+    </div>
+
+    <div class="chart-container">
+      <h2>The ISES membership base</h2>
+      <canvas id="isesChart" width="300" height="300"></canvas>
+    </div>
+</div>
+
+<div class="donation-section">
+    <h1>Make a donation</h1>
+    <p><strong>Join us in shaping a brighter, more sustainable future!</strong></p>
+    <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need <span class="highlight">your support</span>.</p>
+    <p>If membership is not for you, we invite you to <span class="highlight">donate</span> and help us amplify our impact.</p>
+    <p>
+      <span class="highlight">Donate today</span> and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
+    </p>
+    <a href="#" class="donate-btn">Make a Donation</a>
+</div>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
             <h3>About</h3>
             <p>ITM smart panel</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/InnovationTechnologiesCenter"><i class="fab fa-facebook"></i></a>
-                <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
-                <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://itm.uz/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -116,30 +168,26 @@
             <h3>Contact</h3>
             <div class="contact-info">
                 <div>
-                    <i class="fas fa-home"></i>
+                    <i class="fa fa-home"></i>
                     <span>Tashkent city, Almazar district</span>
                 </div>
                 <div>
-                    <i class="fas fa-envelope"></i>
+                    <i class="fa fa-envelope"></i>
                     <span>itm.mchj@itm-llc.uz</span>
                 </div>
                 <div>
-                    <i class="fas fa-phone"></i>
+                    <i class="fa fa-phone"></i>
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fa fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/membership.js' %}"></script>
 </body>
 </html>

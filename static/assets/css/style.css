@@ -474,51 +474,6 @@ body {
   color: black;
 }
 
-.search-container {
-  position: relative;
-  display: inline-block;
-}
-
-/* search icon */
-.search-icon {
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
-}
-.search-icon svg {
-  width: 100%;
-  height: 100%;
-  stroke: #333;
-}
-
-/* hidden input */
-.search-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 28px;
-  padding: 0 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
-  display: none;        /* hidden by default */
-  box-sizing: border-box;
-}
-
-/* when active */
-.search-container.active .search-input {
-  display: block;
-  width: 180px;         /* input chiqganda kengayadi */
-  padding-left: 28px;   /* ichida ikonka joyi bo‘sh qoladi */
-}
-
-.search-container.active .search-icon {
-  position: absolute;
-  top: 0;
-  left: 4px;
-  pointer-events: none;
-}
-
 .article {
   display: flex;
   gap: 20px;
