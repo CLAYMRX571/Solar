@@ -15,8 +15,11 @@
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo" class="logo-img">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -62,21 +65,21 @@
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
-                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
-                    <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
-                    <a href="{% url 'lan_switch' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
-                    <a href="{% url 'lan_switch' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
+                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
 
@@ -109,65 +112,117 @@
     {% endfor %}
 </div>
 
-<div class="mission-section">
-    <div class="background-map collapsed">
-        {% for miss in mission %}
-        <div class="map-content">
-            <div class="mission-header">
-                <span class="arrow">▼</span>
-                <div class="mission-title">{{ miss.mission_title }}</div>
-            </div>
-
-            <div class="mission-content">
-                <div class="mission-body">
-                    <div class="mission-text">
-                        {{ miss.mission_desc }}
-                    </div>
-                    <a href="{% url 'news' %}" class="read-more" style="margin-top:20px;">{{ miss.mission_button_name }}</a>
-                </div>
-            </div>
-
-            <div class="members-box" style="margin-top:20px;">
-                <div class="members-count">{{ miss.mission_count }}</div>
-                <div class="members-label">{{ miss.mission_label }}</div>
-                <div class="members-detail">{{ miss.mission_detail }}</div>
-            </div>
+<div class="article">
+    <div class="article-content">
+        <h1>Message from the Solar Industry: “We Provide the Least Expensive Electricity of Any Technology”</h1>
+        <p class="author">written by Dr. Dave Renné, Past President of ISES</p>
+        <div class="excert">
+            This year's RE+ Solar and Storage Expo, which is rightfully promoted as the largest clean energy event in North America, attracted nearly 40,000 participants to the Venetian Expo and Caesar’s Forum in Las Vegas, Nevada. I attended the full Expo and Conference from 8–11 September, specifically to participate in meetings of the Global Solar Council (GSC) Management and Strategy Boards. But, as with everyone else in attendance I was caught up with the incredible enthusiasm represented by over 1,400 exhibitors displaying products from all sectors of the clean energy industry, along with a vibrant Conference program addressing the opportunities as well as challenges facing the industry, and extensive networking events. This enthusiasm clearly results from the global successes of solar plus storage technologies as the primary source of our future electricity supply.
         </div>
-        {% endfor %}
+        <a href="#" class="read-more">Read the Sunburst blog</a>
+    </div>
+    <div class="article-image"><br>
+        <img src="{% static 'assets/img/itm.jpg' %}" alt="Group photo at solar expo">
     </div>
 </div>
 
-<div class="container">
-    {% for new in latest %}
-    <header>
-        <h1>{{ new.category_name }}</h1>
-        <a href="{% url 'news' %}" class="browse-link">{{ new.browse_link_name }}</a>
-    </header>
-
-    <section class="news-grid">
-        <div class="news-item">
-            <img src="{{ new.latest_image.url }}" alt="Energy Transition" />
-            <h2>{{ new.latest_title }}</h2>
-            <div class="meta">{{ new.latest_date }}</div>
-            <p>{{ new.latest_desc }}</p>
+<div class="article">
+    <div class="article-content">
+        <h2>Solar in Cyprus — Strategic Advantage in a Vulnerable Climate</h2>
+        <p class="author">written by Dr. Nicolaides Kleanthis, President of ISES Cyprus</p>
+        <h3>Essential Background</h3>
+        <div class="excert">
+            Cyprus is an island in the Eastern Mediterranean and the third largest in size after Sicily and Sardinia. It covers an area of about 9,250 sq. km and lies in a strategic location at the crossroads of three continents: Europe, Asia, and Africa. The island’s landscape is dominated by two main mountain ranges —the Pentadaktylos in the north and the Troodos in the centre— as well as the central plain of Mesaoria. Its climate is typically Mediterranean, with hot, dry summers and mild, wet winters.
         </div>
-    </section><br>
-    {% endfor %}
+        <a href="#" class="read-more">Read the blog post</a>
+    </div>
+    <div class="article-image"><br>
+        <img src="{% static 'assets/img/panels.png' %}" alt="Solar panels on roof">
+    </div>
 </div>
 
-<section class="newsletter-container">
-    {% for letter in adver %}
-    <div class="newsletter-content">
-        <div class="newsletter-left">
-            <h2 class="newsletter-title">{{ letter.name }}</h2>
-            <p class="newsletter-subtitle">{{ letter.title }}</p>
-            <button class="newsletter-button">{{ letter.button_name }}</button>
+<h1>Latest News</h1>
+<div class="news-grid">
+    <div class="news-card">
+        <div class="news-image">
+            <img src="https://via.placeholder.com/300x180?text=ISES+Hiring" alt="ISES Hiring">
         </div>
-
-        <div class="newsletter-right">{{ letter.desc }}</div>
+        <div class="news-content">
+            <h3 class="news-title">ISES is Hiring: Apply as Conference and Society Manager by 30 September</h3>
+            <p class="news-date">21 August 2025</p>
+            <p class="news-excerpt">Job Title: Conference and Society Manager | Application Deadline: 30 September 2025 | Location: Freiburg, Germany | Full Job Opening →</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
     </div>
-    {% endfor %}
-</section>
+
+    <div class="news-card">
+        <div class="news-image">
+            <img src="https://via.placeholder.com/300x180?text=CIES+2026" alt="CIES 2026">
+        </div>
+        <div class="news-content">
+            <h3 class="news-title">CIES 2026 – 20th Iberian and 16th Ibero-American Congress on Solar Energy</h3>
+            <p class="news-date">26 September 2025</p>
+            <p class="news-excerpt">About the Congress The Iberian Congress on Solar Energy (CIES) has a longstanding tradition as one of the most important scientific and professional...</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <div class="news-image">
+            <img src="https://via.placeholder.com/300x180?text=ISES+Awards+2025" alt="ISES Awards 2025">
+        </div>
+        <div class="news-content">
+            <h3 class="news-title">ISES Awards 2025 - Winners announced!</h3>
+            <p class="news-date">16 September 2025</p>
+            <p class="news-excerpt">ISES Awards - Honouring Excellence Since 1978, ISES has been honouring those who have made significant achievements and contributions toward...</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <div class="news-image">
+            <img src="https://via.placeholder.com/300x180?text=PV+Magazine+Brazil" alt="PV Magazine Brazil">
+        </div>
+        <div class="news-content">
+            <h3 class="news-title">ISES Column in pv magazine (August 2025) - SWC 2025 in Brazil</h3>
+            <p class="news-date">08 September 2025</p>
+            <p class="news-excerpt">Immediate Past ISES Board Directors and Leads of the ISES PV Strategy Committee Prof. Andrea Biskara (ANU) and Prof. Ricardo Rüther (UFSC) are...</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title">Corporate and Institution Members</h2>
+<div class="carousel-container">
+    <div class="carousel" id="members-carousel">
+        <div class="carousel-item"><img src="{% static 'assets/img/itm.jpg' %}" alt="Valentin Software"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/itm.jpg' %}" alt="SPF Institut"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="Kyocera"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="GREIa"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/cost.jpg' %}" alt="ACAP"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/cost.jpg' %}" alt="Member 6"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="Member 7"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="Member 8"></div>
+    </div>
+    <div class="carousel-arrow prev" onclick="scrollCarousel('members-carousel', -1)">‹</div>
+    <div class="carousel-arrow next" onclick="scrollCarousel('members-carousel', 1)">›</div>
+</div>
+
+<h2 class="section-title">Partners</h2>
+<div class="carousel-container">
+    <div class="carousel" id="partners-carousel">
+        <div class="carousel-item"><img src="{% static 'assets/img/itm.jpg' %}" alt="The World Bank"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="Climate Action Network"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="Global Solar Council"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/itm.jpg' %}" alt="Renalliance"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/panels.png' %}" alt="IDENA Coalition"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/cost.jpg' %}" alt="Partner 6"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/cost.jpg' %}" alt="Partner 7"></div>
+        <div class="carousel-item"><img src="{% static 'assets/img/cost.jpg' %}" alt="Partner 8"></div>
+    </div>
+    <div class="carousel-arrow prev" onclick="scrollCarousel('partners-carousel', -1)">‹</div>
+    <div class="carousel-arrow next" onclick="scrollCarousel('partners-carousel', 1)">›</div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -223,10 +278,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
     </div>
 </footer>
 

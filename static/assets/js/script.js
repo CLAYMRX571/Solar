@@ -93,98 +93,94 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// === Read about us button ===
-const readMoreBtn = document.querySelector('.read-more');
-if (readMoreBtn) {
-    readMoreBtn.addEventListener('click', function () {
-        alert('Redirecting to "About Us" page...');
-        // window.location.href = '/about';
-    });
-}
+const searchBox = document.getElementById('searchBox');
+const toggle = document.getElementById('searchToggle');
+const input = searchBox.querySelector('.search-input');
 
-// === Nav tabs switcher ===
-document.querySelectorAll('.nav-tabs a').forEach(tab => {
-    tab.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelectorAll('.nav-tabs a').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
-
-// === Newsletter subscribe ===
-const subscribeBtn = document.querySelector('.subscribe');
-    if (subscribeBtn) {
-        subscribeBtn.addEventListener('click', function () {
-        alert('Redirecting to newsletter subscription...');
-        // window.location.href = '/newsletter';
-    });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const missionHeader = document.querySelector(".mission-header");
-  const backgroundMap = document.querySelector(".background-map");
-
-  missionHeader.addEventListener("click", () => {
-    backgroundMap.classList.toggle("active");
-  });
-});
-
-document.getElementById("members-btn").addEventListener("click", function() {
-  document.getElementById("all-users-section").classList.add("hidden");
-  document.getElementById("members-section").classList.remove("hidden");
-  this.classList.add("active");
-  document.getElementById("all-users-btn").classList.remove("active");
-});
-
-document.getElementById("all-users-btn").addEventListener("click", function() {
-  document.getElementById("all-users-section").classList.remove("hidden");
-  document.getElementById("members-section").classList.add("hidden");
-  this.classList.add("active");
-  document.getElementById("members-btn").classList.remove("active");
-});
-
-document.getElementById("read-more-btn").addEventListener("click", function() {
-  const extraSection = document.getElementById("extra-section");
-  const newBox = document.createElement("div");
-  newBox.classList.add("extra-box");
-  newBox.innerHTML = `
-    <h3>More Information</h3>
-    <p>
-      The crisis has exposed deeply embedded vulnerabilities in current energy systems. 
-      Governments now have the opportunity to accelerate the transition towards a cleaner, more sustainable future.
-    </p>
-    <p>
-      By investing in renewables and sustainable infrastructure, countries can create new jobs, 
-      enhance energy security, and reduce environmental impact.
-    </p>
-  `;
-  extraSection.appendChild(newBox);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".email-form");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // sahifa yangilanmasin
-      const email = this.querySelector("input").value.trim();
-      if (email) {
-        alert("Thanks for subscribing: " + email);
-        this.reset(); // inputni tozalash
-      } else {
-        alert("Please enter a valid email address!");
-      }
-    });
+toggle.addEventListener('click', () => {
+  searchBox.classList.toggle('active');
+  if (searchBox.classList.contains('active')) {
+    input.focus();
   }
+});
 
-  // Social icons uchun click hodisa
-  const socials = document.querySelectorAll(".social-icons a");
-  socials.forEach((icon, index) => {
-    icon.addEventListener("click", (e) => {
-      e.preventDefault();
-      alert("Opening social link #" + (index + 1));
-      // yoki shu yerda yangi oynada ochirish mumkin:
-      // window.open(icon.href, "_blank");
+// ESC bosganda yopilsin
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && searchBox.classList.contains('active')) {
+    searchBox.classList.remove('active');
+    input.value = '';
+  }
+});
+
+function scrollCarousel(carouselId, direction) {
+  const carousel = document.getElementById(carouselId);
+  const itemWidth = carousel.querySelector('.carousel-item').offsetWidth + 20; // + gap
+  const currentScroll = carousel.scrollLeft;
+  const newScroll = currentScroll + (itemWidth * direction);
+
+  carousel.scrollTo({
+    left: newScroll,
+    behavior: 'smooth'
+  });
+
+  // Avtomatikni to'xtatish (agar kerak bo'lsa)
+  if (direction !== 0) {
+    stopAutoScroll(carouselId);
+  }
+}
+
+// Avtomatik siljish uchun
+let autoIntervals = {};
+
+function startAutoScroll(carouselId) {
+  const carousel = document.getElementById(carouselId);
+  const itemWidth = carousel.querySelector('.carousel-item').offsetWidth + 20;
+
+  autoIntervals[carouselId] = setInterval(() => {
+    const currentScroll = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    if (currentScroll >= maxScroll) {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      carousel.scrollTo({
+        left: currentScroll + itemWidth,
+        behavior: 'smooth'
+      });
+    }
+  }, 5000); // Har 5 soniyada
+}
+
+function stopAutoScroll(carouselId) {
+  if (autoIntervals[carouselId]) {
+    clearInterval(autoIntervals[carouselId]);
+    delete autoIntervals[carouselId];
+  }
+}
+
+// Sliderlarni avtomatik ishga tushirish
+document.addEventListener('DOMContentLoaded', () => {
+  // Boshlang'ich holatda avtomatik ishga tushirish
+  startAutoScroll('members-carousel');
+  startAutoScroll('partners-carousel');
+
+  // Foydalanuvchi tugmalarga bosganda avtomatikni to'xtatish
+  document.querySelectorAll('.carousel-arrow').forEach(button => {
+    button.addEventListener('click', () => {
+      const carouselId = button.parentElement.querySelector('.carousel').id;
+      stopAutoScroll(carouselId);
+    });
+  });
+
+  // Slider ustiga sichqoncha kelsa — to'xtatish
+  document.querySelectorAll('.carousel-container').forEach(container => {
+    container.addEventListener('mouseenter', () => {
+      const carouselId = container.querySelector('.carousel').id;
+      stopAutoScroll(carouselId);
+    });
+    container.addEventListener('mouseleave', () => {
+      const carouselId = container.querySelector('.carousel').id;
+      startAutoScroll(carouselId);
     });
   });
 });
