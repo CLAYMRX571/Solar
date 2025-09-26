@@ -1,16 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Data, Related
+from .models import Leader
 
-def Dataviews(request):
-    data = Data.objects.all()  
-    related = Related.objects.all()
+def Leaderviews(request):
+    leader = Leader.objects.all()
 
     context = {
-        'data': data,
-        'related': related,
+        'leader': leader,
     }
 
-    return render(request, 'data.html', context)
+    return render(request, 'leader.html', context)
 
-def lan_switch_data(request, lan):
-    return redirect(f'/{lan}/data/')
+def lan_switch_leader(request, lan):
+    return redirect(f'/{lan}/leader/')

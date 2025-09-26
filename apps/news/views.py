@@ -1,13 +1,11 @@
 from django.shortcuts import render, redirect
-from .models import News, NewsAdver
+from .models import News
 
 def Newsviews(request):
     news = News.objects.all()  
-    newsadver = NewsAdver.objects.all()
 
     context = {
         'news': news,
-        'newsadver': newsadver,
     }
 
     return render(request, 'news.html', context)

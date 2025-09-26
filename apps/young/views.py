@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Young
 
-# Create your views here.
+def Youngviews(request):
+    young = Young.objects.all()  
+
+    context = {
+        'young': young,
+    }
+
+    return render(request, 'young.html', context)
+
+def lan_switch_young(request, lan):
+    return redirect(f'/{lan}/young/')

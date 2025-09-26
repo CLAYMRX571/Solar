@@ -2,7 +2,7 @@ from django.db import models
 
 class Banner(models.Model):
     name = models.CharField(max_length=255)
-
+  
     def __str__(self):
         return self.name
     
@@ -18,17 +18,6 @@ class Home(models.Model):
     def __str__(self):
         return self.name
     
-class Mission(models.Model):
-    mission_title = models.CharField(max_length=200)
-    mission_desc = models.TextField()
-    mission_button_name = models.CharField(max_length=200)
-    mission_count = models.BigIntegerField(default=1)
-    mission_label = models.CharField(max_length=50)
-    mission_detail = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.mission_title
-    
 class Latest(models.Model):
     category_name = models.CharField(max_length=100)
     browse_link_name = models.CharField(max_length=100)
@@ -42,12 +31,3 @@ class Latest(models.Model):
     
     def __str__(self):
         return self.latest_date.strftime("%d-%m-%y")
-    
-class Adver(models.Model):
-    name = models.CharField(max_length=200)
-    title = models.CharField(max_length=100)
-    button_name = models.CharField(max_length=50)
-    desc = models.TextField()
-
-    def __str__(self):
-        return self.name

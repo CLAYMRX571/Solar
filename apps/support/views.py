@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Support
 
-# Create your views here.
+def Supportviews(request):
+    support = Support.objects.all()  
+
+    context = {
+        'support': support,
+    }
+
+    return render(request, 'support.html', context)
+
+def lan_switch_support(request, lan):
+    return redirect(f'/{lan}/support/')

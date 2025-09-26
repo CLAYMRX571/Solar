@@ -22,14 +22,15 @@ from django.conf.urls.i18n import i18n_patterns
 from apps.about.views import Aboutviews, lan_switch_about
 from apps.achievement.views import Achievementviews, lan_switch_achievement
 from apps.advance.views import Advanceviews, lan_switch_advance
-from apps.awards.views import Awardviews, lan_switch_award
+from apps.award.views import Awardviews, lan_switch_award
 from apps.board.views import Boardviews, lan_switch_board
 from apps.challenge.views import Challengeviews, lan_switch_challenge
 from apps.column.views import Columnviews, lan_switch_column
 from apps.conference.views import Conferenceviews, lan_switch_conference
-from apps.daniels.views import Danielviews, lan_switch_daniel
+from apps.contact.views import Contactviews, lan_switch_contact
+from apps.daniel.views import Danielviews, lan_switch_daniel
 from apps.eurosun.views import Eurosunviews, lan_switch_eurosun
-from apps.events.views import Eventviews, lan_switch_event
+from apps.event.views import Eventviews, lan_switch_event
 from apps.fellow.views import Fellowviews, lan_switch_fellow
 from apps.history.views import Historyviews, lan_switch_history
 from apps.home.views import Homeviews, lan_switch
@@ -45,7 +46,7 @@ from apps.public.views import Publicviews, lan_switch_public
 from apps.structure.views import Structureviews, lan_switch_structure
 from apps.support.views import Supportviews, lan_switch_support
 from apps.team.views import Teamviews, lan_switch_team
-from apps.webinars.views import Webinarviews, lan_switch_webinar
+from apps.webinar.views import Webinarviews, lan_switch_webinar
 from apps.young.views import Youngviews, lan_switch_young
 
 urlpatterns = [
@@ -53,14 +54,15 @@ urlpatterns = [
     path('lan/about/<str:lan>/', lan_switch_about, name='lan_switch_about'),
     path('lan/achievement/<str:lan>/', lan_switch_achievement, name='lan_switch_achievement'),
     path('lan/advance/<str:lan>/', lan_switch_advance, name='lan_switch_advance'),
-    path('lan/awards/<str:lan>/', lan_switch_award, name='lan_switch_award'),
+    path('lan/award/<str:lan>/', lan_switch_award, name='lan_switch_award'),
     path('lan/board/<str:lan>/', lan_switch_board, name='lan_switch_board'),
     path('lan/challenge/<str:lan>/', lan_switch_challenge, name='lan_switch_challenge'),
     path('lan/column/<str:lan>/', lan_switch_column, name='lan_switch_column'),
     path('lan/conference/<str:lan>/', lan_switch_conference, name='lan_switch_conference'),
-    path('lan/daniels/<str:lan>/', lan_switch_daniel, name='lan_switch_daniel'),
+    path('lan/contact/<str:lan>/', lan_switch_contact, name='lan_switch_contact'),
+    path('lan/daniel/<str:lan>/', lan_switch_daniel, name='lan_switch_daniel'),
     path('lan/eurosun/<str:lan>/', lan_switch_eurosun, name='lan_switch_eurosun'),
-    path('lan/events/<str:lan>/', lan_switch_event, name='lan_switch_event'),
+    path('lan/event/<str:lan>/', lan_switch_event, name='lan_switch_event'),
     path('lan/fellow/<str:lan>/', lan_switch_fellow, name='lan_switch_fellow'),
     path('lan/history/<str:lan>/', lan_switch_history, name='lan_switch_history'),
     path('lan/<str:lan>/', lan_switch, name='lan_switch'),
@@ -76,7 +78,7 @@ urlpatterns = [
     path('lan/structure/<str:lan>/', lan_switch_structure, name='lan_switch_structure'),
     path('lan/support/<str:lan>/', lan_switch_support, name='lan_switch_support'),
     path('lan/team/<str:lan>/', lan_switch_team, name='lan_switch_team'),
-    path('lan/webinars/<str:lan>/', lan_switch_webinar, name='lan_switch_webinar'),
+    path('lan/webinar/<str:lan>/', lan_switch_webinar, name='lan_switch_webinar'),
     path('lan/young/<str:lan>/', lan_switch_young, name='lan_switch_young'),
 ]
 
@@ -85,11 +87,12 @@ urlpatterns += i18n_patterns(
     path('about/', Aboutviews, name='about'),
     path('achievement/', Achievementviews, name='achievement'),
     path('advance/', Advanceviews, name='advance'),
-    path('awards/', Awardviews, name='award'),
+    path('award/', Awardviews, name='award'),
     path('board/', Boardviews, name='board'),
     path('challenge/', Challengeviews, name='challenge'),
     path('column/', Columnviews, name='column'),
     path('conference/', Conferenceviews, name='conference'),
+    path('contact/', Contactviews, name='contact'),
     path('daniel/', Danielviews, name='daniel'),
     path('eurosun/', Eurosunviews, name='eurosun'),
     path('event/', Eventviews, name='event'),

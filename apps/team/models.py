@@ -1,6 +1,6 @@
 from django.db import models
 
-class Techno(models.Model):
+class Team(models.Model):
     name = models.CharField(max_length=255)
     desc = models.TextField()
     image = models.ImageField(upload_to='techno', blank=True, null=True)

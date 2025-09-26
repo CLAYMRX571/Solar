@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Policy
+from .models import History
 
-def PolicyViews(request):
-    policy = Policy.objects.all()  
+def Historyviews(request):
+    history = History.objects.all()  
 
     context = {
-        'policy': policy,
+        'history': history,
     }
 
-    return render(request, 'policy.html', context)
+    return render(request, 'history.html', context)
 
-def lan_switch_policy(request, lan):
-    return redirect(f'/{lan}/policy/')
+def lan_switch_history(request, lan):
+    return redirect(f'/{lan}/history/')

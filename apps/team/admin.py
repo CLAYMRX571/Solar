@@ -1,7 +1,7 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
-from .models import Techno
+from .models import Team
 
-@admin.register(Techno)
-class PolicyAdmin(TranslationAdmin):
+@admin.register(Team)
+class TeamAdmin(TranslationAdmin):
     list_display = ['name', 'desc', 'techno_desc',]

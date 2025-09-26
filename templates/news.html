@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRENA</title>
+    <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/news.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>
 
@@ -21,29 +21,43 @@
 
     <ul>
         <li>
-            <a>{% trans 'ENERGY TRANSITION' %}</a>
+            <a>{% trans 'WHO ARE WE' %}</a>
             <div class="mega-menu1">
                 <div class="container">
                     <div class="content1">
-                        <a href="{% url 'outlook' %}">{% trans 'OUTLOOK' %}</a>
-                        <a href="{% url 'plan' %}">{% trans 'PLANNING' %}</a>
-                        <a href="{% url 'policy' %}">{% trans 'POLICY' %}</a>
-                        <a href="{% url 'techno' %}">{% trans 'TECHNOLOGY' %}</a>
-                        <a href="{% url 'eco' %}">{% trans 'ECONOMIC IMPACT' %}</a>
-                        <a href="{% url 'finance' %}">{% trans 'FINANCE INVESTMENT' %}</a>
+                        <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
+                        <a href="{% url 'jobs' %}">{% trans 'JOBS' %}</a>
+                        <a href="{% url 'structure' %}">{% trans 'STRUCTURE' %}</a>
+                        <a href="{% url 'board' %}">{% trans 'BOARD' %}</a>
+                        <a href="{% url 'team' %}">{% trans 'TEAM' %}</a>
+                        <a href="{% url 'part' %}">{% trans 'PARTNERSHIP' %}</a>
+                        <a href="{% url 'history' %}">{% trans 'HISTORY' %}</a>
                     </div>
                 </div>
             </div>
         </li>
         <li>
-            <a>{% trans 'ABOUT' %}</a>
+            <a>{% trans 'WHAT WE DO' %}</a>
             <div class="mega-menu3">
                 <div class="content3">
-                    <a href="{% url 'about' %}">{% trans 'ABOUT' %}</a>
-                    <a href="{% url 'part' %}">{% trans 'PARTNERSHIPS' %}</a>
-                    <a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a>
-                    <a href="{% url 'project' %}">{% trans 'PROJECT' %}</a>
-                    <a href="{% url 'inno' %}">{% trans 'INNOVATION' %}</a>
+                    <a href="{% url 'award' %}">{% trans 'AWARDS' %}</a>
+                    <a href="{% url 'daniel' %}">{% trans 'DANIELS' %}</a>
+                    <a href="{% url 'achievement' %}">{% trans 'ACHIEVEMENT' %}</a>
+                    <a href="{% url 'leader' %}">{% trans 'LEADERSHIP' %}</a>
+                    <a href="{% url 'fellow' %}">{% trans 'FELLOWS' %}</a>
+                    <a href="{% url 'challenge' %}">{% trans 'CHALLENGE' %}</a>
+                    <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
+                    <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
+                    <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
+                    <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
+                    <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
+                    <a href="{% url 'advance' %}">{% trans 'ADVANCE' %}</a>
+                    <a href="{% url 'journal' %}">{% trans 'JOURNAL' %}</a>
+                    <a href="{% url 'conference' %}">{% trans 'CONFERENCE' %}</a>
+                    <a href="{% url 'column' %}">{% trans 'COLUMN' %}</a>
+                    <a href="{% url 'support' %}">{% trans 'SUPPORT' %}</a>
                 </div>
             </div>
         </li>
@@ -51,97 +65,81 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_news' 'uz' %}">UZBEK</a>
-                    <a href="{% url 'lan_switch_news' 'en' %}">ENGLISH</a>
-                    <a href="{% url 'lan_switch_news' 'tr' %}">TURKCHA</a>
-                    <a href="{% url 'lan_switch_news' 'kk' %}">QOZOQCHA</a>
-                    <a href="{% url 'lan_switch_news' 'tg' %}">TOJIKCHA</a>
+                    <a href="{% url 'lan_switch_about' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
+                    <a href="{% url 'lan_switch_about' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
+                    <a href="{% url 'lan_switch_about' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
+                    <a href="{% url 'lan_switch_about' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
+                    <a href="{% url 'lan_switch_about' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
         <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'education' %}">{% trans 'EDUCATION' %}</a></li>
-        <li><a href="{% url 'data' %}">{% trans 'DATA' %}</a></li>
-        <li><a href="{% url 'event' %}">{% trans 'EVENTS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
 
-<div class="container">
-    {% for now in news %}
-    <div class="section-title"> {{ now.category_name }}
-      <a href="{% url 'news' %}"><span class="view-all">{{ now.all_name }}</a></span>
-    </div>
-
-    <div class="news-grid">
-        <div class="news-item">
-            <img src="{{ now.image.url }}" alt="29th IRENA Council" class="news-image" />
-            <h2 class="news-title">{{ now.title }}</h2>
-            <div class="news-meta"> {{ now.date }} </div>
-            <p class="news-excert"> {{ now.desc }}</p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-<section class="newsletter-container">
-    <div class="newsletter-content">
-        {% for letter in newsadver %}
-        <div class="newsletter-left">
-            <h2 class="newsletter-title">{{ letter.name }}</h2>
-            <p class="newsletter-subtitle">{{ letter.title }}</p>
-            <button class="newsletter-button">{{ letter.button_name }}</button>
-        </div>
-
-        <div class="newsletter-right">{{ letter.desc }}</div>
-        {% endfor %}
-    </div>
-</section>
-
-<section class="footer-section">
-    <div class="footer">
-        <div class="essentials">
-            <div>
-                <ul>
-                    <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
-                    <li><a href="{% url 'eco' %}">{% trans 'Economic' %}</a></li>
-                    <li><a href="{% url 'project' %}">{% trans 'Project' %}</a></li>
-                    <li><a href="{% url 'event' %}">{% trans 'Event' %}</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a href="{% url 'membership' %}">{% trans 'Membership' %}</a></li>
-                    <li><a href="{% url 'inno' %}">{% trans 'Innovation' %}</a></li>
-                    <li><a href="{% url 'part' %}">{% trans 'Partnerships' %}</a></li>
-                    <li><a href="{% url 'outlook' %}">{% trans 'Outlook' %}</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a href="{% url 'news' %}">{% trans 'News' %}</a></li>
-                    <li><a href="{% url 'event' %}">{% trans 'Technology' %}</a></li>
-                    <li><a href="{% url 'data' %}">{% trans 'Data' %}</a></li>
-                    <li><a href="{% url 'education' %}">{% trans 'Education' %}</a></li>
-                </ul>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About</h3>
+            <p>ITM smart panel</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
+                <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
             </div>
         </div>
 
-        <div class="social-links">
-            <a href="https://www.itm-llc.uz/uz/home/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google">
-            </a>
-            <a href="https://www.youtube.com/watch?v=JlDJVOnEM8o" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-            </a>
-            <a href="https://t.me/ITMRasmiy" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-            </a>
+        <div class="footer-column">
+            <h3>What we do</h3>
+            <ul>
+                <li><a href="{% url 'award' %}"> Award </a></li>
+                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
+                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+            </ul>
         </div>
 
-        <div class="copyright">
-            <p>2025 ITM MCHJ</p>
+        <div class="footer-column">
+            <h3>Who we are</h3>
+            <ul>
+                <li><a href="{% url 'about' %}"> About </a></li>
+                <li><a href="{% url 'structure' %}"> Structure </a></li>
+                <li><a href="{% url 'board' %}"> Board </a></li>
+                <li><a href="{% url 'team' %}"> Team </a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-home"></i>
+                    <span>Tashkent city, Almazar district</span>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>itm.mchj@itm-llc.uz</span>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>+998712300402</span>
+                </div>
+                <div>
+                    <i class="far fa-clock"></i>
+                    <span>Mon-Sat: 8:30-19:00</span>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+
+    <div class="footer-bottom">
+        <div>ITM MCHJ</div>
+    </div>
+</footer>
+
+<script src="{% static 'assets/js/script.js' %}"></script>
 </body>
 </html>

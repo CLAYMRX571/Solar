@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect
 from .models import Achievement
 
 def Achievementviews(request):
-    achivement = Achievement.objects.all()  
+    achievement = Achievement.objects.all()  
 
     context = {
-        'achivement': achivement,
+        'achievement': achievement,
     }
 
-    return render(request, 'achivement.html', context)
+    return render(request, 'achievement.html', context)
 
-def lan_switch_achivement(request, lan):
-    return redirect(f'/{lan}/achivement/')
+def lan_switch_achievement(request, lan):
+    return redirect(f'/{lan}/achievement/')

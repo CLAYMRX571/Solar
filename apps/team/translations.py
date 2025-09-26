@@ -1,6 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Techno
+from .models import Team
 
-@register(Techno)
+@register(Team)
 class CategoryTranslationOptions(TranslationOptions):
     fields = ('name', 'desc', 'techno_desc',)

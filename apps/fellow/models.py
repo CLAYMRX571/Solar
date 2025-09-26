@@ -1,6 +1,6 @@
 from django.db import models
 
-class Outlook(models.Model):
+class Fellow(models.Model):
     name = models.CharField(max_length=255)
     desc = models.TextField()
     image = models.ImageField(upload_to='outlook', blank=True, null=True)

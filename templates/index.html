@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>
@@ -40,17 +41,16 @@
             <a>{% trans 'WHAT WE DO' %}</a>
             <div class="mega-menu3">
                 <div class="content3">
-                    <a href="{% url 'awards' %}">{% trans 'AWARDS' %}</a>
-                    <a href="{% url 'daniels' %}">{% trans 'DANIELS' %}</a>
+                    <a href="{% url 'award' %}">{% trans 'AWARDS' %}</a>
+                    <a href="{% url 'daniel' %}">{% trans 'DANIELS' %}</a>
                     <a href="{% url 'achievement' %}">{% trans 'ACHIEVEMENT' %}</a>
                     <a href="{% url 'leader' %}">{% trans 'LEADERSHIP' %}</a>
                     <a href="{% url 'fellow' %}">{% trans 'FELLOWS' %}</a>
                     <a href="{% url 'challenge' %}">{% trans 'CHALLENGE' %}</a>
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
-                    <a href="{% url 'solar' %}">{% trans 'SOLAR' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinars' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -66,11 +66,11 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch' 'uz' %}">UZBEK</a>
-                    <a href="{% url 'lan_switch' 'en' %}">ENGLISH</a>
-                    <a href="{% url 'lan_switch' 'tr' %}">TURKCHA</a>
-                    <a href="{% url 'lan_switch' 'kk' %}">QOZOQCHA</a>
-                    <a href="{% url 'lan_switch' 'tg' %}">TOJIKCHA</a>
+                    <a href="{% url 'lan_switch' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
+                    <a href="{% url 'lan_switch' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
+                    <a href="{% url 'lan_switch' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
+                    <a href="{% url 'lan_switch' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
+                    <a href="{% url 'lan_switch' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
                 </div>
             </div>
         </li>
@@ -169,52 +169,66 @@
     {% endfor %}
 </section>
 
-<section class="footer-section">
-    <div class="footer">
-        <div class="essentials">
-            <div>
-                <ul>
-                    <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
-                    <li><a href="{% url 'eco' %}">{% trans 'Economic' %}</a></li>
-                    <li><a href="{% url 'project' %}">{% trans 'Project' %}</a></li>
-                    <li><a href="{% url 'event' %}">{% trans 'Event' %}</a></li>
-                </ul>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About</h3>
+            <p>ITM smart panel</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://itm.uz/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
-            <div>
-                <ul>
-                    <li><a href="{% url 'membership' %}">{% trans 'Membership' %}</a></li>
-                    <li><a href="{% url 'inno' %}">{% trans 'Innovation' %}</a></li>
-                    <li><a href="{% url 'part' %}">{% trans 'Partnerships' %}</a></li>
-                    <li><a href="{% url 'outlook' %}">{% trans 'Outlook' %}</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a href="{% url 'news' %}">{% trans 'News' %}</a></li>
-                    <li><a href="{% url 'event' %}">{% trans 'Technology' %}</a></li>
-                    <li><a href="{% url 'data' %}">{% trans 'Data' %}</a></li>
-                    <li><a href="{% url 'education' %}">{% trans 'Education' %}</a></li>
-                </ul>
-            </div>
-        </div>  
-
-        <div class="social-links">
-            <a href="https://www.itm-llc.uz/uz/home/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google">
-            </a>
-            <a href="https://www.youtube.com/watch?v=JlDJVOnEM8o" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-            </a>
-            <a href="https://t.me/ITMRasmiy" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-            </a>
         </div>
 
-        <div class="copyright">
-            <p>2025 ITM MCHJ</p>
+        <div class="footer-column">
+            <h3>What we do</h3>
+            <ul>
+                <li><a href="{% url 'award' %}"> Award </a></li>
+                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
+                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Who we are</h3>
+            <ul>
+                <li><a href="{% url 'about' %}"> About </a></li>
+                <li><a href="{% url 'structure' %}"> Structure </a></li>
+                <li><a href="{% url 'board' %}"> Board </a></li>
+                <li><a href="{% url 'team' %}"> Team </a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>Tashkent city, Almazar district</span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>itm.mchj@itm-llc.uz</span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>+998712300402</span>
+                </div>
+                <div>
+                    <i class="fa fa-clock"></i>
+                    <span>Mon-Sat: 8:30-19:00</span>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+
+    <div class="footer-bottom">
+        <div>ITM MCHJ</div>
+    </div>
+</footer>
 
 <script src="{% static 'assets/js/script.js' %}"></script>
 </body>

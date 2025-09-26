@@ -1,6 +1,6 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Policy
+from .models import History
 
-@register(Policy)
+@register(History)
 class CategoryTranslationOptions(TranslationOptions):
     fields = ('name', 'desc', 'policy_desc',)

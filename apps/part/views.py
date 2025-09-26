@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Part
 
-def PartViews(request):
+def Partviews(request):
     part = Part.objects.all()  
 
     context = {

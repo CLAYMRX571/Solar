@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class OutlookConfig(AppConfig):
+class FellowConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.outlook'
+    name = 'apps.fellow'

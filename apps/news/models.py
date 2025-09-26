@@ -13,12 +13,3 @@ class News(models.Model):
     
     def __str__(self):
         return self.date.strftime("%d-%m-%y")    
-    
-class NewsAdver(models.Model):
-    name = models.CharField(max_length=200)
-    title = models.CharField(max_length=100)
-    button_name = models.CharField(max_length=50)
-    desc = models.TextField()
-
-    def __str__(self):
-        return self.name

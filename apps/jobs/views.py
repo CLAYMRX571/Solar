@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Plan
+from .models import Jobs
 
-def PlanViews(request):
-    plan = Plan.objects.all()  
+def Jobsviews(request):
+    jobs = Jobs.objects.all()  
 
     context = {
-        'plan': plan,
+        'jobs': jobs,
     }
 
-    return render(request, 'plan.html', context)
+    return render(request, 'jobs.html', context)
 
-def lan_switch_plan(request, lan):
-    return redirect(f'/{lan}/plan/')
+def lan_switch_jobs(request, lan):
+    return redirect(f'/{lan}/jobs/')

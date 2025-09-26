@@ -1,6 +1,5 @@
 from django.apps import AppConfig
 
-
-class DataConfig(AppConfig):
+class LeaderConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.data'
+    name = 'apps.leader'

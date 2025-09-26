@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Techno
+from .models import Team
 
-def TechnoViews(request):
-    techno = Techno.objects.all()  
+def Teamviews(request):
+    team = Team.objects.all()  
 
     context = {
-        'techno': techno,
+        'team': team,
     }
 
-    return render(request, 'techno.html', context)
+    return render(request, 'team.html', context)
 
-def lan_switch_techno(request, lan):
-    return redirect(f'/{lan}/techno/')
+def lan_switch_team(request, lan):
+    return redirect(f'/{lan}/team/')

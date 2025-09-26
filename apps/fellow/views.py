@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Outlook
+from .models import Fellow
 
-def OutlookViews(request):
-    outlook = Outlook.objects.all()  
+def Fellowviews(request):
+    fellow = Fellow.objects.all()  
 
     context = {
-        'outlook': outlook,
+        'fellow': fellow,
     }
 
-    return render(request, 'outlook.html', context)
+    return render(request, 'fellow.html', context)
 
-def lan_switch_outlook(request, lan):
-    return redirect(f'/{lan}/outlook/')
+def lan_switch_fellow(request, lan):
+    return redirect(f'/{lan}/fellow/')
