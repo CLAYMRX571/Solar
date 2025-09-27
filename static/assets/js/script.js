@@ -93,17 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const searchBox = document.getElementById('searchBox');
-const toggle = document.getElementById('searchToggle');
-const input = searchBox.querySelector('.search-input');
-
-toggle.addEventListener('click', () => {
-  searchBox.classList.toggle('active');
-  if (searchBox.classList.contains('active')) {
-    input.focus();
-  }
-});
-
 // ESC bosganda yopilsin
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && searchBox.classList.contains('active')) {

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
     <link rel="stylesheet" href="{% static 'assets/css/membership.css' %}">
 </head>
 <body>
@@ -14,8 +15,11 @@
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo" class="logo-img">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -61,6 +65,9 @@
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
@@ -73,9 +80,6 @@
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
 
@@ -113,20 +117,24 @@
 
       <p>We’d love to stay connected with you! Subscribe to the ISES mailing list at the bottom of this page and stay up-to-date with all the latest news, events, and opportunities from ISES. Join us on this exciting journey towards a brighter, sustainable future!</p>
     </div>
+</div>
 
-    <div class="chart-container">
-      <h2>The ISES membership base</h2>
-      <canvas id="isesChart" width="300" height="300"></canvas>
+<div class="image-container">
+    <div class="image-box">
+        <img src="{% static 'assets/img/panels.png' %}" alt="" />
+    </div>
+    <div class="image-box">
+        <img src="{% static 'assets/img/cost.jpg' %}" alt=""/>
     </div>
 </div>
 
-<div class="donation-section">
+<div class="donation-section" style="text-align: center;">
     <h1>Make a donation</h1>
-    <p><strong>Join us in shaping a brighter, more sustainable future!</strong></p>
-    <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need <span class="highlight">your support</span>.</p>
-    <p>If membership is not for you, we invite you to <span class="highlight">donate</span> and help us amplify our impact.</p>
+    <p>Join us in shaping a brighter, more sustainable future!</p>
+    <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need your support</p>
+    <p>If membership is not for you, we invite you to donate and help us amplify our impact.</p>
     <p>
-      <span class="highlight">Donate today</span> and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
+      Donate today and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
     </p>
     <a href="#" class="donate-btn">Make a Donation</a>
 </div>
