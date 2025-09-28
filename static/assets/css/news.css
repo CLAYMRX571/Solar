@@ -171,7 +171,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  gap: 0;
 }
 
 .footer-column {
@@ -484,7 +484,7 @@ p {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 0 16px;
 }

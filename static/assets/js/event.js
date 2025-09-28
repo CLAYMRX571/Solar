@@ -1,44 +1,19 @@
-const timeline = document.getElementById('timeline');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-
-let scrollPosition = 0;
-const eventWidth = 280; 
-const gap = 80; 
-const visibleEvents = 3;
-
-function scrollToIndex(index) {
-    const offset = index * (eventWidth + gap);
-    timeline.scrollLeft = offset;
+// === Dropdown Toggle ===
+function toggleDropdown(id) {
+  const dropdowns = document.querySelectorAll('.mega-menu1, .mega-menu2, .mega-menu3');
+  dropdowns.forEach(drop => {
+    if (drop.id === id) {
+      drop.style.display = drop.style.display === 'block' ? 'none' : 'block';
+    } else {
+      drop.style.display = 'none';
+    }
+  });
 }
 
-function updateButtons() {
-    const maxScroll = timeline.scrollWidth - timeline.clientWidth;
-    prevBtn.disabled = scrollPosition <= 0;
-    nextBtn.disabled = scrollPosition >= maxScroll;
-}
-
-prevBtn.addEventListener('click', () => {
-    if (scrollPosition > 0) {
-    scrollPosition -= (eventWidth + gap);
-    timeline.scrollLeft = scrollPosition;
-    updateButtons();
-    }
+// Tashqariga bosilganda yopish
+document.addEventListener('click', function (e) {
+    if (!e.target.closest('.navbar li')) {
+        document.querySelectorAll('.mega-menu1, .mega-menu2, .mega-menu3')
+        .forEach(drop => drop.style.display = 'none');
+  }
 });
-
-nextBtn.addEventListener('click', () => {
-    const maxScroll = timeline.scrollWidth - timeline.clientWidth;
-    if (scrollPosition < maxScroll) {
-    scrollPosition += (eventWidth + gap);
-    timeline.scrollLeft = scrollPosition;
-    updateButtons();
-    }
-});
-
-timeline.addEventListener('scroll', () => {
-    scrollPosition = timeline.scrollLeft;
-    updateButtons();
-});
-
-// Initial setup
-updateButtons();

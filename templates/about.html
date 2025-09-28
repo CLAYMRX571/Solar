@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/about.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -61,6 +65,9 @@
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
@@ -73,12 +80,39 @@
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
 
+<div class="container">
+    <section class="vision-section">
+        <img src="{% static 'assets/img/itm.jpg' %}" alt="Vision Image" class="vision-image">
+        <h1>Vision</h1>
+        <div class="vision-text">
+            <p>For over 60 years the members of The International Solar Energy Society (ISES) have undertaken the product research that has helped the renewable energy industry to grow. ISES, through its knowledge sharing and community building programs, helps its global membership provide the technical answers to accelerate the transformation to 100% renewable energy and thereby achieve the following vision: The International Solar Energy Society (ISES) envisions a world with 100% renewable energy for everyone used wisely and efficiently.</p>
+        </div>
+    </section>
+
+    <section class="key-advocacy">
+        <h2>Key advocacy role</h2>
+        <div class="two-columns">
+            <div class="column">
+                <p>ISES is the largest international solar organization, with extensive membership worldwide. ISES has members in more than 110 countries, and Global contacts and partners in over 50 countries with thousands of associate members, and almost 100 company and institutional members throughout the world. Young ISES, a network of students and young professional ISES members, is now connecting young solar professionals worldwide.</p>
+                <p>ISES has a track record of strongly supporting the solar industry, helping shape public opinion through education and outreach activities and providing informed comment on global issues.</p>
+            </div>
+            <div class="column">
+                <h3>ISES advocates</h3>
+                <span class="checkmark">✔</span> Knowledge sharing on renewable energy and energy efficiency technologies<br>
+                <span class="checkmark">✔</span> Universal energy access, including:<br>
+                <span class="checkmark">✔</span> Decentralized energy systems<br>
+                <span class="checkmark">✔</span> Smart grids<br>
+                <span class="checkmark">✔</span> Village and community power<br>
+                <span class="checkmark">✔</span> Renewable systems integration<br>
+                <span class="checkmark">✔</span> International cooperation<br>
+                <span class="checkmark">✔</span> Comprehensive assessments/roadmaps<br>
+            </div>
+        </div>
+    </section>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -90,7 +124,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -129,18 +163,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/about.js' %}"></script>
 </body>
 </html>

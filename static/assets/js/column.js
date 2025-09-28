@@ -1,12 +1,19 @@
-// Interaktivlik: kartani bosganda xabar chiqarish
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-    const title = card.querySelector('h2').textContent;
-    alert(`More information about ${title} will be shown here.`);
-    });
-});
+// === Dropdown Toggle ===
+function toggleDropdown(id) {
+  const dropdowns = document.querySelectorAll('.mega-menu1, .mega-menu2, .mega-menu3');
+  dropdowns.forEach(drop => {
+    if (drop.id === id) {
+      drop.style.display = drop.style.display === 'block' ? 'none' : 'block';
+    } else {
+      drop.style.display = 'none';
+    }
+  });
+}
 
-// Download tugmasi bosilganda
-document.querySelector('.download-btn').addEventListener('click', () => {
-    alert('Brochure downloading...');
+// Tashqariga bosilganda yopish
+document.addEventListener('click', function (e) {
+    if (!e.target.closest('.navbar li')) {
+        document.querySelectorAll('.mega-menu1, .mega-menu2, .mega-menu3')
+        .forEach(drop => drop.style.display = 'none');
+  }
 });
