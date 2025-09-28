@@ -171,7 +171,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  gap: 0;
 }
 
 .footer-column {
@@ -481,4 +481,69 @@ p {
   color: #2c3e50;
   letter-spacing: 0.5px;
   white-space: nowrap;
+}
+
+.contact-section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  color: #333;
+  position: relative;
+}
+
+.contact-section-title::after {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ff0000;
+  margin: 10px auto;
+}
+
+.contact-section {
+  width: 100%;
+  margin: 50px auto 0;
+  padding: 0;
+  max-width: none;
+}
+
+.contact-info-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  margin: 0;
+  width: 100%;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contact-info-item span {
+  display: flex;
+  text-align: center;
+  gap: 6px;
+}
+
+.map-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
 }

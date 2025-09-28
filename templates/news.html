@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/news.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -61,23 +65,75 @@
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_about' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
-                    <a href="{% url 'lan_switch_about' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
-                    <a href="{% url 'lan_switch_about' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
-                    <a href="{% url 'lan_switch_about' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
-                    <a href="{% url 'lan_switch_about' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
+                    <a href="{% url 'lan_switch_news' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_news' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_news' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_news' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_news' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
+
+<div class="container">
+    <h1 class="section-title">News</h1>
+    <div class="news-grid">
+        <div class="news-card">
+            <img src="{% static 'assets/img/cost.jpg' %}" alt="CIES 2026" class="news-image">
+            <div class="news-content">
+                <h3 class="news-title">CIES 2026 - 20th Iberian and 16th Ibero-American Congress on Solar Energy</h3>
+                <p class="news-excert">About the Congress The Iberian Congress on Solar Energy (CIES) has a longstanding tradition as one of the most important scientific and professional...</p>
+                <a href="#" class="read-more-btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="{% static 'assets/img/out.png' %}" alt="ISES Awards 2025" class="news-image">
+            <div class="news-content">
+                <h3 class="news-title">ISES Awards 2025 - Winners announced!</h3>
+                <p class="news-excert">ISES Awards - Honouring Excellence Since 1976. ISES has been honouring those who have made significant...</p>
+                <a href="#" class="read-more-btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="{% static 'assets/img/panels.png' %}" alt="pv magazine" class="news-image">
+            <div class="news-content">
+                <h3 class="news-title">ISES Column in pv magazine - SWC 2025 in Brazil</h3>
+                <p class="news-excert">Immediate Past ISES Board Directors and Leads of the ISES PV Strategy Committee Prof. Andrei Basara (ANU) and Prof. Ricardo Ruther (UFSC) are...</p>
+                <a href="#" class="read-more-btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="{% static 'assets/img/cost.jpg' %}" alt="RTC 2025 Winner" class="news-image">
+            <div class="news-content">
+                <h3 class="news-title">RTC 2025 Winner is AgriSol from</h3>
+                <p class="news-excert">Basler and the International Solar Energy Society (ISES) are pleased to announce the Indonesian project AgriSol as the winners of the 2025 Renewable...</p>
+                <a href="#" class="read-more-btn">Read more</a>
+            </div>
+        </div>
+    </div>
+    <div class="pagination" id="pagination">
+        <a href="#" id="prevBtn" class="arrow">←</a>
+        <a href="#" id="prevBtn" class="arrow">Previous</a>
+        <a href="#" class="page-link" data-page="1">1</a>
+        <a href="#" class="page-link" data-page="2">2</a>
+        <a href="#" class="page-link" data-page="3">3</a>
+        <a href="#" class="page-link" data-page="4">4</a>
+        <a href="#" class="page-link" data-page="3">5</a>
+        <a href="#" id="prevBtn" class="arrow">Next</a>
+        <a href="#" id="nextBtn" class="arrow">→</a>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +145,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -134,12 +190,8 @@
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/news.js' %}"></script>
 </body>
 </html>
