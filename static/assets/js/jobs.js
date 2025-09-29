@@ -17,3 +17,23 @@ document.addEventListener('click', function (e) {
         .forEach(drop => drop.style.display = 'none');
   }
 });
+
+// Optional: Add smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Optional: Add hover effect to sections
+document.querySelectorAll('section').forEach(section => {
+  section.addEventListener('mouseenter', () => {
+    section.style.backgroundColor = '#dde5e9';
+  });
+  section.addEventListener('mouseleave', () => {
+    section.style.backgroundColor = 'var(--light)';
+  });
+});

@@ -482,3 +482,64 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.pdf-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pdf-link:hover {
+  text-decoration: underline;
+}
+
+/* Barcha section va info/foot bloklari uchun umumiy sozlamalar */
+section,
+.info,
+.foot {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center; /* Matnni markazga qo'yish */
+}
+
+/* Sarlavhalarni markazga qo'yish */
+section h2,
+.info h3,
+.foot h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Matnlar (p, li) — markazda, lekin matn ichki tarkibini chapga yoki markazga qo'yish */
+section p,
+.info p,
+.foot p {
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+/* Havolalar — rang saqlansin */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

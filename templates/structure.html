@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/structure.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -61,23 +65,59 @@
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_about' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
-                    <a href="{% url 'lan_switch_about' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
-                    <a href="{% url 'lan_switch_about' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
-                    <a href="{% url 'lan_switch_about' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
-                    <a href="{% url 'lan_switch_about' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
+                    <a href="{% url 'lan_switch_structure' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_structure' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_structure' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_structure' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_structure' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
+
+<div class="intro-text">
+        <p>The members of ISES form the foundation on which the ISES vision, goals and activities are built. From all over the world, our members form a global community unified through a common goal - to advance the transition to a 100% renewable energy world.</p>
+    </div>
+
+    <div class="two-column">
+        <div class="column">
+            <p>ISES is governed by the Board of Directors, who are elected by the membership. The Board of Directors elects the Executive Committee which works closely with the Headquarters-Secretariat to implement the decisions of the Board and carry out the Society’s activities.</p>
+            <a href="{% url 'board' %}" class="btn">ISES Board of Directors</a>
+        </div>
+        <div class="column">
+            <p>The ISES Sections are organisations working at the national or regional level and represent the international organisation at this level. Members are encouraged to be involved with the Sections in their area.</p>
+            <a href="{% url 'contact' %}" class="btn">ITM Contacts</a>
+        </div>
+    </div>
+
+    <div class="three-column">
+        <div class="card">
+            <h2>ISES Board of Directors</h2>
+            <p>The ISES Board of Directors meet regularly, either at ISES conferences or at the ISES headquarters in Freiburg, Germany. During these meetings, the Board of Directors discuss the strategic work plan for the years ahead, the budget and the leadership of the Society. The Board of Directors also constantly evaluate the role the Society is playing in the renewable energy transformation and how best to create pathways towards a 100% renewable energy future.</p>
+            <a href="{% url 'board' %}" class="btn">ISES Board of Directors</a>
+        </div>
+
+        <div class="card">
+            <h2>ISES Structure</h2>
+            <p>The ISES Structure and Collaborating Groups are organisations working at the national or regional level and members are encouraged to be involved with these groups in their area. Please contact individual Country Contacts for more information on ISES related activities at the country level.</p>
+            <a href="{% url 'structure' %}" class="btn">ISES Structure</a>
+        </div>
+
+        <div class="card">
+            <h2>ISES Bylaws</h2>
+            <p>The ISES bylaws, is a set of rules established by ISES so as to regulate itself. ISES operates elections, membership, activities and meetings according to the ISES Bylaws. Find the ISES Bylaws, edited in May 2023 <a href="#">here</a>.</p>
+            <a href="{% url 'about' %}" class="btn">Learn more about ISES elections</a>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +129,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +168,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/structure.js' %}"></script>
 </body>
 </html>

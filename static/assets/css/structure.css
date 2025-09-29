@@ -482,3 +482,83 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.intro-text {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+/* Ikki ustunli blok — oq fon, chiziqli chegarasiz */
+.two-column {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 0;
+  text-align: center;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+  border-radius: 0;
+}
+
+.column p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Uchta blok — pastki qism */
+.three-column {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+  border-radius: 0;
+}
+
+.card h2 {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  justify-content: center;
+}
+
+.card p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/board.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+       <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -61,23 +65,219 @@
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_about' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">UZ</a>
-                    <a href="{% url 'lan_switch_about' 'en' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">EN</a>
-                    <a href="{% url 'lan_switch_about' 'tr' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TR</a>
-                    <a href="{% url 'lan_switch_about' 'kk' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">KK</a>
-                    <a href="{% url 'lan_switch_about' 'tg' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16">TG</a>
+                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
+
+<div class="intro-text">
+    <p>We are proud to introduce the esteemed members of the Board of Directors of the International Solar Energy Society. This dedicated group of volunteers represents a diverse and experienced range of professionals, united by a shared commitment to advancing solar energy innovation and sustainability across the globe.</p>
+    <p>Our board members are experts from various fields, including renewable energy, engineering, policy, research, and environmental advocacy. With a wealth of experience spanning continents, they bring invaluable global perspectives and insights to guide the Society’s mission of accelerating the adoption of solar energy worldwide.</p>
+    <p>As volunteers, each director is driven by a passion for creating a sustainable future and contributing to the growth of solar energy solutions. Together, they lead with a vision to not only meet today’s energy challenges but also to shape a cleaner, greener future for generations to come.</p>
+    <p>We are honored to have such an accomplished and dedicated group of individuals steering our efforts as we continue to champion solar energy as a key to a sustainable, carbon-neutral world.</p>
+</div>
+
+<h2 class="section-title">ISES Executive Committee (ExCo)</h2>
+
+<div class="members-grid">
+    <div class="member-card">
+        <img src="{% static 'assets/img/itms.ico' %}" alt="Prof. Viktoria Martin">
+        <div class="member-info">
+            <h3>Prof. Viktoria Martin</h3>
+            <p>ISES President</p>
+            <a href="#" class="read-more-btn" onclick="showBio('viktoria-martin')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+Andreas+Hauer" alt="Dr. Andreas Hauer">
+        <div class="member-info">
+            <h3>Dr. Andreas Hauer</h3>
+            <p>ISES Vice President</p>
+            <a href="#" class="read-more-btn" onclick="showBio('andreas-hauer')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Mr.+Chiel+Boonstra" alt="Mr. Chiel Boonstra">
+        <div class="member-info">
+            <h3>Mr. Chiel Boonstra</h3>
+            <p>Treasurer</p>
+            <a href="#" class="read-more-btn" onclick="showBio('chiel-boonstra')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Prof.+Michael+Leung" alt="Prof. Michael Leung">
+        <div class="member-info">
+            <h3>Prof. Michael Leung</h3>
+            <p>Secretary</p>
+            <a href="#" class="read-more-btn" onclick="showBio('michael-leung')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+Aline+Kirsten" alt="Dr. Aline Kirsten Vidal de Oliveira">
+        <div class="member-info">
+            <h3>Dr. Aline Kirsten Vidal de Oliveira</h3>
+            <p>ISES Executive Committee</p>
+            <a href="#" class="read-more-btn" onclick="showBio('aline-kirsten')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+Gurleen+Kaur" alt="Dr. Gurleen Kaur">
+        <div class="member-info">
+            <h3>Dr. Gurleen Kaur</h3>
+            <p>ISES Executive Committee and Young ISES representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('gurleen-kaur')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Prof.+Klaus+Vajen" alt="Prof. Klaus Vajen">
+        <div class="member-info">
+            <h3>Prof. Klaus Vajen</h3>
+            <p>ISES Immediate Past President</p>
+            <a href="#" class="read-more-btn" onclick="showBio('klaus-vajen')">read more</a>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title">Board Members</h2>
+
+<div class="members-grid">
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+Andreas+Häberle" alt="Dr. Andreas Häberle">
+        <div class="member-info">
+            <h3>Dr. Andreas Häberle</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('andreas-haeberle')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+David+Renné" alt="Dr. David Renné">
+        <div class="member-info">
+            <h3>Dr. David Renné</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('david-renne')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Christine+Lins" alt="Christine Lins">
+        <div class="member-info">
+            <h3>Christine Lins</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('christine-lins')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Geoff+Stapleton" alt="Geoff Stapleton">
+        <div class="member-info">
+            <h3>Geoff Stapleton</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('geoff-stapleton')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Prof.+Genene+Mola" alt="Prof. Genene Tessema Mola">
+        <div class="member-info">
+            <h3>Prof. Genene Tessema Mola</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('genene-mola')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Francisco+Beltran" alt="Francisco Beltran">
+        <div class="member-info">
+            <h3>Francisco Beltran</h3>
+            <p>Young ISES Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('francisco-beltran')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Prof.+Berta+García" alt="Prof. Berta García Fernández">
+        <div class="member-info">
+            <h3>Prof. Berta García Fernández</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('berta-garcia')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+Jianhua+Fan" alt="Dr. Jianhua Fan">
+        <div class="member-info">
+            <h3>Dr. Jianhua Fan</h3>
+            <p>ISES Corporate Member</p>
+            <a href="#" class="read-more-btn" onclick="showBio('jianhua-fan')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr+Ashvini+Kumar" alt="Dr Ashvini Kumar">
+        <div class="member-info">
+            <h3>Dr Ashvini Kumar</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('ashvini-kumar')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Andreas+Kazantzidis" alt="Andreas Kazantzidis">
+        <div class="member-info">
+            <h3>Andreas Kazantzidis</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('andreas-kazantzidis')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Dr.+Saman+Nimai" alt="Dr. Saman Nimai Gunasekara">
+        <div class="member-info">
+            <h3>Dr. Saman Nimai Gunasekara</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('saman-gunasekara')">read more</a>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/250x250?text=Oluwatoyn+Ogedengbe" alt="Oluwatoyn Ogedengbe">
+        <div class="member-info">
+            <h3>Oluwatoyn Ogedengbe</h3>
+            <p>ISES Member at Large Representative</p>
+            <a href="#" class="read-more-btn" onclick="showBio('oluwatoyn-ogedengbe')">read more</a>
+        </div>
+    </div>
+</div>
+
+<div id="bio-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title" class="modal-title">Biography</h3>
+            <button class="close-btn" onclick="closeBio()">×</button>
+        </div>
+        <div id="modal-body" class="modal-body"></div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +289,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +328,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/board.js' %}"></script>
 </body>
 </html>
