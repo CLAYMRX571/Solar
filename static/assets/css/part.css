@@ -482,3 +482,117 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.intro-text {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.partners-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.partner-card {
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  padding: 20px;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.partner-info {
+  flex-grow: 1;
+}
+
+.partner-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 10px 0;
+}
+
+.partner-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: black;
+  margin: 0 0 15px 0;
+}
+
+.partner-link {
+  display: inline-flex;
+  align-items: center;
+  color: red;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.partner-link i {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+}
+
+.intro-text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.partners-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partners-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  justify-content: center;
+}
+
+.partners-list li:before {
+  content: '✔';
+  color: green;
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 16px;
+}

@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/history.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -68,16 +72,299 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_history' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_history' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_history' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_history' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_history' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="container">
+    <div class="intro-text">
+        In the 1950s, a group of forward thinkers recognised the need to create an organisation to promote the development and application of solar energy. A detailed account of the creation and the first 50 years of our history are documented in the ISES history book published in 2004. Over 60 years later, it is worth highlighting, the motivation for creating the Association for Applied Solar Energy, which later became ISES, namely to promote the development and application of solar energy. The Association’s objectives as defined in the incorporating by-laws, were: to foster and encourage the research, development, application, and education in the fields related to solar and other energies.
+    </div>
+
+    <div class="vision-section">
+        <div class="vision-content">
+            <div class="vision-column">
+                <p>
+                The visionary goal set by our ISES founders—a global solar energy industry—has now become a reality. According to the REN21 2023 Global Status Report, the renewable energy sector continues to experience rapid growth, with global investments surpassing USD 500 billion in recent years, demonstrating an ongoing commitment to clean energy transitions (REN21, 2023). The global installed capacity of solar photovoltaic (PV) systems has exceeded 1,000 GW, a remarkable increase from previous years, underscoring the widespread adoption of solar energy (IRENA, 2022).
+                </p>
+                <p>
+                In addition, the renewable energy sector now supports over 12 million jobs globally, both directly and indirectly with solar energy leading the way in employment growth (IRENA, 2022). This success is a direct result of continuous breakthroughs in research and development, which have not only advanced solar technologies but also significantly reduced costs. These innovations have made solar energy more affordable, efficient, and accessible, accelerating its deployment and helping drive the global transition to a sustainable energy future.
+                </p>
+            </div>
+
+            <div class="vision-column">
+                <p>
+                The goals set by ISES to promote the global development and application of solar energy technologies are more vital than ever. The challenges identified by pioneers like Farrington Daniels, Henry Sargent, and others over 70 years ago have only grown more urgent, amplified today by the escalating risks of climate change. As the world faces a pressing need for clean, sustainable energy solutions, ISES remains at the forefront of the movement to lead the transition to a 100% renewable energy future.
+                </p>
+                <p>
+                With a deep commitment to addressing the climate crisis and advancing solar energy innovation, ISES is poised to continue driving the global energy transformation throughout this century, striving for a world where renewable energy powers every corner of the planet.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="timeline-title">Here is a brief time-line of some of the milestones throughout ISES history.</h2>
+    <div class="history-grid">
+        <div class="history-card">
+            <img src="{% static 'assets/img/itm.jpg' %}" alt="Solar Energy Cover" class="timeline-image">
+            <div class="card-year">1954</div>
+            <div class="card-content">
+                <p>ISES has its origin in Phoenix / Arizona, USA. A group of industrial, financial and agricultural leaders establishes the Association for Applied Solar Energy (AFASE) as a nonprofit organisation.</p>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1955</div>
+            <div class="card-content">
+                <p>Meetings are held in Tucson and Phoenix, USA attracting more than 1,000 scientists, engineers and government officials from 26 different countries.</p>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1956</div>
+            <div class="card-content">
+                <p>The association establishes its first scientific publication "the sun at work".</p>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1957</div>
+            <div class="card-content">
+                <p>The first issue of "The Journal of Solar Energy, Science and Engineering" is published.</p>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1963</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1964</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1970</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1971</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1976</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1979</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1983</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1989</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+          <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1992</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+          <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1994</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">1995</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2002</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2003</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2004</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2005</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2006</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2007</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2008</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2009</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2011</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2012</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2015</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2016</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2017</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2018</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2019</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2020</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2021</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2022</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2023</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+        <div class="history-card">
+            <img src="{% static 'assets/img/itms.ico' %}" alt="Journal Cover" class="timeline-image">
+            <div class="card-year">2024</div>
+            <div class="card-content">
+                <p>Dedicated solar scientists decide that radical changes are required for the operation and goals of the Society.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +376,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +415,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/history.js' %}"></script>
 </body>
 </html>

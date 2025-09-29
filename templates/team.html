@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/team.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -68,16 +72,122 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_team' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_team' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_team' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_team' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_team' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="team-intro">
+  <h2>Meet the Headquarters Team at the International Solar Energy Society: Passionate Leaders Driving Change</h2>
+  <p>
+    At the heart of the International Solar Energy Society, our dedicated headquarters team is working tirelessly to push the boundaries of solar energy innovation, advocacy, and education as well as project and event management. With diverse backgrounds and expertise, our team members bring their unique skills and unwavering commitment to the cause, driving our mission forward every day.
+  </p>
+  <p>
+    From research and conference organization to community outreach and project development, the team at our headquarters plays a crucial role in helping shape the future of solar and renewable energy. Together, we work in harmony to build a world powered by clean, renewable energy, and we are proud to have such a passionate group of professionals leading the charge.
+  </p>
+  <p>
+    Each member of our headquarters team is united by a shared passion for renewable energy and the vision of a sustainable future for all. Together, we're making an impact, and we're excited to have you with us on this journey.
+  </p>
+  <p>
+    <strong>Get to know the team more and one our <a href="{% url 'event' %}" target="_blank">upcoming ISES events!</a></strong>
+  </p>
+</div>
+
+<div class="members-grid">
+    <div class="member-card">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <div class="member-info">
+            <h3>Sardor Mirniyazov</h3>
+            <p>Fullstack</p>
+            <div class="social-links">
+                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <div class="member-info">
+            <h3>Dr. Andreas Hauer</h3>
+            <p>ISES Vice President</p>
+            <div class="social-links">
+                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <div class="member-info">
+            <h3>Mr. Chiel Boonstra</h3>
+            <p>Treasurer</p>
+            <div class="social-links">
+                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="member-card">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <div class="member-info">
+            <h3>Prof. Michael Leung</h3>
+            <p>Secretary</p>
+            <div class="social-links">
+                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +199,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +238,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/team.js' %}"></script>
 </body>
 </html>

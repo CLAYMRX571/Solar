@@ -482,3 +482,102 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.team-intro {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: black;
+  border-radius: 8px;
+}
+
+.team-intro h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.team-intro p {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.team-intro a {
+  color: red; /* Rasmdagi kabi qizil rang */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+.member-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow);
+  background-color: var(--card-bg);
+  transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+}
+
+.member-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.member-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FFD700;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.member-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.social-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  color: #FFD700;
+  font-size: 18px;
+  transition: color 0.3s;
+}
