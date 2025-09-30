@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/advance.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo" class="logo-img">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -68,17 +72,51 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_advance' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_advance' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_advance' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_advance' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_advance' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
 
+<header>
+    <h1>ISES and Elsevier fully OPEN ACCESS Journal - Solar Energy Advances</h1>
+</header>
+
+<main>
+    <section class="journal-intro">
+        <div class="journal-content">
+            <p>In 2021, ISES and Elsevier launched the new open access journal, <a href="{% url 'advance' %}" class="highlight">Solar Energy Advances</a>. Solar Energy Advances is a high-quality journal reflecting the work of ISES in transforming our energy production and consumption into a fully renewable system. The new journal complements the successful <a href="{% url 'journal' %}" target="_blank">ISES Solar Energy Journal</a>, launched in 1957, and which remains the flagship scientific journal for solar energy.</p>
+            <p>Solar Energy Advances aims to provide a forum for the presentation of fundamental scientific advances in the understanding on any aspect of solar energy research, development, application, measurement or policy. The journal welcomes the submissions of articles at the forefront of solar energy research, truly advancing the field.</p>
+            <p>Solar Energy Advances covers a broad range of themes relevant to solar energy technology, systems, policy, applications, and its impact on sustainable development, climate change, resilience, circular economy, and social justice.</p>
+
+            <p>Each issue of Solar Energy Advances will focus on specific topics, such as:</p>
+            <ul class="topics-list">
+                <li>Solar energy systems and applications</li>
+                <li>Research and development in solar energy utilisation</li>
+                <li>Applications of solar energy measurements, assessments, and forecasting methods</li>
+                <li>Planning of active and passive solar energy utilization in urban environments</li>
+                <li>Solar energy policy and legislation</li>
+                <li>Solar energy markets and public support</li>
+                <li>Other direct and indirect applications of solar energy such as energy storage, hybrid systems, sector integration</li>
+                <li>Other renewable energy uses</li>
+            </ul>
+            <div class="performance">
+                <h3>Journal Performance:</h3>
+                <p><strong>CiteScore: 4.0</strong></p>
+            </div>
+        </div>
+
+        <div class="journal-cover">
+            <img src="{% static 'assets/img/award.png' %}" alt="Solar Energy Advances Cover">
+            <p style="font-size: 0.9em; text-align: center; margin-top: 10px;">An Official Journal of the International Solar Energy Society</p>
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer-container">
@@ -90,7 +128,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -129,18 +167,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/advance.js' %}"></script>
 </body>
 </html>

@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/young.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo" class="logo-img">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -79,6 +83,64 @@
     </ul>
 </header>
 
+<header>
+    <h1>Young ISES Meeting 2023 & Young ISES Manifesto</h1>
+</header>
+
+<main>
+    <section class="intro">
+        <p>Young ISES is a social and professional network for young members of the International Solar Energy Society (ISES). The majority of our members are students, PhD students and young professionals working on solar and other renewable energy forms from all over the world. Young ISES provides the opportunity to connect to peers and to experienced ISES members. Meetings and social events are organized at the biennial Solar World Congress and at some regional solar energy conferences.</p>
+        
+        <p style="text-align: center;">
+            Follow us on <a href="https://linkedin.com" target="_blank">LinkedIn</a> and <a href="https://facebook.com" target="_blank">Facebook</a>.
+        </p>
+    </section>
+
+    <section class="meeting">
+        <h2>Young ISES Meeting 2023 & Young ISES Manifesto</h2>
+        <p>Young ISES met during the Solar World Congress 2023 in New Delhi for a special young ISES meeting. In addition to good food and drink, we had exciting exchanges and enjoyed the time together with young people who are working on solar and renewable energies. We discussed the pivotal role of young people to contribute towards a 100% renewable energy transition to face climate change.</p>
+        
+        <p>One highlight of the meeting was drafting a manifesto for COP 28, urging global leaders to prioritize renewable energy in addressing the climate crisis. Climate crisis is one of the greatest burdens faced by young people all over the world and it is crucial that young people, including scientists can take part in finding solutions and contributing in a meaningful way to the energy transition.</p>
+        
+        <p>The declaration highlights the pivotal role of solar energy, advocates for youth-driven initiatives, and calls for immediate international collaboration to accelerate the transition toward a 100% renewable energy future.</p>
+        
+        <p><a href="{% static 'assets/file/job.pdf' %}" class="btn">You can read the full declaration here.</a></p>
+    </section>
+</main>
+
+<header>
+    <h1>Young ISES Event Gallery</h1>
+</header>
+
+<main>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="{% static 'assets/img/fullstack.jpg' %}" alt="Group Photo 1"></div>
+        <div class="gallery-item"><img src="{% static 'assets/img/fullstack.jpg' %}" alt="Group Photo 2"></div>
+        <div class="gallery-item"><img src="{% static 'assets/img/fullstack.jpg' %}" alt="Group Photo 3"></div>
+        <div class="gallery-item"><img src="{% static 'assets/img/fullstack.jpg' %}" alt="Group Photo 4"></div>
+    </div>
+</main>
+
+<header>
+    <h1>Forming a Student Chapter of ISES</h1>
+</header>
+
+<main>
+    <section class="chapter-info">
+        <div class="content-left">
+            <h3>Forming a student chapter of ISES</h3>
+            <p>ISES promotes solar research and development, provides authoritative advice on renewable energy issues worldwide, advocates for a sustainable global solar industry, supports career growth of ISES student members, and promotes energy education at all levels.</p>
+            <p>Students are an integral part of the International Solar Energy Society. New ideas, enthusiasm and support from student members, passionate about renewable energy forms from all over the world, are welcomed and valued throughout the Society.</p>
+        </div>
+
+        <div class="content-right">
+            <h3>Being a part of an ISES student chapter</h3>
+            <p>provides students the opportunity to connect to peers and to experienced ISES members. Meetings and social events are organized at the biennial Solar World Congress and at some regional solar energy conferences for ISES student chapters.</p>
+            <p>Please contact the ISES headquarters (<a href="mailto:itm.mchj@itm-llc.uz">itm.mchj@itm-llc.uz</a>) for a copy of the Bylaws on formation of a student chapter of ISES.</p>
+        </div>
+    </section>
+</main>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -89,7 +151,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +190,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/young.js' %}"></script>
 </body>
 </html>

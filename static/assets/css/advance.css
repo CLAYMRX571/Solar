@@ -484,115 +484,95 @@ p {
 }
 
 header {
-  text-align: center;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: black;
 }
 
 main {
-  text-align: center;
   max-width: 1200px;
   margin: 30px auto;
   padding: 20px;
 }
 
-section {
-  margin-bottom: 30px;
+.journal-intro {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.intro p {
+.journal-content {
+  flex: 2;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.journal-content p {
   margin-bottom: 15px;
   text-align: justify;
 }
 
-.museum-image img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 8px;
-}
-
-.cta {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: red;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: red;
-}
-
-.orange {
-  background: red;
-}
-
-.orange:hover {
-  background: red;
-}
-
-.note {
-  text-align: center;
-  padding: 15px;
-  margin: 20px 0;
-  font-style: italic;
-}
-
-.submission-call {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.gallery-item {
-  width: 200px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.support h2 {
-  margin-bottom: 15px;
-  color: black;
-}
-
-.support h3 {
-  margin: 20px 0 10px;
-  color: black;
-}
-
-.support a {
+.journal-content .highlight {
   color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.topics-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.topics-list li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.topics-list li:before {
+  content: "✓";
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.performance {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.performance h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.performance p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: black;
+}
+
+.journal-cover {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.journal-cover img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
 }

@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/public.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo" class="logo-img">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -79,6 +83,70 @@
     </ul>
 </header>
 
+<header>
+    <h1>Stay Informed on the Future of Solar and Renewable Energy!</h1>
+</header>
+
+<main>
+    <section class="intro">
+        <p>At the International Solar Energy Society, ISES, we are proud to offer a wealth of resources through our publications, available both in print and digital formats. Whether you prefer the tactile experience of a printed journal or the convenience of online reading, our publications provide you with the latest news, academic research, insights, and analysis on solar and renewable energy.</p>
+        <p>As a leading voice in the renewable energy community, the International Solar Energy Society is committed to delivering valuable content that keeps you informed about:</p>
+        <ul class="topics">
+            <li>Solar energy advancements</li>
+            <li>Scientific break-throughs</li>
+            <li>Innovative technologies</li>
+            <li>Trends and In-depth analyses and expert opinions</li>
+        </ul> 
+        <p>Our mission is to empower you with the knowledge and tools needed to understand the dynamic world of solar energy and its crucial role in shaping a sustainable future.</p>
+        <p>By subscribing to our publications through an ISES membership, you’ll be joining a global network of professionals, advocates, and enthusiasts who are all working towards the common goal of a cleaner, greener planet.</p>
+        <p style="text-align: center; font-weight: bold; font-size: 1.1em;">
+            Stay ahead of the curve. <a href="{% url 'public' %}">Explore our publications today</a> and dive into the world of solar energy like never before!
+        </p>
+    </section>
+
+    <section id="publications-grid" class="publications-grid">
+        <div class="pub-item">
+            <img src="{% static 'assets/img/award.png' %}" alt="ISES Solar Energy Journal">
+            <div class="pub-info">
+                <h3>ISES Solar Energy Journal</h3>
+                <p><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Learn more about one of the oldest and leading journals in solar research!</a></p>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <img src="{% static 'assets/img/award.png' %}" alt="Blog Posts">
+            <div class="pub-info">
+                <h3>Blog posts</h3>
+                <p><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Latest blog articles by ISES Board Members, including SunBurst blogs, President columns and original articles on solar energy and the climate crisis</a></p>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <img src="{% static 'assets/img/award.png' %}" alt="ISES Solar Energy Advances">
+            <div class="pub-info">
+                <h3>ISES Solar Energy Advances</h3>
+                <p><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Learn more about this new ISES fully open access journal!</a></p>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <img src="{% static 'assets/img/award.png' %}" alt="ISES Column in pv magazine">
+            <div class="pub-info">
+                <h3>ISES Column in pv magazine</h3>
+                <p><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Since 2023, ISES publishes a monthly column in pv magazine (online).</a></p>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <img src="{% static 'assets/img/award.png' %}" alt="ISES Membership Newsletter">
+            <div class="pub-info">
+                <h3>ISES membership newsletter</h3>
+                <p><a href="{% static 'assets/file/job.pdf' %}" target="_blank">The ISES membership newsletter reports on the news of the Society and network</a></p>
+            </div>
+        </div>
+    </section>
+</main>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -89,7 +157,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +196,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/public.js' %}"></script>
 </body>
 </html>

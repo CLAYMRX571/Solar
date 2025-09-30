@@ -524,12 +524,12 @@ p {
 }
 
 .awards-list ul {
-  list-style: none;
   padding-left: 0;
   margin-bottom: 20px;
 }
 
 .awards-list li {
+  list-style: none;
   position: relative;
   padding-left: 25px;
   margin-bottom: 10px;
