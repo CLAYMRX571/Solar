@@ -482,3 +482,58 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+h1, h2 {
+  color: black;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.conference {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.conference-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.conference-content {
+  text-align: center;
+  display: none;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.conference-content.active {
+  display: block;
+}
+
+.logo {
+  float: right;
+  margin-left: 20px;
+  max-width: 150px;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}

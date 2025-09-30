@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/challenge.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -49,7 +53,7 @@
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINAR' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -68,16 +72,120 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_challenge' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_challenge' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_challenge' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_challenge' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_challenge' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="challenge-container">
+    <div class="challenge-text">
+        <h1>About the Renewable Transformation Challenge</h1>
+        <p>
+            The <span class="highlight">Renewable Energy Transformation Challenge</span> (RTC100) by ISES and Elsevier is a bi-annual challenge recognizing and honoring outstanding work towards a world powered by renewable energy and with accessible energy for all.
+        </p>
+        <p>
+            The objective of the Elsevier-ISES Renewable Transformation Challenge is to recognize and honor outstanding work towards a world powered by renewable energy and with accessible energy for all. This objective is consistent with the vision of the International Solar Energy Society (ISES), which is for a world powered by 100% renewable energy used efficiently and wisely and accessible for all. To achieve this vision, a global transformation of our energy systems to efficient and affordable renewable energy must take place.
+        </p>
+        <p>
+            The Challenge promotion is administered every two (2) years to recognize accomplishments by organizations such as private enterprises, NGOs, and research institutions for undertaking projects and programs that help move the world toward an energy system supplied entirely by renewable energy sources, or for conducting the critical analyses that provide meaningful roadmaps for the transformation. The award winner represents one step towards furthering ISES’ vision. This vision can only be achieved through private and civil society initiatives towards innovative and successful programs that adopt the use of renewable energy technologies, and the intelligent application of energy efficiency measures. In the context of this Challenge, the energy transformation applies to all end-use energy consumption: power, heat, and transport.
+        </p>
+    </div>
+
+    <div class="images-grid">
+        <img src="{% static 'assets/img/award.png' %}" alt="Community Project">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Solar Installation">
+        <img src="{% static 'assets/img/award.png' %}" alt="Local Farmer">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Team Celebration">
+    </div>
+</div>
+
+<div class="announcement">
+    <p>The winning project for the Renewable Transformation Challenge 2025 has been announced!</p>
+    <p>Meet the winning team from Indonesia and their initiative to enable rural agriculture powered by solar energy.</p>
+</div>
+
+<div class="winner-section">
+    <div class="winner-content">
+        <h2>Winners 2025: Agrisol</h2>
+        <p>
+            The winners of the RTC 2025 are Agrisol from Indonesia and their initiative to enable rural agriculture powered by solar energy.
+        </p>
+        <p>
+            In many parts of Indonesia, agriculture remains vulnerable to the whims of the weather – this is especially true for smallholder farmers who rely solely on unpredictable rainfall. Affordable irrigation is vital to sustain successful planting seasons – without it, entire seasons can be lost during the dry months. Farmers are often forced to wait for rain or use expensive petrol-powered irrigation pumps that are also noisy and harmful to the environment, and most significantly, often push farmers into debt. In some seasons, the cost of petrol is so high that letting crops fail is the only option.
+        </p>
+        <p>
+            Solar-powered irrigation systems are a sustainable and affordable alternative to traditional fossil-fuel-powered pumps, providing reliable access to clean water at a fraction of the cost. Agrisol, built by <strong>Mobah Teknologi</strong>, is an irrigation system built on social and technological innovation. A portable water pump, the Agrisol-pump, is powered by solar-charged batteries and designed specifically for use on small farms. Batteries are housed in a “battery swap station” and charged through rooftop solar panels that are shared between communities.
+        </p>
+        <p>
+            Benefits go beyond cost savings. For traditionally rain-fed agriculture, the new system enables farmers to plant more frequently, even during the dry seasons. With one or two additional harvest cycles every year, farmers produce more food and more income. For families who have long faced the uncertainties of weather and fuel prices, this brings greater stability and security.
+        </p>
+        <p>
+            <a href="{% url 'news' %}" class="link-text">Learn more about the 2025 winner and their project here!</a>
+        </p>
+    </div>
+    <img src="{% static 'assets/img/award.png' %}" alt="Agrisol Solar Panels" class="winner-image">
+</div>
+
+<div class="winner-section">
+    <div class="winner-content">
+        <h2>Winners 2023: Solar Sister</h2>
+        <p>
+            The winners of the RTC 2023 are Solar Sister and their initiative to empower women to eradicate energy poverty. Since 2010, <strong>Solar Sister</strong> has worked to fight energy poverty across this region by recruiting, training, and supporting women entrepreneurs as they create clean energy distribution businesses. Solar Sister Entrepreneurs sell products produced by trusted manufacturers, ranging from a small phone-charging lamp to larger solar home systems and clean cookstoves.
+        </p>
+        <p>
+            After over a decade of operations, Solar Sister remains the only organisation working at the intersection of women’s empowerment, energy poverty and climate change in Africa. Solar Sister’s theory of change is that through developing women entrepreneurship, both the women entrepreneurs and their communities benefit from positive impacts in the areas of energy access, climate justice and gender equity.
+        </p>
+        <p>
+            <a href="{% url 'news' %}" class="link-text">Learn more about the 2023 winners and their project here.</a>
+        </p>
+    </div>
+    <img src="{% static 'assets/img/award.png' %}" alt="Solar Sister Team" class="winner-image">
+</div>
+
+<div class="winner-section">
+    <div class="winner-content">
+        <h2>Winners 2021: Coldbox Store</h2>
+        <p>
+            Meet the 2021 Renewable Transformation Challenge winners, <strong>Coldbox Store</strong>, who offer a solar-powered walk-in, commercial, refrigeration solution fighting food waste which is a significant driver in climate change, as 6% of all global greenhouse emissions come from the production of food that is never eaten. The 2021 winning project, <strong>Coldbox Store</strong> offers one solution that can help address this problem. By connecting perishable food farmers to markets and handling the cold chain logistics to ensure fresh produce is received at the expected quality, the project fights the dramatic issue of 50% of the fruits and vegetables produced in Nigeria never being consumed due to post-harvest losses and poor storage conditions.
+        </p>
+        <p>
+            <a href="{% url 'news' %}" class="link-text">Learn more about the 2021 winners and their project here.</a>
+        </p>
+    </div>
+    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Coldbox Store Tomato" class="winner-image">
+</div>
+
+<div class="winner-section">
+    <div class="winner-content">
+        <h2>Winners 2019: SUNSPOT</h2>
+        <p>
+            Meet the 2019 Renewable Transformation Challenge winners - Team SUNSPOT. Team SUNSPOT works to replace polluting fuels with a solar-powered home cooking system. The scale of the problem that the team set out to solve is massive. According to the World Bank, three billion people across the world are still using basic biomass fuels (like wood or dung) for cooking¹. This has a significant negative impact on the individuals’ health, their environment, and their social and economic potential. Reducing the use of biofuels around the world will mean less deforestation and that time currently used to collect or create fuel, could be better spent on more socially beneficial activities like education and commerce.
+        </p>
+        <p>
+            <a href="{% url 'news' %}" class="link-text">Learn more about the 2019 winners and their project here.</a>
+        </p>
+    </div>
+    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="SUNSPOT Cooking System" class="winner-image">
+</div>
+
+<div class="winner-section">
+    <div class="winner-content">
+        <h2>Winners 2017: ME SOLShare</h2>
+        <p>
+            In 2017, the team at ME SOLshare won the first ever Renewable Transformation Challenge with their project <strong>"The Energiewende 3.0 - Smart P2P Solar Grids"</strong>. ME SOLshare provides a peer-to-peer solar energy trading platform empowering individuals and SMEs to become solar entrepreneurs offering pay-as-you-go and cash-in-as-you-go electricity solutions to low-income households. ME SOLshare therefore has potential to play a crucial role in supporting rural development and providing a means of direct income to rural communities.
+        </p>
+        <p>
+            <a href="{% url 'news' %}" class="link-text">Learn more about the 2017 winners and their project here.</a>
+        </p>
+    </div>
+    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="ME SOLShare Team" class="winner-image">
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +197,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +236,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/challenge.js' %}"></script>
 </body>
 </html>

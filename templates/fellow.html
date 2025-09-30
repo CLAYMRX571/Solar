@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/fellow.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -49,7 +53,7 @@
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINAR' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -65,11 +69,11 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_fellow' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_fellow' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_fellow' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_fellow' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_fellow' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
@@ -78,6 +82,170 @@
         <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
+
+<div class="fellow-container">
+    <div class="fellow-content">
+        <p>
+            The ISES Fellow status can be conferred at any time with presentation at a special Reception, Congress or other suitable event, and represents a lifetime award of the Society. Fellows will have their name and a brief description of their expertise posted on a special section on the ISES website.
+        </p>
+    </div>
+    <div class="aims-section">
+        <h3>The aims of awarding the category of ISES Fellow are:</h3>
+        <ul class="aims-list">
+            <li>To recognise people who have given many years of distinguished service to ISES and have advanced the use of solar and renewable energy through research, education, communication and deployment</li>
+            <li>To provide inspiration and mentoring to Young ISES members</li>
+            <li>To establish a pool of experienced solar and renewable energy experts to ensure that their knowledge and expertise can benefit ISES in various ways.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="fellows-container">
+    <div class="fellow-card">
+        <h2>2025 Fellow: Geoff Stapleton</h2>
+        <div class="underline"></div>
+        <div class="fellow-content">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Geoff Stapleton" class="fellow-image" />
+            <div class="fellow-text">
+                <p>
+                    Geoff Stapleton specialized in solar (PV) energy in the final year of his electrical engineering degree in 1981. He has worked in the solar industry since 1987. In 1998 he was one of the co-founders of Global Sustainable Energy Solutions Pty Ltd (GSES). GSES is a multi-disciplinary organization specializing in professional engineering and training services across the Renewable Energies sector. In 2010 through funding from REEEP, GSES acted as project manager and helped the industry in the Pacific create their own industry association known as Sustainable Energy Industry Association of Pacific Islands (SEIAPI).
+                </p>
+                <p>
+                    At ISES, Geoff has been part of the Board of Directors for many years, served as the ISES treasurers and lead important ISES projects such as SWC50 - the 50 year celebration of the ISES Solar World Congresses in 2020 - as well as most notably the <a href="{% url 'museum' %}" target="_blank">ISES Online Museum of Solar Energy</a>, a fully virtual museum of solar history, research and development.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fellow-card">
+        <h2>2025 Fellow: Simon Furbo</h2>
+        <div class="underline"></div>
+        <div class="fellow-content">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Simon Furbo" class="fellow-image" />
+            <div class="fellow-text">
+                <p>
+                    Simon Furbo, born in 1951, holds a Ph.D. in heat storage for solar heating systems from the Technical University of Denmark, where he also earned his Master of Engineering in 1976. From 1976 to 1995, he worked as a researcher at the Technical University of Denmark, and between 1984 and 1987, he also worked part-time at Esbensen Consulting Engineers Ltd. Since 1996, he has been an Associate Professor at the Technical University of Denmark, where he leads the solar energy research group, supervises Ph.D. students, and teaches courses on solar heating systems. He has contributed to the Young ISES Programme and supported student courses alongside ISES conferences.
+                </p>
+                <p>
+                    His research focuses on solar heating systems, heat storage—including heat of fusion storage—solar collectors, PVT panels and systems, solar heating plants, and testing methods for heat storage, solar collectors, and solar heating systems. Simon has collaborated closely with universities, research institutes, consulting companies, and manufacturers in Denmark and internationally. He has also participated in numerous EU and International Energy Agency projects, working with industry partners to improve the design of heat storages, solar collectors, and solar heating systems.
+                </p>
+                <p>
+                    Simon has served on multiple scientific committees and review panels. He was the scientific secretary for the EuroSun 2000 Congress in Copenhagen and the Arctic Solar Energy Symposium 2001 in Greenland. He has been a member of assessment committees for 19 Ph.D. studies worldwide and has evaluated research proposals for various national research councils and scientific journals. Between 1996 and 2022, he was responsible for education in solar heating systems for university and Ph.D. students.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fellow-container">
+    <h1>2023 Fellow: Prof. Lars Broman, Sweden</h1>
+    <div class="underline"></div>
+        <div class="fellow-content">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Prof. Lars Broman" class="main-image" />
+            <div class="fellow-text">
+                <p>
+                Emeritus Professor Lars Broman has been a driving force in solar energy education and research for over 35 years. A dedicated member of ISES, he has significantly contributed to advancing solar energy knowledge worldwide. In 1980, he established Sweden’s first undergraduate solar energy program at Dalarna University, later founding the Solar Energy Research Center (SERC) in 1984 and the European Solar Engineering School (ESES) in 1999—both of which remain active today.
+                </p>
+                <p>
+                Broman co-founded the International Association for Solar Energy Education (IASEE) in 1989 and played a key role in integrating it into ISES, forming the ISES Working Group on Education. He also initiated the International Symposium on Renewable Energy Education (ISREE), which continues to foster global collaboration on solar education.
+                </p>
+                <p>
+                With over 120 publications, extensive mentorship of students, and a history of pioneering research in solar optics and renewable energy education, Broman’s impact is far-reaching. In 2020, ISES recognized him as a Pioneer of Solar Energy Research, and he continues to contribute as a member of the committee developing the ISES Online Solar Energy Museum.
+                </p>
+                <p>
+                In recognition of his lifelong dedication and profound contributions to solar energy education and research, ISES proudly honors Lars Broman with the <strong>ISES Fellows Award 2023</strong>.
+                </p>
+                <p>
+                The award was presented to Prof. Broman during the 2024 EuroSun conference.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <h2>Gallery</h2>
+        <div class="gallery-thumbs">
+            <div class="thumb">
+                <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Audience" />
+            </div>
+            <div class="thumb">
+                <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Award Presentation" />
+            </div>
+            <div class="thumb">
+                <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Speech at Podium" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recipient-section">
+    <h1>2021 Recipients</h1>
+    <p>The 2021 Fellows are:</p>
+
+    <div class="recipient-name">Steven Meyers, USA</div>
+    <div class="recipient-bio">
+        He served on the ISES Board of Directors from 2016 – 2019, during the 2018 – 2019 term he was on the Executive Committee. Steve was the Project Lead for both infographic installments ISES has developed so far: Dispelling the Myths in 2018 and Solar Thermal Heat for Industry Processes in 2019. He was very engaged to work with ISES headquarters in successfully developing these products which are very useful to ISES to dispel myths about solar energy.
+    </div>
+
+    <div class="recipient-name">Paulette Middleton, USA</div>
+    <div class="recipient-bio">
+        Dr Middleton has been on the ISES Board of Directors since 2010 where she has played many valuable roles both as a member of the Board and the Executive. A non-comprehensive list includes, ISES Secretary, ByLaws reviewer, coordinator of the society’s strategic planning and implementation of new directions, sustainable development interests, membership growth, coordinator among country sections, and educational programs, including ISREE. She was Chair of the Solar and Society theme for the Solar World Congresses 2013, 2015 and 2017 and ISREE Congress 2019 and 2021
+    </div>
+
+    <div class="recipient-name">Dave Renné as Immediate Past President, USA</div>
+
+    <div class="recipient-name">Aldo Steinfeld, Switzerland</div>
+    <div class="recipient-bio">
+        Prof. Aldo Steinfeld has an excellent track record in engineering research and development of solar energy technologies. He is among the leading scholars in the field of solar thermochemical fuels and the most cited researcher in the world in this emerging field, in particular for his innovative ideas and pioneering research on efficient conversion of concentrated solar energy. Prof. Steinfeld was an ISES Board Director from 2016 – 2018.
+    </div>
+</div>
+
+<div class="recipient-section">
+    <h1>2019 Recipients</h1>
+    <p>The 2019 ISES Fellows are the following Past ISES Presidents and the terms they served:</p>
+    <div class="recipient-bio">
+        William Beckmann, USA (1986 - 1987)<br>
+        Doug Lorrимann, Canada (1990 - 1991)<br>
+        Adolf Götzberger, Germany (1992 - 1993)<br>
+        Michael Nicklas, USA (1994 - 1995)<br>
+        Eduardo d O. Fernandes, Portugal (1996 - 1997)<br>
+        David Mills, Australia (1998 - 1999)<br>
+        Cesare Silvi, Italy (1999 – 2001)<br>
+        Anne Grete Hestnes, Norway (2002 - 2003)<br>
+        Monica Oliphant, Australia (2008 - 2009)<br>
+        and<br>
+        Renate Böer, USA
+    </div>
+</div>
+
+<div class="recipient-section">
+    <h1>2017 Recipient</h1>
+    <div class="recipient-content">
+        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Torben Esbensen" class="photo">
+        <div class="text-content">
+            <div class="recipient-name">Torben Esbensen</div>
+            <div class="recipient-bio">
+                is Director at Esbensen Consulting Engineers A/S since 1979, a company working internationally in the field of solar energy and energy design of buildings. He is current the Treasurer of ISES since 2007, was ISES President 2006-2007 and was the President of ISES-Europe 1997-99. In the period 2012-2013 he was also the ISES Secretary. Torben was Director of the ISES Board in the period 1990-96 representing the four Scandinavian countries and again from 1998 representing the small sections of ISES. Since 2003 Torben has represented the associated sections of Denmark and Finland. He was Organizing Chairman of the ISES Solar World Congress 2007 in Beijing, China, of the ISES- Europe Congress EuroSun 2000 Copenhagen, and he was the International Chairman of the ISES Solar World Congress 2003 in Göteborg, Sweden and of ISES SWC 2011 in Kassel, Germany. Torben Esbensen started his career in solar in 1973 as employed at the Technical University of Denmark. In 1979 he left the University trying to implement the research result into the practical design of building.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recipient-section">
+    <h1>2015 Recipients</h1>
+    <p>The first four Fellows were chosen in 2015 with the title given to those respected ISES members who previously held the ISES Honorary Director title:</p>
+
+    <ul class="checkmark-list">
+        <li>Dr Wolfgang Palz</li>
+        <li>Professor Yogi Goswami</li>
+        <li>Emeritus Professor Dr Dieter Holm</li>
+        <li>Mr Peter Rae AO</li>
+    </ul>
+</div>
+
+<div class="recipient-section">
+    <h1>Running list of ISES Fellows</h1>
+    <p><a href="{% static 'assets/file/job.pdf' %}" class="link-text" target="_blank">Find the running list of ISES Fellows here.</a></p>
+</div> 
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +257,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +296,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/fellow.js' %}"></script>
 </body>
 </html>

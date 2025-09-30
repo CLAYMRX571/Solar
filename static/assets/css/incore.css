@@ -482,3 +482,93 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+h1 {
+  color: black;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.section {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.section-header {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.section-content {
+  text-align: center;
+  display: none;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.section-content.active {
+  display: block;
+}
+
+.logo {
+  float: right;
+  margin-left: 20px;
+  max-width: 150px;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.testimonial {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.video-thumb {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}

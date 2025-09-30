@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/daniel.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -49,7 +53,7 @@
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINAR' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -68,16 +72,140 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_daniel' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_daniel' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_daniel' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_daniel' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_daniel' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="award-container">
+    <div class="award-content">
+        <h2>About the Award:</h2>
+        <p>
+            Presented since 1975, this is the premier world award for outstanding intellectual leadership in the field of Solar Energy. The Award is named after Farrington Daniels (1889-1972), pioneer of the modern direct use of solar energy and the first ISES President.
+        </p>
+        <p>
+            Winners have an established & long-standing international reputation and have made significant contributions to the work and goals of ISES. The winner is invited to deliver an address at the ISES Solar World Congress 2025.
+        </p>
+        <p>
+            <strong>Nomination Process:</strong><br>
+            Persons nominated should have an established international reputation of long-standing and preferably should have made a significant contribution to the work of the International Solar Energy Society.
+        </p>
+        <p>
+            Nominations for the award may be made by members of the Society or by groups of members (i.e. ISES National Sections, ISES Committees or other groups) or Non-members and should be supported by appropriate evidence of the contributions of the nominee. Letters of support can be provided by anyone.
+        </p>
+        <p>
+            Self-nominations will not be accepted.
+        </p>
+        <p>
+            <strong>The winner of the 2025 Farrington Daniels Award has been announced - meet the winner below!</strong>
+        </p>
+        <p>
+            The next Farrington Daniels Award will be awarded in 2027.
+        </p>
+    </div>
+
+    <div class="award-image-wrapper">
+        <div>
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Farrington Daniels" class="award-image">
+            <div class="award-signature">Farrington Daniels</div>
+        </div>
+    </div>
+</div>
+
+<div class="recipient-container">
+    <div class="recipient-section">
+        <div class="recipient-content">
+            <h2>2025 Recipient</h2>
+            <p>
+                Professor Priti Chitnis is the George R. Goodson Endowed Chair Professor in the Department of Mechanical Engineering at Virginia Tech, USA. At Virginia Tech, she directs the Advanced Materials and Technologies Laboratory (AMT Lab), which focuses on research in the areas of energy and materials. From 2011–2015, Prof. Priti Chitnis served in an invitational role as the Chief Scientist for the SunShot Initiative at the U.S. Department of Energy (DOE), where she was the Founding Director of the SunShot Concentrating Solar Power program and Director of the Solar Grid Integration program. In her role at the DOE, she defined bold national goals for achieving cost-competitive solar energy technologies and their ubiquitous integration into the electric grid.
+            </p>
+            <p>
+                Prof. Priti Chitnis is the Editor-in-Chief of the ISES journal Solar Energy and serves on the editorial team of many journals. She also served as the U.S. representative on the Executive Committee of the International Energy Agency’s SolarPACES and on the Advisory Board of Australian Renewable Energy Agency (ARENA)’s Australian Solar Thermal Research Initiative (ASTRI). Among her professional honours, she is a Life Fellow of the American Society of Mechanical Engineers (ASME) and a recipient of the ASME Frank Kreith Energy Award for significant contributions to a secure energy future as well as the Hoyt Clarke Hottel Award and the Charles Greeley Abbot Award from the American Solar Energy Society for leadership and pioneering contributions in the development of cost-effective solar energy. For his career accomplishments, he was recognized with the Distinguished Alumnus Award by his alma mater, the Indian Institute of Technology, Bombay.
+            </p>
+        </div>
+        <div class="recipient-image-wrapper">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2025 Recipient" class="recipient-image">
+        </div>
+    </div>
+
+    <div class="recipient-section">
+        <div class="recipient-content">
+            <h2>2021 Recipient</h2>
+            <p>
+                ISES is very pleased to present this prestigious award to Dr. David Renné.
+            </p>
+            <p>
+                Dr. Dave Renné served as President of the International Solar Energy Society from 2010–2019 and continues to serve on the society’s Board. From 1991 until his retirement in 2012, Dr. Renné managed the solar resource assessment activities at the U.S. National Renewable Energy Laboratory (NREL). In 2012, he formed the consultancy, Dave Renné Renewables. He is dedicated to the concept of urgently achieving 100% renewable energy to meet all of our end use energy requirements as the best solution to the climate crisis.
+            </p>
+        </div>
+        <div class="recipient-image-wrapper">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2021 Recipient" class="recipient-image">
+        </div>
+    </div>
+
+    <div class="recipient-section">
+        <div class="recipient-content">
+            <h2>2019 Recipient</h2>
+            <p>
+                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
+            </p>
+            <p>
+                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
+            </p>
+        </div>
+        <div class="recipient-image-wrapper">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
+        </div>
+    </div>
+    <div class="recipient-section">
+        <div class="recipient-content">
+            <h2>2017 Recipient</h2>
+            <p>
+                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
+            </p>
+            <p>
+                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
+            </p>
+        </div>
+        <div class="recipient-image-wrapper">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
+        </div>
+    </div>
+    <div class="recipient-section">
+        <div class="recipient-content">
+            <h2>2015 Recipient</h2>
+            <p>
+                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
+            </p>
+            <p>
+                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
+            </p>
+        </div>
+        <div class="recipient-image-wrapper">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
+        </div>
+    </div>
+    <div class="recipient-section">
+        <div class="recipient-content">
+            <h2>2013 Recipient</h2>
+            <p>
+                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
+            </p>
+            <p>
+                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
+            </p>
+        </div>
+        <div class="recipient-image-wrapper">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +217,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +256,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/daniel.js' %}"></script>
 </body>
 </html>

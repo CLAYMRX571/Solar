@@ -17,3 +17,18 @@ document.addEventListener('click', function (e) {
         .forEach(drop => drop.style.display = 'none');
   }
 });
+
+function toggleSection(id) {
+  const content = document.getElementById(id);
+  const allContents = document.querySelectorAll('.section-content');
+  
+  // Close all others
+  allContents.forEach(el => {
+    if (el.id !== id) {
+      el.classList.remove('active');
+    }
+  });
+  
+  // Toggle current
+  content.classList.toggle('active');
+}

@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/event.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -49,7 +53,7 @@
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINAR' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -68,16 +72,106 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_event' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_event' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_event' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_event' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_event' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="ises-events-container">
+    <h1>ISES Events</h1>
+    <p>
+        The International Solar Energy Society, ISES, events provide excellent opportunities to connect and network with fellow members, stay updated on the latest advancements in solar energy research and development, and gain insights into industry trends and policies. Organized by ISES and its global network of Sections, these events bring together leading scientists, engineers, architects, and professionals from industry and business to discuss cutting-edge research, technological innovations, and emerging opportunities in solar energy.
+    </p>
+    <p>
+        <strong>ISES Members are eligible for discounts at many of these events</strong> - please see the individual events below and log into your ISES account and visit the <a href="{% url 'event' %}" class="highlight-link">ISES Members Area > Event discounts for ISES Members.</a>
+    </p>
+    <p>
+        ISES supports events organized by our Corporate Members and our <a href="{% url 'part' %}" target="_blank" class="highlight-link">Partner Organizations</a>. All events must have a focus on solar or renewable energy. If you are interested in partnering with ISES on an event, please <a href="{% url 'contact' %}" target="_blank" class="highlight-link">contact us.</a>
+    </p>
+</div>
+
+<h1>Upcoming ISES Events and ISES Supported Events</h1>
+<div class="events-grid">
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">6th International Conference on Solar Technologies and Hybrid Mini-Grids for Energy Access</h3>
+            <p class="event-desc">The 6th International Conference on Solar Technologies and Hybrid Mini-Grids for Energy Access ...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="6th International Conference" class="event-image">
+    </div>
+
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">25th World Renewable Energy Congress (WREC)</h3>
+            <p class="event-desc">The 25th World Renewable Energy Congress (WREC), takes place in Perth, Western Australia from 8-13...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="WREC 2026" class="event-image">
+    </div>
+
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">Solar World Congress 2025</h3>
+            <p class="event-desc">ISES and ABENS, the Brazilian Association for Solar Energy and the official ISES section in Brazil...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="Solar World Congress 2025" class="event-image">
+    </div>
+
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">ISES AGM</h3>
+            <p class="event-desc">Join Us for the ISES Annual General Meeting 2025 – Online on July 15! ISES is pleased to invite all...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="ISES AGM" class="event-image">
+    </div>
+</div>
+
+<div class="events-grid" style="margin-top: 40px;">
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">International Conference on Energy & Meteorology (ICEM)</h3>
+            <p class="event-desc">Participate at the 8th International Conference on Energy & Meteorology (2-5 June 2025, Padua,...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="ICEM 2025" class="event-image">
+    </div>
+
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">Tanzania Renewable Energy Week 2025</h3>
+            <p class="event-desc">The Renewable Energy Week 2025 (REW2025) is a premier platform designed to accelerate Tanzania’s...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="REW 2025" class="event-image">
+    </div>
+
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">CONSOLFOOD 2025</h3>
+            <p class="event-desc">CONSOLFOOD 2025 is being planned for Marseille (Aix Marseille University and Le Présage solar...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="CONSOLFOOD 2025" class="event-image">
+    </div>
+
+    <div class="event-card">
+        <div class="event-info">
+            <h3 class="event-title">IcoSES 2025 International Conference on Sustainable Energy Systems</h3>
+            <p class="event-desc">This "ON-LINE" edition of the International Conference on sustainable energy systems is the first...</p>
+            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more ></a>
+        </div>
+        <img src="{% static 'assets/img/award.png' %}" alt="IcoSES 2025" class="event-image">
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +183,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +222,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/event.js' %}"></script>
 </body>
 </html>

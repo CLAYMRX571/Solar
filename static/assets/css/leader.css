@@ -482,3 +482,112 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.award-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.award-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.award-content h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.award-content p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.notice {
+  padding: 15px 20px;
+  margin: 25px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  color: black;
+}
+
+.award-image {
+  flex-shrink: 0;
+}
+
+.award-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recipient-container {
+  text-align: center;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.recipient-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.recipient-content h1 {
+  font-size: 32px;
+  color: black;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.recipient-content a {
+  color: red;
+  font-weight: bold;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  margin-bottom: 20px;
+}
+
+.recipient-content p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.recipient-content p strong {
+  font-weight: 700;
+  color: black;
+}
+
+.recipient-image {
+  flex-shrink: 0;
+}
+
+.recipient-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipient-image img:hover {
+  transform: scale(1.02);
+}

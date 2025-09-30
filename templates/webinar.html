@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/webinar.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -49,7 +53,7 @@
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINAR' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -68,16 +72,148 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_webinar' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_webinar' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_webinar' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_webinar' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_webinar' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="container">
+    <h1>ISES Webinars</h1>
+    <p>
+      ISES organizes monthly webinars and invites everybody to join (free-of-charge). Focusing on solar energy related topics of high relevance in science, technology development, market and industrial implementation, social issues, training and education our webinars offer something for everyone.
+    </p>
+
+    <div class="section">
+        <div class="card">
+            <h2>Sponsor an ISES webinar</h2>
+            <p>
+            The International Solar Energy Society (ISES) invites your organization to be a sponsor of our webinar series. Focusing on solar energy related topics of high relevance in science, technology development, market and industrial implementation, social issues, training and education our webinars offer something for everyone. ISES initiated these online seminars in 2012 and since then, they enjoy a great popularity and increasing number of participants. Please contact <a href="mailto:itm.mchj@itm-llc.uz">itm.mchj@itm-llc.uz</a> for further information.
+            </p>
+            <p>
+            <a href="{% url 'webinar' %}">View our webinar sponsoring flyer here.</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Become a webinar panelist</h2>
+            <p>
+            Webinar panelists are distinguished experts from research, academia and industry. Panelists share their knowledge and passion during the webinar on a voluntary basis and answer participants questions during and after the live webinar. We welcome new panelist speakers who are experts in their fields to participate in an ISES webinar. Please contact <a href="mailto:itm.mchj@itm-llc.uz">itm.mchj@itm-llc.uz</a> for further information.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Next Webinars</h1>
+    <div class="grid-container">
+        <div class="card">
+            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Image" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (2)</h3>
+                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Speaker" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (1)</h3>
+                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
+                <div class="card-meta">
+                    Hosted by: SOLAR ACADEMY & ISES
+                </div>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
+                <div class="card-meta">
+                    Hosted by: SOLAR ACADEMY & ISES
+                </div>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">Recent and Past Events</h2>
+    <div class="grid-container">
+        <div class="card">
+            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Image" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (2)</h3>
+                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Speaker" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (1)</h3>
+                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
+                <div class="card-meta">
+                    Hosted by: SOLAR ACADEMY & ISES
+                </div>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
+                <div class="card-meta">
+                    Hosted by: SOLAR ACADEMY & ISES
+                </div>
+                <div class="read-more-container">
+                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +225,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +264,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/webinar.js' %}"></script>
 </body>
 </html>

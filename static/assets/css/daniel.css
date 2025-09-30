@@ -482,3 +482,131 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.award-container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 8px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.award-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.award-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+
+.award-content h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 3px;
+}
+
+.award-content p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.award-content strong {
+  font-weight: bold;
+}
+
+.award-image-wrapper {
+  position: relative;
+  width: 220px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.award-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.award-signature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+}
+
+.recipient-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.recipient-section {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.recipient-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.recipient-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+
+.recipient-content h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 3px;
+}
+
+.recipient-content p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.recipient-image-wrapper {
+  position: relative;
+  width: 220px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.recipient-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  padding: 10px;
+}

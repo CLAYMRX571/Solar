@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/award.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -49,7 +53,7 @@
                     <a href="{% url 'event' %}">{% trans 'EVENTS' %}</a>
                     <a href="{% url 'eurosun' %}">{% trans 'EUROSUN' %}</a>
                     <a href="{% url 'incore' %}">{% trans 'INCORE' %}</a>
-                    <a href="{% url 'webinar' %}">{% trans 'WEBINARS' %}</a>
+                    <a href="{% url 'webinar' %}">{% trans 'WEBINAR' %}</a>
                     <a href="{% url 'museum' %}">{% trans 'MUSEUM' %}</a>
                     <a href="{% url 'young' %}">{% trans 'YOUNG' %}</a>
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
@@ -68,16 +72,50 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_award' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_award' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_award' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_award' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_award' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<div class="section">
+    <p>
+      Since 1975, the International Solar Energy Society, ISES, has been recognizing individuals and organizations that have made exceptional contributions to the advancement of solar energy applications and the broader renewable energy transition.
+      Every two years, ISES celebrates excellence in solar energy through the prestigious ISES Awards, honoring groundbreaking work that is helping to create a world powered by renewable energy and ensuring accessible energy for all. Additionally, ISES, in collaboration with Elsevier, presents the <strong>Renewable Transformation Challenge</strong> awards to further recognize innovative achievements driving the global shift to sustainable energy solutions.</p>
+      <p><strong>The nomination period for the ISES Awards 2025 has passed and we will be happy to announce the winners in a few weeks!</strong>
+    </p>
+</div>
+
+<div class="awards-container">
+    <div class="awards-content">
+        <h3>The ISES awards are:</h3>
+        <ul class="awards-list">
+            <li><a href="{% url 'award' %}">Farrington Daniels Award</a></li>
+            <li><a href="{% url 'achievement' %}" target="_blank">Achievement through Action Award in memory of Christopher A. Weeks</a></li>
+            <li><a href="{% url 'leader' %}" target="_blank">ISES Global Leadership Award in Advancing Solar Energy Policy in honour of Hermann Scheer</a></li>
+            <li><a href="{% url 'fellow' %}" target="_blank">ISES Fellows</a></li>
+            <li><a href="{% url 'challenge' %}" target="_blank">Elsevier and ISES "Renewable Transformation Challenge"</a></li>
+            <li><a href="{% url 'journal' %}" target="_blank">Solar Energy Journal Best Paper Award Associate Editor of the Year Award</a></li>
+        </ul>
+
+        <h3>Other and Previous Awards</h3>
+        <ul class="awards-list">
+            <li><a href="{% url 'award' %}">Karl W. Böer Solar Energy Award</a></li>
+            <li><a href="{% url 'award' %}">ISES Special Service Award</a></li>
+        </ul>
+    </div>
+
+    <div class="trophy-wrapper">
+        <div class="trophy-bg">
+            <img src="{% static 'assets/img/award.png' %}" alt="Trophy" class="trophy-img">
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +127,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +166,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/award.js' %}"></script>
 </body>
 </html>

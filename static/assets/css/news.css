@@ -547,7 +547,7 @@ p {
 
 .news-excert {
   font-size: 0.92rem;
-  color: #555;
+  color: black;
   line-height: 1.5;
   margin-bottom: 14px;
   flex-grow: 1;

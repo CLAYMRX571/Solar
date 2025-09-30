@@ -482,3 +482,95 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.section p {
+  margin-bottom: 15px;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.section strong {
+  font-weight: bold;
+}
+
+.awards-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 8px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.awards-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.awards-content h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.awards-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.awards-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.awards-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: green; 
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.awards-list a {
+  color: red;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.trophy-wrapper {
+  position: relative;
+  width: 200px;
+  height: auto;
+  transform: rotate(-5deg);
+  z-index: 1;
+  margin-top: -15px;
+}
+
+.trophy-bg {
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.trophy-img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  display: block;
+}

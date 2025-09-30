@@ -482,3 +482,103 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+.ises-events-container {
+  justify-content: center;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: left;
+  margin: 15px 0;
+  font-size: 0.95em;
+}
+
+.highlight-link {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.event-card {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+}
+
+.event-info {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-date {
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.event-date i {
+  font-size: 0.9em;
+}
+
+.event-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #222;
+  margin: 0 0 10px;
+}
+
+.event-desc {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0 0 15px;
+  line-height: 1.4;
+}
+
+.read-more {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.event-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0 12px 12px 0;
+}
