@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/column.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -55,7 +59,6 @@
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
                     <a href="{% url 'advance' %}">{% trans 'ADVANCE' %}</a>
                     <a href="{% url 'journal' %}">{% trans 'JOURNAL' %}</a>
-                    <a href="{% url 'conference' %}">{% trans 'CONFERENCE' %}</a>
                     <a href="{% url 'column' %}">{% trans 'COLUMN' %}</a>
                     <a href="{% url 'support' %}">{% trans 'SUPPORT' %}</a>
                 </div>
@@ -68,16 +71,82 @@
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
                 <div class="content2">
-                    <a href="{% url 'lan_switch_jobs' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
-                    <a href="{% url 'lan_switch_jobs' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
-                    <a href="{% url 'lan_switch_jobs' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
-                    <a href="{% url 'lan_switch_jobs' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
-                    <a href="{% url 'lan_switch_jobs' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
+                    <a href="{% url 'lan_switch_column' 'uz' %}"><img src="{% static 'assets/img/uz.png' %}" width="24" height="16"> UZ</a>
+                    <a href="{% url 'lan_switch_column' 'en' %}"><img src="{% static 'assets/img/en.png' %}" width="24" height="16"> EN</a>
+                    <a href="{% url 'lan_switch_column' 'tr' %}"><img src="{% static 'assets/img/tr.png' %}" width="24" height="16"> TR</a>
+                    <a href="{% url 'lan_switch_column' 'kk' %}"><img src="{% static 'assets/img/kz.png' %}" width="24" height="16"> KK</a>
+                    <a href="{% url 'lan_switch_column' 'tg' %}"><img src="{% static 'assets/img/tg.jpg' %}" width="24" height="16"> TG</a>
                 </div>
             </div>
         </li>
     </ul>
 </header>
+
+<header>
+    <h1>ISES PV Column in pv magazine</h1>
+</header>
+
+<main>
+    <section class="intro">
+        <p>In 2023, Past ISES Board Directors and Leads of the ISES PV Strategy Committee Prof. Andrew Blakers (ANU) and Prof. Ricardo Rüther (UFSC) started publishing a monthly column with pv magazine (online).</p>
+        <p>Below, please find all installments of this column that have been published so far.</p>
+    </section>
+
+    <section class="columns-section">
+        <h2>2025 Columns</h2>
+        <div class="column-list">
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">September 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">The impact of sunlight spectral shifts on bifacial perovskite-silicon tandem solar cells</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">August 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">The International Solar Energy Society's Solar World Congress 2025 in Brazil</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">July 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Solar myths and misconceptions</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">June 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Global renewable energy pathfinding</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">May 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Falling Li-ion battery prices mirror solar photovoltaics trends: Is there a role for second-life batteries before recycling?</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">April 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Who are the solar and wind champions?</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">March 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Unlimited energy storage in Europe</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">February 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Daytime charging of electric vehicles further expands adoption of photovoltaics</a></span>
+            </div>
+            <div class="column-item">
+                <span class="check">✓</span>
+                <span class="date">January 2025</span> - 
+                <span class="title"><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Curtailing solar photovoltaics is here to stay, overbuilding PV will become normal</a></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="magazine-logo">
+        <img src="{% static 'assets/img/award.png' %}" alt="pv magazine Logo">
+    </div>
+</main>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +158,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +197,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/column.js' %}"></script>
 </body>
 </html>

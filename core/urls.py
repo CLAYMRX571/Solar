@@ -26,7 +26,6 @@ from apps.award.views import Awardviews, lan_switch_award
 from apps.board.views import Boardviews, lan_switch_board
 from apps.challenge.views import Challengeviews, lan_switch_challenge
 from apps.column.views import Columnviews, lan_switch_column
-from apps.conference.views import Conferenceviews, lan_switch_conference
 from apps.contact.views import Contactviews, lan_switch_contact
 from apps.daniel.views import Danielviews, lan_switch_daniel
 from apps.eurosun.views import Eurosunviews, lan_switch_eurosun
@@ -58,7 +57,6 @@ urlpatterns = [
     path('lan/board/<str:lan>/', lan_switch_board, name='lan_switch_board'),
     path('lan/challenge/<str:lan>/', lan_switch_challenge, name='lan_switch_challenge'),
     path('lan/column/<str:lan>/', lan_switch_column, name='lan_switch_column'),
-    path('lan/conference/<str:lan>/', lan_switch_conference, name='lan_switch_conference'),
     path('lan/contact/<str:lan>/', lan_switch_contact, name='lan_switch_contact'),
     path('lan/daniel/<str:lan>/', lan_switch_daniel, name='lan_switch_daniel'),
     path('lan/eurosun/<str:lan>/', lan_switch_eurosun, name='lan_switch_eurosun'),
@@ -91,7 +89,6 @@ urlpatterns += i18n_patterns(
     path('board/', Boardviews, name='board'),
     path('challenge/', Challengeviews, name='challenge'),
     path('column/', Columnviews, name='column'),
-    path('conference/', Conferenceviews, name='conference'),
     path('contact/', Contactviews, name='contact'),
     path('daniel/', Danielviews, name='daniel'),
     path('eurosun/', Eurosunviews, name='eurosun'),

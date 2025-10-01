@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITM</title>
     <link rel="icon" href="{% static 'assets/img/itms.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/support.css' %}">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+        <a href="{% url 'index' %}" class="logo-link">
+            <h3 class="logo-title">
+                <img src="{% static 'assets/img/itm.jpg' %}" alt="ITM Logo">
+                <span class="logo-text">ITM</span>
+            </h3>
         </a>
     </div>
 
@@ -55,12 +59,14 @@
                     <a href="{% url 'public' %}">{% trans 'PUBLICATION' %}</a>
                     <a href="{% url 'advance' %}">{% trans 'ADVANCE' %}</a>
                     <a href="{% url 'journal' %}">{% trans 'JOURNAL' %}</a>
-                    <a href="{% url 'conference' %}">{% trans 'CONFERENCE' %}</a>
                     <a href="{% url 'column' %}">{% trans 'COLUMN' %}</a>
                     <a href="{% url 'support' %}">{% trans 'SUPPORT' %}</a>
                 </div>
             </div>
         </li>
+        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
+        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
+        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
         <li>    
             <a>{% trans 'LANGUAGES' %}</a>
             <div class="mega-menu2">
@@ -73,11 +79,58 @@
                 </div>
             </div>
         </li>
-        <li><a href="{% url 'membership' %}">{% trans 'MEMBERSHIP' %}</a></li>
-        <li><a href="{% url 'news' %}">{% trans 'NEWS' %}</a></li>
-        <li><a href="{% url 'contact' %}">{% trans 'CONTACT' %}</a></li>
     </ul>
 </header>
+
+<header>
+    <h1>Support Solar - Empowering a Sustainable Future!</h1>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Join Us in Shaping a Brighter, More Sustainable Future!</h2>
+        <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need your support.</p>
+        <p>We invite you to donate or become a member today and help us amplify our impact. Whether you contribute financially or lend your voice to our cause, you’ll be joining a community of passionate individuals driving change.</p>
+    </section>
+
+    <section class="ways-to-support">
+        <div class="support-item">
+            <span class="check">✓</span>
+            Donate today and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
+        </div>
+        <div class="support-item">
+            <span class="check">✓</span>
+            Spread the word: Every share or recommendation helps us reach more people passionate about making an impact.
+        </div>
+    </section>
+
+    <section class="mission">
+        <h3>Support the International Solar Energy Society, ISES to:</h3>
+        <ul class="mission-list">
+            <li>Contribute to solar energy publications, projects and research</li>
+            <li>Educate and engage communities about the benefits of renewable energy</li>
+            <li>Advocate for policy changes that support renewable energy on a global scale</li>
+        </ul>
+    </section>
+
+    <section class="get-involved">
+        <h3>How you can get involved:</h3>
+        <div class="involve-item">
+            <span class="check">✓</span>
+            Donate: Every contribution, big or small, fuels our mission and helps us reach more people.
+        </div>
+        <div class="involve-item">
+            <span class="check">✓</span>
+            Become a member: Join the International Solar Energy Society, ISES, as a member and stand behind our efforts to expand solar energy adoption. As a member, you’ll have access to exclusive updates, events, and opportunities to influence the future of solar energy. More information on membership here: <a href="{% url 'board' %}" target="_blank">Board</a>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <p>Together, we can create a world that’s more sustainable, more empowered, and more connected.</p>
+        <p>We need more voices like yours. Stand with us, donate today, or become a member and make your impact!</p>
+        <p>The anonymous donation form is right here!</p>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer-container">
@@ -89,7 +142,7 @@
                 <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
                 <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fab fa-envelope"></i></a>
+                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -128,18 +181,14 @@
                     <span>+998712300402</span>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i>
+                    <i class="fas fa-clock"></i>
                     <span>Mon-Sat: 8:30-19:00</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <div>ITM MCHJ</div>
-    </div>
 </footer>
 
-<script src="{% static 'assets/js/script.js' %}"></script>
+<script src="{% static 'assets/js/support.js' %}"></script>
 </body>
 </html>

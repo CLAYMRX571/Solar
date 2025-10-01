@@ -482,3 +482,77 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.intro p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.columns-section h2 {
+  color: black;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 2rem;
+}
+
+.column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.column-item {
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.check {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.date {
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+}
+
+.title {
+  color: black;
+  flex: 1;
+}
+
+.magazine-logo {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.magazine-logo img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+}

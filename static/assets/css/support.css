@@ -482,3 +482,107 @@ p {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+header h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.intro h2 {
+  color: black;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.intro p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.intro a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.intro a:hover {
+  color: black;
+}
+
+.ways-to-support,
+.get-involved {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.support-item,
+.involve-item {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background 0.2s ease;
+}
+
+.support-item:hover,
+.involve-item:hover {
+  background: #eaf2fb;
+}
+
+.check {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.mission h3 {
+  text-align: center;
+  color: black;
+  margin: 25px 0 15px;
+  font-size: 1.2em;
+}
+
+.mission-list {
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.mission-list li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  font-weight: 500;
+}
+
+.mission-list li:before {
+  content: "✓";
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.call-to-action {
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.call-to-action p {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.call-to-action a {
+  color: red;
+  font-weight: bold;
+}
