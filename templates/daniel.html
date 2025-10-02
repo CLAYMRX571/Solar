@@ -83,127 +83,33 @@
 </header>
 
 <div class="award-container">
+    {% for aw in daniel %}
     <div class="award-content">
-        <h2>About the Award:</h2>
-        <p>
-            Presented since 1975, this is the premier world award for outstanding intellectual leadership in the field of Solar Energy. The Award is named after Farrington Daniels (1889-1972), pioneer of the modern direct use of solar energy and the first ISES President.
-        </p>
-        <p>
-            Winners have an established & long-standing international reputation and have made significant contributions to the work and goals of ISES. The winner is invited to deliver an address at the ISES Solar World Congress 2025.
-        </p>
-        <p>
-            <strong>Nomination Process:</strong><br>
-            Persons nominated should have an established international reputation of long-standing and preferably should have made a significant contribution to the work of the International Solar Energy Society.
-        </p>
-        <p>
-            Nominations for the award may be made by members of the Society or by groups of members (i.e. ISES National Sections, ISES Committees or other groups) or Non-members and should be supported by appropriate evidence of the contributions of the nominee. Letters of support can be provided by anyone.
-        </p>
-        <p>
-            Self-nominations will not be accepted.
-        </p>
-        <p>
-            <strong>The winner of the 2025 Farrington Daniels Award has been announced - meet the winner below!</strong>
-        </p>
-        <p>
-            The next Farrington Daniels Award will be awarded in 2027.
-        </p>
+        <h2>{{ aw.name }}</h2>
+        <p>{{ aw.desc }}</p>
     </div>
 
     <div class="award-image-wrapper">
         <div>
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Farrington Daniels" class="award-image">
-            <div class="award-signature">Farrington Daniels</div>
+            <img src="{{ aw.image.url }}" alt="Farrington Daniels" class="award-image">
+            <div class="award-signature">{{ aw.title }}</div>
         </div>
     </div>
+    {% endfor %}
 </div>
 
 <div class="recipient-container">
+    {% for p in recep %}
     <div class="recipient-section">
         <div class="recipient-content">
-            <h2>2025 Recipient</h2>
-            <p>
-                Professor Priti Chitnis is the George R. Goodson Endowed Chair Professor in the Department of Mechanical Engineering at Virginia Tech, USA. At Virginia Tech, she directs the Advanced Materials and Technologies Laboratory (AMT Lab), which focuses on research in the areas of energy and materials. From 2011–2015, Prof. Priti Chitnis served in an invitational role as the Chief Scientist for the SunShot Initiative at the U.S. Department of Energy (DOE), where she was the Founding Director of the SunShot Concentrating Solar Power program and Director of the Solar Grid Integration program. In her role at the DOE, she defined bold national goals for achieving cost-competitive solar energy technologies and their ubiquitous integration into the electric grid.
-            </p>
-            <p>
-                Prof. Priti Chitnis is the Editor-in-Chief of the ISES journal Solar Energy and serves on the editorial team of many journals. She also served as the U.S. representative on the Executive Committee of the International Energy Agency’s SolarPACES and on the Advisory Board of Australian Renewable Energy Agency (ARENA)’s Australian Solar Thermal Research Initiative (ASTRI). Among her professional honours, she is a Life Fellow of the American Society of Mechanical Engineers (ASME) and a recipient of the ASME Frank Kreith Energy Award for significant contributions to a secure energy future as well as the Hoyt Clarke Hottel Award and the Charles Greeley Abbot Award from the American Solar Energy Society for leadership and pioneering contributions in the development of cost-effective solar energy. For his career accomplishments, he was recognized with the Distinguished Alumnus Award by his alma mater, the Indian Institute of Technology, Bombay.
-            </p>
+            <h2>{{ p.name }}</h2>
+            <p>{{ p.desc }}</p>
         </div>
         <div class="recipient-image-wrapper">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2025 Recipient" class="recipient-image">
+            <img src="{{ p.image.url }}" alt="2025 Recipient" class="recipient-image">
         </div>
     </div>
-
-    <div class="recipient-section">
-        <div class="recipient-content">
-            <h2>2021 Recipient</h2>
-            <p>
-                ISES is very pleased to present this prestigious award to Dr. David Renné.
-            </p>
-            <p>
-                Dr. Dave Renné served as President of the International Solar Energy Society from 2010–2019 and continues to serve on the society’s Board. From 1991 until his retirement in 2012, Dr. Renné managed the solar resource assessment activities at the U.S. National Renewable Energy Laboratory (NREL). In 2012, he formed the consultancy, Dave Renné Renewables. He is dedicated to the concept of urgently achieving 100% renewable energy to meet all of our end use energy requirements as the best solution to the climate crisis.
-            </p>
-        </div>
-        <div class="recipient-image-wrapper">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2021 Recipient" class="recipient-image">
-        </div>
-    </div>
-
-    <div class="recipient-section">
-        <div class="recipient-content">
-            <h2>2019 Recipient</h2>
-            <p>
-                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
-            </p>
-            <p>
-                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
-            </p>
-        </div>
-        <div class="recipient-image-wrapper">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
-        </div>
-    </div>
-    <div class="recipient-section">
-        <div class="recipient-content">
-            <h2>2017 Recipient</h2>
-            <p>
-                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
-            </p>
-            <p>
-                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
-            </p>
-        </div>
-        <div class="recipient-image-wrapper">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
-        </div>
-    </div>
-    <div class="recipient-section">
-        <div class="recipient-content">
-            <h2>2015 Recipient</h2>
-            <p>
-                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
-            </p>
-            <p>
-                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
-            </p>
-        </div>
-        <div class="recipient-image-wrapper">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
-        </div>
-    </div>
-    <div class="recipient-section">
-        <div class="recipient-content">
-            <h2>2013 Recipient</h2>
-            <p>
-                ISES is very pleased to present this prestigious award to Dr. Lawrence L. Kazmerski.
-            </p>
-            <p>
-                Lawrence L. Kazmerski is Emeritus Research Staff Member of the National Renewable Energy Laboratory, Golden, Colorado, having last served as Executive Director Science and Technology Partnerships at NREL 2009–2019. He is currently Research Professor at the University of Colorado Boulder, with the Renewable and Sustainable Energy Institute (RASEI). Kazmerski’s 50-year professional career in solar energy includes serving as the founding Director of the National Center for Photovoltaics (NCPV) for the period 1999 through 2008.
-            </p>
-        </div>
-        <div class="recipient-image-wrapper">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="2019 Recipient" class="recipient-image">
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

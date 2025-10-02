@@ -83,326 +83,69 @@
 </header>
 
 <div class="intro-text">
-    <p>We are proud to introduce the esteemed members of the Board of Directors of the International Solar Energy Society. This dedicated group of volunteers represents a diverse and experienced range of professionals, united by a shared commitment to advancing solar energy innovation and sustainability across the globe.</p>
-    <p>Our board members are experts from various fields, including renewable energy, engineering, policy, research, and environmental advocacy. With a wealth of experience spanning continents, they bring invaluable global perspectives and insights to guide the Society’s mission of accelerating the adoption of solar energy worldwide.</p>
-    <p>As volunteers, each director is driven by a passion for creating a sustainable future and contributing to the growth of solar energy solutions. Together, they lead with a vision to not only meet today’s energy challenges but also to shape a cleaner, greener future for generations to come.</p>
-    <p>We are honored to have such an accomplished and dedicated group of individuals steering our efforts as we continue to champion solar energy as a key to a sustainable, carbon-neutral world.</p>
+    {% for inro in board %}
+        <p>{{ inro.desc }}</p>
+    {% endfor %}
 </div>
 
-<h2 class="section-title">ISES Executive Committee (ExCo)</h2>
+{% for s in ses %}
+    <h2 class="section-title">{{ s.name }}</h2>
+{% endfor %}
 
 <div class="members-grid">
+    {% for grid in member %}
     <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <img src="{{ grid.image.url }}" alt="Fullstack">
         <div class="member-info">
-            <h3>Sardor Mirniyazov</h3>
-            <p>Fullstack</p>
+            <h3>{{ grid.name }}</h3>
+            <p>{{ grid.title }}</p>
             <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                <a href="{{ grid.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <a href="{{ grid.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="{{ grid.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                <a href="{{ grid.mail }}" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
     </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Andreas Hauer</h3>
-            <p>ISES Vice President</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Mr. Chiel Boonstra</h3>
-            <p>Treasurer</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Prof. Michael Leung</h3>
-            <p>Secretary</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Aline Kirsten Vidal de Oliveira</h3>
-            <p>ISES Executive Committee</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Gurleen Kaur</h3>
-            <p>ISES Executive Committee and Young ISES representative</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Prof. Klaus Vajen</h3>
-            <p>ISES Immediate Past President</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
-<h2 class="section-title">Board Members</h2>
+{% for b in bar %}
+    <h2 class="section-title">{{ b.name }}</h2>
+{% endfor %}
 
 <div class="members-grid">
+    {% for c in car %}
     <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <img src="{{ c.image.url }}" alt="Fullstack">
         <div class="member-info">
-            <h3>Prof. Viktoria Martin</h3>
-            <p>ISES President</p>
+            <h3>{{ c.name }}</h3>
+            <p>{{ c.title }}</p>
             <div class="social-links">
-                 <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                 <a href="{{ c.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <a href="{{ c.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="{{ c.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                <a href="{{ c.mail }}" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
     </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Andreas Hauer</h3>
-            <p>ISES Vice President</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Mr. Chiel Boonstra</h3>
-            <p>Treasurer</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Prof. Michael Leung</h3>
-            <p>Secretary</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Aline Kirsten Vidal de Oliveira</h3>
-            <p>ISES Executive Committee</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Gurleen Kaur</h3>
-            <p>ISES Executive Committee and Young ISES representative</p>
-            <div class="social-links">
-                 <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Prof. Klaus Vajen</h3>
-            <p>ISES Immediate Past President</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

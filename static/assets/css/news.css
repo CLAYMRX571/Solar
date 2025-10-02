@@ -306,12 +306,6 @@ body {
   white-space: nowrap;
 }
 
-.container {
-  max-width: 2000px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
 .section-title {
   text-align: center;
   font-size: 2rem;

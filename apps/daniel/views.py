@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
-from .models import Daniel
+from .models import Daniel, Recep
 
 def Danielviews(request):
-    daniel = Daniel.objects.all()  
+    daniel = Daniel.objects.all() 
+    recep = Recep.objects.all() 
 
     context = {
         'daniel': daniel,
+        'recep': recep,
     }
 
     return render(request, 'daniel.html', context)

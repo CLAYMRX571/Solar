@@ -83,109 +83,37 @@
 </header>
 
 <div class="team-intro">
-  <h2>Meet the Headquarters Team at the International Solar Energy Society: Passionate Leaders Driving Change</h2>
-  <p>
-    At the heart of the International Solar Energy Society, our dedicated headquarters team is working tirelessly to push the boundaries of solar energy innovation, advocacy, and education as well as project and event management. With diverse backgrounds and expertise, our team members bring their unique skills and unwavering commitment to the cause, driving our mission forward every day.
-  </p>
-  <p>
-    From research and conference organization to community outreach and project development, the team at our headquarters plays a crucial role in helping shape the future of solar and renewable energy. Together, we work in harmony to build a world powered by clean, renewable energy, and we are proud to have such a passionate group of professionals leading the charge.
-  </p>
-  <p>
-    Each member of our headquarters team is united by a shared passion for renewable energy and the vision of a sustainable future for all. Together, we're making an impact, and we're excited to have you with us on this journey.
-  </p>
-  <p>
-    <strong>Get to know the team more and one our <a href="{% url 'event' %}" target="_blank">upcoming ISES events!</a></strong>
-  </p>
+    {% for ino in team %}
+    <h2>{{ ino.name }}</h2>
+    <p>{{ ino.desc }}</p>
+    <a href="{% url 'event' %}" target="_blank">{{ ino.button }}</a></strong>
+    {% endfor %}
 </div>
 
 <div class="members-grid">
+    {% for grd in cd %}
     <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
+        <img src="{{ grd.image.url }}" alt="Fullstack">
         <div class="member-info">
-            <h3>Sardor Mirniyazov</h3>
-            <p>Fullstack</p>
+            <h3>{{ grd.name }}</h3>
+            <p>{{ grd.title }}</p>
             <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
+                <a href="{{ grd.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <a href="{{ grd.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="{{ grd.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
+                <a href="{{ grd.mail }}" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
     </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Dr. Andreas Hauer</h3>
-            <p>ISES Vice President</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Mr. Chiel Boonstra</h3>
-            <p>Treasurer</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="member-card">
-        <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Fullstack">
-        <div class="member-info">
-            <h3>Prof. Michael Leung</h3>
-            <p>Secretary</p>
-            <div class="social-links">
-                <a href="https://t.me/sanjarivc" target="_blank" rel="noopener noreferrer" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:sardormirniyazov63@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

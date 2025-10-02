@@ -83,81 +83,36 @@
 </header>
 
 <div class="container">
+    {% for con in part %}
     <div class="intro-text">
-        An important strategic activity of the Society is engaging in strategic partnerships with like minded organisations at all levels. ISES works closely with a number of partner organisations around the world, together with our Members and Sections, these partners form a strong global alliance for advancing renewable energy. ISES is also a member and/or founding member of other international organizations.
+     {{ con.desc }}
     </div>
+    {% endfor %}
     <div class="partner-card">
-        <img src="{% static 'assets/img/panels.png' %}" alt="American Council on Renewable Energy" class="partner-logo">
+        {% for ca in cards %}
+        <img src="{{ ca.image.url }}" alt="American Council on Renewable Energy" class="partner-logo">
         <div class="partner-info">
-            <h3 class="partner-title">American Council on Renewable Energy</h3>
+            <h3 class="partner-title">{{ ca.name }}</h3>
             <p class="partner-description">
-            Founded in 2001, the American Council on Renewable Energy national nonprofit organization that unites finance, policy and technology to accelerate the transition to a renewable energy economy.
+            {{ ca.desc }}
             </p>
-            <a href="https://www.acore.org" class="partner-link" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-globe"></i> www.acore.org
+            <a href="{{ ca.link.url }}" class="partner-link" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-globe"></i> {{ ca.button }}
             </a>
         </div>
-    </div>
-
-    <div class="partner-card">
-        <img src="{% static 'assets/img/cost.jpg' %}" alt="Climate Action Network - International" class="partner-logo">
-        <div class="partner-info">
-            <h3 class="partner-title">Climate Action Network - International</h3>
-            <p class="partner-description">
-            The Climate Action Network (CAN) is a worldwide network of over 1100 Non-Governmental Organizations (NGOs) in more than 120 countries, working to promote government and individual action to limit human-induced climate change to ecologically sustainable levels. CAN members work to achieve this goal through information exchange and the coordinated development of NGO strategy on international, regional, and national climate issues. CAN has regional network hubs that coordinate these efforts around the world. CAN members place a high priority on both a healthy environment and development that "meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Commission). CAN's vision is to protect the atmosphere while allowing for sustainable and equitable development worldwide.
-            </p>
-            <a href="https://www.climatenetwork.org" class="partner-link" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-globe"></i> www.climatenetwork.org
-            </a>
-        </div>
-    </div>
-    <div class="partner-card">
-        <img src="{% static 'assets/img/cost.jpg' %}" alt="Climate Action Network - International" class="partner-logo">
-        <div class="partner-info">
-            <h3 class="partner-title">Climate Action Network - International</h3>
-            <p class="partner-description">
-            The Climate Action Network (CAN) is a worldwide network of over 1100 Non-Governmental Organizations (NGOs) in more than 120 countries, working to promote government and individual action to limit human-induced climate change to ecologically sustainable levels. CAN members work to achieve this goal through information exchange and the coordinated development of NGO strategy on international, regional, and national climate issues. CAN has regional network hubs that coordinate these efforts around the world. CAN members place a high priority on both a healthy environment and development that "meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Commission). CAN's vision is to protect the atmosphere while allowing for sustainable and equitable development worldwide.
-            </p>
-            <a href="https://www.climatenetwork.org" class="partner-link" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-globe"></i> www.climatenetwork.org
-            </a>
-        </div>
-    </div>
-    <div class="partner-card">
-        <img src="{% static 'assets/img/panels.png' %}" alt="Climate Action Network - International" class="partner-logo">
-        <div class="partner-info">
-            <h3 class="partner-title">Climate Action Network - International</h3>
-            <p class="partner-description">
-            The Climate Action Network (CAN) is a worldwide network of over 1100 Non-Governmental Organizations (NGOs) in more than 120 countries, working to promote government and individual action to limit human-induced climate change to ecologically sustainable levels. CAN members work to achieve this goal through information exchange and the coordinated development of NGO strategy on international, regional, and national climate issues. CAN has regional network hubs that coordinate these efforts around the world. CAN members place a high priority on both a healthy environment and development that "meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Commission). CAN's vision is to protect the atmosphere while allowing for sustainable and equitable development worldwide.
-            </p>
-            <a href="https://www.climatenetwork.org" class="partner-link" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-globe"></i> www.climatenetwork.org
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
 <div class="container">
-    <h2 class="section-title">Valued partners additional</h2>
+    {% for sect in pord %}
+    <h2 class="section-title">{{ sect.name }}</h2>
     <p class="intro-text">
-        ISES cooperates with a range of organisations at all levels on different activities.
-    </p>
-    <p class="intro-text">
-        Organisations ISES works with include:
-    </p>
+        {{ sect.title }}
     <ul class="partners-list">
-        <li>Energy Access Practitioner Network</li>
-        <li>United Nations and its various sub-organisations such as the UN Environmental Programme (UNEP)</li>
-        <li>International Renewable Energy Agency (IRENA)</li>
-        <li>International Energy Agency (IEA) - in particular the IEA Solar Heating & Cooling Programme</li>
-        <li>European Union</li>
-        <li>World Council for Rewable Energy</li>
-        <li>Renewable Energy Policy Network for the 21st Century - REN 21</li>
-        <li>Universities & Research Institutes</li>
-        <li>Non-governmental organisations</li>
-        <li>Industry and service organisations</li>
-        <li>Governments</li>
+        <li>{{ sect.desc }}</li>
     </ul>
+    {% endfor %}
 </div>
 
 <footer class="footer">

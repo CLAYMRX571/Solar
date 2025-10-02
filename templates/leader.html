@@ -83,225 +83,39 @@
 </header>
 
 <div class="award-container">
+    {% for abs in leader %}
     <div class="award-content">
-        <h2>About the award:</h2>
-        <p>
-            In recognition of the late Dr. Hermann Scheer (1944–2010), this award was introduced and presented for the first time in 2011 to pay tribute to the solar hero whose enormous contribution and vocal political commitment to solar energy were so effective in bringing about energy changes globally. The award is presented to a person who has made significant contributions to the advancement of solar energy policy.
-        </p>
-        <h2>Nomination Process:</h2>
-        <p>
-            Nominations for the award may be made by members of the Society or by groups of members (i.e. ISES National Sections, ISES Committees or other groups) or Non-members and should be supported by appropriate evidence of the contributions of the nominee. Letters of support can be provided by anyone. Self-nominations (neither by individuals or groups) will not be accepted.
-        </p>
-        <div class="notice">
-            The nomination period for the Global Leadership Award 2025 has passed and we will be happy to announce the winner in a few weeks!
-        </div>
+        <h2>{{ abs.name }}</h2>
+        <p></p>
+        <div class="notice">{{ abs.desc }}</div>
     </div>
     <div class="award-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Hermann Scheer" />
+      <img src="{{ abs.image.url }}" alt="Dr. Hermann Scheer" />
     </div>
+    {% endfor %}
 </div>
 
 <div class="recipient-container">
+    {% for hh in cont %}
     <div class="recipient-content">
-        <h1>2025 Recipient</h1>
+        <h1>{{ hh.name }}</h1>
         <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
+            <strong>{{ hh.desc }}</strong>
         </p>
     </div>
-
     <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
+      <img src="{{ hh.image.url }}" alt="Dr. Robert Habeck" />
     </div>
+    {% endfor %}
 </div>
 
 <div class="recipient-container">
+    {% for sd in win %}
     <div class="recipient-content">
-        <h1>2021 Recipient</h1>
-        <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
-        </p>
+        <h2>{{ sd.name }}</h2>
+        <a href="{{ sd.file }}" target="_blank"> {{ sd.desc }}</a>
     </div>
-
-    <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
-    </div>
-</div>
-
-<div class="recipient-container">
-    <div class="recipient-content">
-        <h1>2019 Recipient</h1>
-        <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
-        </p>
-    </div>
-
-    <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
-    </div>
-</div>
-
-<div class="recipient-container">
-    <div class="recipient-content">
-        <h1>2017 Recipient</h1>
-        <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
-        </p>
-    </div>
-
-    <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
-    </div>
-</div>
-
-<div class="recipient-container">
-    <div class="recipient-content">
-        <h1>2015 Recipient</h1>
-        <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
-        </p>
-    </div>
-
-    <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
-    </div>
-</div>
-
-<div class="recipient-container">
-    <div class="recipient-content">
-        <h1>2013 Recipient</h1>
-        <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
-        </p>
-    </div>
-
-    <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
-    </div>
-</div>
-
-<div class="recipient-container">
-    <div class="recipient-content">
-        <h1>2011 Recipient</h1>
-        <p>
-            <strong>The ISES Global Leadership Award in Advancing Solar Energy Policy is presented to Dr. Robert Habeck, former Federal Minister for Economic Affairs and Climate Action and former Vice Chancellor of Germany.</strong>
-        </p>
-        <p>
-            Dr. Habeck has been a leading figure in German politics representing Alliance 90/The Greens since the early 2000s. From 2002 to 2018, he served at the state level in Schleswig-Holstein, where he held positions as Deputy Prime Minister and Minister for Energy, Agriculture, the Environment, Nature, and Digitalisation.
-        </p>
-        <p>
-            In 2018, Dr. Habeck became co-leader of Alliance 90/The Greens. From 2021 to 2024, he was a central member of the German federal government, serving as Federal Minister for Economic Affairs and Climate Action and as Vice Chancellor.
-        </p>
-        <p>
-            During his tenure, Dr. Habeck played a pivotal role in advancing Germany’s renewable energy transition. Under his leadership, the 2022 “Easter Package” introduced a series of ambitious measures to accelerate the deployment of solar and wind energy across the country.
-        </p>
-        <p>
-            Notably, Dr. Habeck established the classification of renewable energy projects as being of <em>“overriding public interest”</em>—a landmark achievement that significantly strengthened the legal and policy framework for renewables in Germany. This milestone aligns directly with the ISES mission: 100% renewable energy for all.
-        </p>
-        <p>
-            These accomplishments were achieved amid the challenges of the energy crisis triggered by Russia’s war of aggression against Ukraine — making his leadership all the more commendable and deserving of this recognition.
-        </p>
-    </div>
-
-    <div class="recipient-image">
-      <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Dr. Robert Habeck" />
-    </div>
-</div>
-
-<div class="recipient-container">
-    <div class="recipient-content">
-        <h2>Running list of winners</h2>
-        <a href="{% static 'assets/file/job.pdf' %}" target="_blank"> Please find a list of all winners here.</a>
-    </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

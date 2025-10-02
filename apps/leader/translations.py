@@ -1,6 +1,14 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Leader
+from .models import Leader, Cont, Win
 
 @register(Leader)
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('name', 'more_name', 'desc', 'title', 'title_desc', 'file_name',)
+    fields = ('name', 'desc',)
+
+@register(Cont)
+class CategoryTranslationOptions(TranslationOptions):
+    fields = ('name', 'desc',)
+
+@register(Win)
+class CategoryTranslationOptions(TranslationOptions):
+    fields = ('name', 'desc',)

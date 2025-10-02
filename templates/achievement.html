@@ -83,132 +83,31 @@
 </header>
 
 <div class="award-container">
-  <h2>About the Award</h2>
-  <p>
-    The Achievement through Action (Christopher A. Weeks Memorial) Award was presented for the first time in 1983. It comprises a certificate and a cash prize, derived from funds donated for the purpose by Mrs. Marta Weeks. The Award is presented to an individual, a group, or a corporate body that has made an important contribution to the harnessing of solar energy for practical use or is proposing a new concept, development or product for the same purpose.
-  </p>
-  <h2>Nomination Process:</h2>
-  <p>
-    Nominations for the award may be made by members of the Society or by groups of members (i.e. ISES National Sections, ISES Committees or other groups) or Non-members and should be supported by appropriate evidence of the contributions of the nominee. Letters of support can be provided by anyone. Self-nominations (neither by individuals or groups) will not be accepted.
-  </p>
-  <p>
-    <strong>The winner of the 2025 Achievement through Action Award has been announced - meet the winner below!</strong>
-  </p>
-  <p>
-    The next Achievement through Action Award will be awarded in 2027.
-  </p>
+  {% for a in achievement %}
+    <h2>{{ a.name }}</h2>
+    <p> {{ a.desc }}</p>
+  {% endfor %}
 </div>
 
 <div class="recipient-container">
+  {% for n in recept %}
   <div class="recipient-content">
-    <h2>2025 Recipient</h2>
-    <p>
-      Harish Hande, the founder and Chief Executive of SELCO Foundation, is a renewable energy entrepreneur with over 30 years of grassroots experience in meeting the energy needs of underserved populations. He is also the founder of SELCO India – a pioneering last-mile rural energy enterprise based in India since the early nineties.
-    </p>
-    <p>
-      SELCO sees the pressing need to develop a fertile environment to enhance sustainable energy access solutions for the poor. This energy access increases incomes, improves quality of life, and alleviates poverty, turning energy consumers into asset owners. Last-mile energy solutions have clear commercial viability, and SELCO works to combine technical and non-technical aspects focused on alleviating poverty in a sustainable manner.
-    </p>
-    <p>
-      Today, SELCO is an umbrella of organizations, each tasked to address gaps in the energy access ecosystem. SELCO India established in 1995 runs grassroots operations which sell, install, and service decentralized energy solutions like solar lights systems for households, institutions, digital education, livelihood appliances etc. financed by local financial institutions. SELCO Foundation established in 2010 is an open-source innovation research lab for replicable social innovations across areas: livelihoods, education, and health. SELCO’s incubation program created in 2012 nurtures and catalyzes aspiring clean energy enterprises that deploy and maintain sustainable solutions for underserved communities. Finally SELCO Fund registered in 2016 is an impact fund that seeks to deploy patient capital such as equity or debt to last mile energy access enterprises. SELCO operates at every level of the system and at every point in the supply chain, to build an ecosystem that increases accessibility, affordability, and appropriate renewable energy solutions for the poor. Collectively SELCO has so far impacted over 6 million people.
-    </p>
-    <p>
-      Harish, graduated from the Indian Institute of Technology, Kharagpur and holds a Masters and PhD from University of Massachusetts, USA. In recognition of his vision and the efforts of SELCO, he has been awarded national and international awards including the reputed Zayed Future Energy Prize in 2018 and the Skoll Award for Social Entrepreneurship also in 2018. In 2011, Harish was conferred the Ramon Magsaysay Award in recognition of his vision to catalyse development outcomes via sustainable energy.
-    </p>
+    <h2>{{ n.name }}</h2>
+    <p>{{ n.desc }}</p>
   </div>
   <div class="recipient-image-wrapper">
-    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
+    <img src="{{ n.image.url }}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
   </div>
+  {% endfor %}
 </div>
 
 <div class="recipient-container">
+  {% for s in past %}
   <div class="recipient-content">
-    <h2>2019 Recipient</h2>
-    <p>
-      Harish Hande, the founder and Chief Executive of SELCO Foundation, is a renewable energy entrepreneur with over 30 years of grassroots experience in meeting the energy needs of underserved populations. He is also the founder of SELCO India – a pioneering last-mile rural energy enterprise based in India since the early nineties.
-    </p>
-    <p>
-      SELCO sees the pressing need to develop a fertile environment to enhance sustainable energy access solutions for the poor. This energy access increases incomes, improves quality of life, and alleviates poverty, turning energy consumers into asset owners. Last-mile energy solutions have clear commercial viability, and SELCO works to combine technical and non-technical aspects focused on alleviating poverty in a sustainable manner.
-    </p>
-    <p>
-      Today, SELCO is an umbrella of organizations, each tasked to address gaps in the energy access ecosystem. SELCO India established in 1995 runs grassroots operations which sell, install, and service decentralized energy solutions like solar lights systems for households, institutions, digital education, livelihood appliances etc. financed by local financial institutions. SELCO Foundation established in 2010 is an open-source innovation research lab for replicable social innovations across areas: livelihoods, education, and health. SELCO’s incubation program created in 2012 nurtures and catalyzes aspiring clean energy enterprises that deploy and maintain sustainable solutions for underserved communities. Finally SELCO Fund registered in 2016 is an impact fund that seeks to deploy patient capital such as equity or debt to last mile energy access enterprises. SELCO operates at every level of the system and at every point in the supply chain, to build an ecosystem that increases accessibility, affordability, and appropriate renewable energy solutions for the poor. Collectively SELCO has so far impacted over 6 million people.
-    </p>
-    <p>
-      Harish, graduated from the Indian Institute of Technology, Kharagpur and holds a Masters and PhD from University of Massachusetts, USA. In recognition of his vision and the efforts of SELCO, he has been awarded national and international awards including the reputed Zayed Future Energy Prize in 2018 and the Skoll Award for Social Entrepreneurship also in 2018. In 2011, Harish was conferred the Ramon Magsaysay Award in recognition of his vision to catalyse development outcomes via sustainable energy.
-    </p>
+    <h2>{{ s.name }}</h2>
+    <a href="{{ s.file }}" target="_blank">{{ s.desc }}</a>
   </div>
-  <div class="recipient-image-wrapper">
-    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
-  </div>
-</div>
-
-<div class="recipient-container">
-  <div class="recipient-content">
-    <h2>2017 Recipient</h2>
-    <p>
-      Harish Hande, the founder and Chief Executive of SELCO Foundation, is a renewable energy entrepreneur with over 30 years of grassroots experience in meeting the energy needs of underserved populations. He is also the founder of SELCO India – a pioneering last-mile rural energy enterprise based in India since the early nineties.
-    </p>
-    <p>
-      SELCO sees the pressing need to develop a fertile environment to enhance sustainable energy access solutions for the poor. This energy access increases incomes, improves quality of life, and alleviates poverty, turning energy consumers into asset owners. Last-mile energy solutions have clear commercial viability, and SELCO works to combine technical and non-technical aspects focused on alleviating poverty in a sustainable manner.
-    </p>
-    <p>
-      Today, SELCO is an umbrella of organizations, each tasked to address gaps in the energy access ecosystem. SELCO India established in 1995 runs grassroots operations which sell, install, and service decentralized energy solutions like solar lights systems for households, institutions, digital education, livelihood appliances etc. financed by local financial institutions. SELCO Foundation established in 2010 is an open-source innovation research lab for replicable social innovations across areas: livelihoods, education, and health. SELCO’s incubation program created in 2012 nurtures and catalyzes aspiring clean energy enterprises that deploy and maintain sustainable solutions for underserved communities. Finally SELCO Fund registered in 2016 is an impact fund that seeks to deploy patient capital such as equity or debt to last mile energy access enterprises. SELCO operates at every level of the system and at every point in the supply chain, to build an ecosystem that increases accessibility, affordability, and appropriate renewable energy solutions for the poor. Collectively SELCO has so far impacted over 6 million people.
-    </p>
-    <p>
-      Harish, graduated from the Indian Institute of Technology, Kharagpur and holds a Masters and PhD from University of Massachusetts, USA. In recognition of his vision and the efforts of SELCO, he has been awarded national and international awards including the reputed Zayed Future Energy Prize in 2018 and the Skoll Award for Social Entrepreneurship also in 2018. In 2011, Harish was conferred the Ramon Magsaysay Award in recognition of his vision to catalyse development outcomes via sustainable energy.
-    </p>
-  </div>
-  <div class="recipient-image-wrapper">
-    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
-  </div>
-</div>
-
-<div class="recipient-container">
-  <div class="recipient-content">
-    <h2>2015 Recipient</h2>
-    <p>
-      Harish Hande, the founder and Chief Executive of SELCO Foundation, is a renewable energy entrepreneur with over 30 years of grassroots experience in meeting the energy needs of underserved populations. He is also the founder of SELCO India – a pioneering last-mile rural energy enterprise based in India since the early nineties.
-    </p>
-    <p>
-      SELCO sees the pressing need to develop a fertile environment to enhance sustainable energy access solutions for the poor. This energy access increases incomes, improves quality of life, and alleviates poverty, turning energy consumers into asset owners. Last-mile energy solutions have clear commercial viability, and SELCO works to combine technical and non-technical aspects focused on alleviating poverty in a sustainable manner.
-    </p>
-    <p>
-      Today, SELCO is an umbrella of organizations, each tasked to address gaps in the energy access ecosystem. SELCO India established in 1995 runs grassroots operations which sell, install, and service decentralized energy solutions like solar lights systems for households, institutions, digital education, livelihood appliances etc. financed by local financial institutions. SELCO Foundation established in 2010 is an open-source innovation research lab for replicable social innovations across areas: livelihoods, education, and health. SELCO’s incubation program created in 2012 nurtures and catalyzes aspiring clean energy enterprises that deploy and maintain sustainable solutions for underserved communities. Finally SELCO Fund registered in 2016 is an impact fund that seeks to deploy patient capital such as equity or debt to last mile energy access enterprises. SELCO operates at every level of the system and at every point in the supply chain, to build an ecosystem that increases accessibility, affordability, and appropriate renewable energy solutions for the poor. Collectively SELCO has so far impacted over 6 million people.
-    </p>
-    <p>
-      Harish, graduated from the Indian Institute of Technology, Kharagpur and holds a Masters and PhD from University of Massachusetts, USA. In recognition of his vision and the efforts of SELCO, he has been awarded national and international awards including the reputed Zayed Future Energy Prize in 2018 and the Skoll Award for Social Entrepreneurship also in 2018. In 2011, Harish was conferred the Ramon Magsaysay Award in recognition of his vision to catalyse development outcomes via sustainable energy.
-    </p>
-  </div>
-  <div class="recipient-image-wrapper">
-    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
-  </div>
-</div>
-
-<div class="recipient-container">
-  <div class="recipient-content">
-    <h2>2013 Recipient</h2>
-    <p>
-      Harish Hande, the founder and Chief Executive of SELCO Foundation, is a renewable energy entrepreneur with over 30 years of grassroots experience in meeting the energy needs of underserved populations. He is also the founder of SELCO India – a pioneering last-mile rural energy enterprise based in India since the early nineties.
-    </p>
-    <p>
-      SELCO sees the pressing need to develop a fertile environment to enhance sustainable energy access solutions for the poor. This energy access increases incomes, improves quality of life, and alleviates poverty, turning energy consumers into asset owners. Last-mile energy solutions have clear commercial viability, and SELCO works to combine technical and non-technical aspects focused on alleviating poverty in a sustainable manner.
-    </p>
-    <p>
-      Today, SELCO is an umbrella of organizations, each tasked to address gaps in the energy access ecosystem. SELCO India established in 1995 runs grassroots operations which sell, install, and service decentralized energy solutions like solar lights systems for households, institutions, digital education, livelihood appliances etc. financed by local financial institutions. SELCO Foundation established in 2010 is an open-source innovation research lab for replicable social innovations across areas: livelihoods, education, and health. SELCO’s incubation program created in 2012 nurtures and catalyzes aspiring clean energy enterprises that deploy and maintain sustainable solutions for underserved communities. Finally SELCO Fund registered in 2016 is an impact fund that seeks to deploy patient capital such as equity or debt to last mile energy access enterprises. SELCO operates at every level of the system and at every point in the supply chain, to build an ecosystem that increases accessibility, affordability, and appropriate renewable energy solutions for the poor. Collectively SELCO has so far impacted over 6 million people.
-    </p>
-    <p>
-      Harish, graduated from the Indian Institute of Technology, Kharagpur and holds a Masters and PhD from University of Massachusetts, USA. In recognition of his vision and the efforts of SELCO, he has been awarded national and international awards including the reputed Zayed Future Energy Prize in 2018 and the Skoll Award for Social Entrepreneurship also in 2018. In 2011, Harish was conferred the Ramon Magsaysay Award in recognition of his vision to catalyse development outcomes via sustainable energy.
-    </p>
-  </div>
-  <div class="recipient-image-wrapper">
-    <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
-  </div>
-</div>
-
-<div class="recipient-container">
-  <div class="recipient-content">
-    <h2>All past recipients</h2>
-    <a href="{% static 'assets/file/job.pdf' %}" target="_blank"> Please find a list of all past recipients here.</a>
-  </div>
+  {% endfor %}
 </div>
 
 <footer class="footer">

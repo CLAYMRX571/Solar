@@ -83,37 +83,33 @@
 </header>
 
 <div class="section">
+    {% for new in award %}
     <p>
-      Since 1975, the International Solar Energy Society, ISES, has been recognizing individuals and organizations that have made exceptional contributions to the advancement of solar energy applications and the broader renewable energy transition.
-      Every two years, ISES celebrates excellence in solar energy through the prestigious ISES Awards, honoring groundbreaking work that is helping to create a world powered by renewable energy and ensuring accessible energy for all. Additionally, ISES, in collaboration with Elsevier, presents the <strong>Renewable Transformation Challenge</strong> awards to further recognize innovative achievements driving the global shift to sustainable energy solutions.</p>
-      <p><strong>The nomination period for the ISES Awards 2025 has passed and we will be happy to announce the winners in a few weeks!</strong>
+      {{ new.desc }}
     </p>
+    {% endfor %}
 </div>
 
 <div class="awards-container">
+    {% for con in link %}
     <div class="awards-content">
-        <h3>The ISES awards are:</h3>
+        <h3>{{ con.name }}</h3>
         <ul class="awards-list">
-            <li><a href="{% url 'award' %}">Farrington Daniels Award</a></li>
-            <li><a href="{% url 'achievement' %}" target="_blank">Achievement through Action Award in memory of Christopher A. Weeks</a></li>
-            <li><a href="{% url 'leader' %}" target="_blank">ISES Global Leadership Award in Advancing Solar Energy Policy in honour of Hermann Scheer</a></li>
-            <li><a href="{% url 'fellow' %}" target="_blank">ISES Fellows</a></li>
-            <li><a href="{% url 'challenge' %}" target="_blank">Elsevier and ISES "Renewable Transformation Challenge"</a></li>
-            <li><a href="{% url 'journal' %}" target="_blank">Solar Energy Journal Best Paper Award Associate Editor of the Year Award</a></li>
-        </ul>
-
-        <h3>Other and Previous Awards</h3>
-        <ul class="awards-list">
-            <li><a href="{% url 'award' %}">Karl W. Böer Solar Energy Award</a></li>
-            <li><a href="{% url 'award' %}">ISES Special Service Award</a></li>
+            <li><a href="{% url 'award' %}">{{ con.awards }}</a></li>
+            <li><a href="{% url 'achievement' %}" target="_blank">{{ con.achieve }}</a></li>
+            <li><a href="{% url 'leader' %}" target="_blank">{{ con.lead }}</a></li>
+            <li><a href="{% url 'fellow' %}" target="_blank">{{ con.fell }}</a></li>
+            <li><a href="{% url 'challenge' %}" target="_blank">{{ con.chall }}</a></li>
+            <li><a href="{% url 'journal' %}" target="_blank">{{ con.jour }}</a></li>
         </ul>
     </div>
 
     <div class="trophy-wrapper">
         <div class="trophy-bg">
-            <img src="{% static 'assets/img/award.png' %}" alt="Trophy" class="trophy-img">
+            <img src="{{ con.image.url }}" alt="Trophy" class="trophy-img">
         </div>
     </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

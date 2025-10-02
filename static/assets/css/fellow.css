@@ -372,12 +372,6 @@ body {
   display: inline-block;
 }
 
-.underline {
-  width: 50px;
-  height: 4px;
-  margin-bottom: 20px;
-}
-
 .fellow-content {
   display: flex;
   gap: 20px;

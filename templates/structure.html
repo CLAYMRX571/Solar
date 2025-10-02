@@ -83,39 +83,28 @@
 </header>
 
 <div class="intro-text">
-        <p>The members of ISES form the foundation on which the ISES vision, goals and activities are built. From all over the world, our members form a global community unified through a common goal - to advance the transition to a 100% renewable energy world.</p>
+    {% for int in structure %}
+    <p>{{ int.desc }}</p>
+    {% endfor %}
+</div>
+
+<div class="two-column">
+    {% for two in column %}
+    <div class="column">
+        <p>{{ two.desc }}</p>
+        <a href="{% url 'board' %}" class="btn">{{ two.button }}</a>
     </div>
+    {% endfor %}
+</div>
 
-    <div class="two-column">
-        <div class="column">
-            <p>ISES is governed by the Board of Directors, who are elected by the membership. The Board of Directors elects the Executive Committee which works closely with the Headquarters-Secretariat to implement the decisions of the Board and carry out the Society’s activities.</p>
-            <a href="{% url 'board' %}" class="btn">ISES Board of Directors</a>
-        </div>
-        <div class="column">
-            <p>The ISES Sections are organisations working at the national or regional level and represent the international organisation at this level. Members are encouraged to be involved with the Sections in their area.</p>
-            <a href="{% url 'contact' %}" class="btn">ITM Contacts</a>
-        </div>
+<div class="three-column">
+    {% for three in card %}
+    <div class="card">
+        <h2>{{ three.name }}</h2>
+        <p>{{ three.desc }}</p>
+        <a href="{% url 'board' %}" class="btn">{{ three.button }}</a>
     </div>
-
-    <div class="three-column">
-        <div class="card">
-            <h2>ISES Board of Directors</h2>
-            <p>The ISES Board of Directors meet regularly, either at ISES conferences or at the ISES headquarters in Freiburg, Germany. During these meetings, the Board of Directors discuss the strategic work plan for the years ahead, the budget and the leadership of the Society. The Board of Directors also constantly evaluate the role the Society is playing in the renewable energy transformation and how best to create pathways towards a 100% renewable energy future.</p>
-            <a href="{% url 'board' %}" class="btn">ISES Board of Directors</a>
-        </div>
-
-        <div class="card">
-            <h2>ISES Structure</h2>
-            <p>The ISES Structure and Collaborating Groups are organisations working at the national or regional level and members are encouraged to be involved with these groups in their area. Please contact individual Country Contacts for more information on ISES related activities at the country level.</p>
-            <a href="{% url 'structure' %}" class="btn">ISES Structure</a>
-        </div>
-
-        <div class="card">
-            <h2>ISES Bylaws</h2>
-            <p>The ISES bylaws, is a set of rules established by ISES so as to regulate itself. ISES operates elections, membership, activities and meetings according to the ISES Bylaws. Find the ISES Bylaws, edited in May 2023 <a href="#">here</a>.</p>
-            <a href="{% url 'about' %}" class="btn">Learn more about ISES elections</a>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">
