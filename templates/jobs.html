@@ -83,109 +83,110 @@
 </header>
 
 <header>
-    <h1 style="text-align:center;">Conference and Society Manager (f/m/d)</h1>
+    {% for h in jobs %}
+    <h1 style="text-align:center;">{{ h.name }}</h1>
     <div class="job-meta" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-weight: bold; text-align: center;">
-        <div><strong>Application Deadline:</strong> <span class="deadline">30 September 2025</span></div>
-        <div><strong>Location:</strong> Freiburg, Germany</div>
+        <div><span class="deadline">{{ h.deadline }}</span></div>
+        <div>{{ h.location }}</div>
     </div>
+    {% endfor %}
 </header>
 
 <section id="about-role">
-    <h2>About the Role</h2>
-    <p>The Innovation technology center (ITM) is seeking a dynamic Conference and Society Manager to join our small, dedicated headquarters team. This role combines strategic society management with hands-on organisation of high-quality international conferences (EuroSun and the Solar World Congress). We are looking for someone with excellent communication skills, experience working with diverse international stakeholders, and a passion for renewable energy. You will report directly to the Board of Directors, lead conference planning, secure sponsorships, and contribute to shaping the Society’s strategic direction.</p>
+    {% for t in abs %}
+    <h2>{{ t.name }}</h2>
+    <p>{{ t.desc }}</p>
+    {% endfor %}
 </section>
 
 <section id="responsibilities">
-    <h2>Key Responsibilities</h2>
+    {% for n in res %}
+    <h2>{{ n.name }}</h2>
     <ul>
-        <strong>Society Management</strong> – Support day-to-day operations, prepare reports, organize Society awards, and coordinate meetings with the Board of Directors, Executive Committee, and ISES committees.
-        <strong>Conference Leadership</strong> – Oversee all aspects of EuroSun and the Solar World Congress, including budgeting, concept development, stakeholder management, sponsorship acquisition, and on-site coordination.
-        <strong>Webinars & Online Events</strong> – Organise and manage ISES online events.
-        <strong>Funding & Partnerships</strong> – Secure sponsorships and other funding sources; manage relationships with strategic partners, publishers, service providers, and conference hosts.
+        <strong>{{ n.desc }}</strong>
     </ul>
+    {% endfor %}
 </section>
 
 <section id="looking-for"><br>
-    <h2>What We're Looking For</h2>
+    {% for l in look %}
+    <h2>{{ l.name }}</h2>
     <ul>
-        <strong>Experience:</strong> Minimum 10 years of professional experience, ideally in non-profit, conference management, membership organisations, or renewable energy sectors.
-        <strong>Languages:</strong> Excellent in English and German (spoken and written).
-        <strong>Skills:</strong> Strong organisational abilities, independent work style, stakeholder engagement, and budget management.
-        <strong>Knowledge:</strong> Familiarity with renewable energy, sustainability, or environmental topics is an asset.
+        <strong>{{ l.desc }}</strong>
     </ul>
+    {% endfor %}
 </section>
 
 <section id="we-offer">
-    <h2>What We Offer</h2>
+    {% for we in offer %}
+    <h2>{{ we.name }}</h2>
     <ul>
-      32-40 hours per week with flexible working hours. Possibility for partly remote work after probation period.
-      Permanent position (must be eligible to work in Germany). Competitive salary based on experience and qualifications.
-      Six weeks paid annual leave. Moderate international travel.
-      A friendly, family-oriented, and collaborative work environment at the ISES Headquarters in the historic Villa Tannheim, Freiburg.
+       {{ we.desc }}
     </ul>
-</section>
-
-<section id="about-itm">
-    <h2>About ITM</h2>
-    <p>The International Solar Energy Society is a global non-profit working for 100% renewable energy for all. We promote solar energy research, provide scientific research collaboration, and foster energy education worldwide. Our activities include scientific journals, international congresses and conferences, webinars, and publications supporting the global energy transformation.</p>
+    {% endfor %}
 </section>
 
 <section id="how-to-apply">
-    <h2>How to Apply</h2>
-    <p>Send your cover letter and CV (including contact details for at least two references) in English to <a href="mailto:itm.mchj@itm-llc.uz" style="color: var(--accent); font-weight: bold;">itm.mch@itm-llc.uz</a></p>
+    {% for app in apply %}
+    <h2>{{ app.name }}</h2>
+    <p>{{ app.desc }}</p>
+    {% endfor %}
 </section>
 
 <div class="info">
-    <h3>Contact:</h3>
-    <p>Dr. Andreas Hauer</p>
-    <p>ISES Vice President</p>
-    <p>ISES Headquarters — <a href="mailto:itm.mchj@itm-llc.uz" style="color: var(--accent);" target="_blank">itm.mchj@itm-llc.uz</a></p>
+    {% for i in info %}
+    <h3>{{ i.name }}</h3>
+    <p>{{ i.desc }}</p>
+    <a href="mailto:itm.mchj@itm-llc.uz" style="color: var(--accent);" target="_blank">{{ i.mail }}</a></p>
+    {% endfor %}
 </div>
 
 <div class="foot">
-    <p>ISES is committed to equality, diversity, and an inclusive renewable energy transition — we welcome applicants from all backgrounds.</p>
-    <p>Interested in sharing this job opportunity? <a href="{% static 'assets/file/job.pdf' %}" style="color: var(--accent);" target="_blank">Download it here</a> and share it with your contacts!</p>
+    {% for f in foot %}
+    <p>{{ f.desc }}</p>
+    <a href="{{ f.file.url }}" style="color: var(--accent);" target="_blank">{{ f.button }}</a>
+    {% endfor %}
 </div>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
-            <h3>About</h3>
-            <p>ITM smart panel</p>
+            <h3>{% trans 'About' %}</h3>
+            <p>{% trans 'ITM smart panel' %}</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/InnovationTechnologiesCenter"><i class="fab fa-facebook"></i></a>
-                <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
-                <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://itm.uz/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
         <div class="footer-column">
-            <h3>What we do</h3>
+            <h3>{% trans 'What we do' %}</h3>
             <ul>
-                <li><a href="{% url 'award' %}"> Award </a></li>
-                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
-                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+                <li><a href="{% url 'award' %}"> {% trans 'Award' %} </a></li>
+                <li><a href="{% url 'daniel' %}"> {% trans 'Daniel' %} </a></li>
+                <li><a href="{% url 'webinar' %}"> {% trans 'Webinar' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Who we are</h3>
+            <h3>{% trans 'Who we are' %}</h3>
             <ul>
-                <li><a href="{% url 'about' %}"> About </a></li>
-                <li><a href="{% url 'structure' %}"> Structure </a></li>
-                <li><a href="{% url 'board' %}"> Board </a></li>
-                <li><a href="{% url 'team' %}"> Team </a></li>
+                <li><a href="{% url 'about' %}"> {% trans 'About' %} </a></li>
+                <li><a href="{% url 'structure' %}"> {% trans 'Structure' %} </a></li>
+                <li><a href="{% url 'board' %}"> {% trans 'Board' %} </a></li>
+                <li><a href="{% url 'team' %}"> {% trans 'Team' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Contact</h3>
+            <h3>{% trans 'Contact' %}</h3>
             <div class="contact-info">
                 <div>
                     <i class="fas fa-home"></i>
-                    <span>Tashkent city, Almazar district</span>
+                    <span>{% trans 'Tashkent city, Almazar district' %}</span>
                 </div>
                 <div>
                     <i class="fas fa-envelope"></i>
@@ -197,7 +198,7 @@
                 </div>
                 <div>
                     <i class="fas fa-clock"></i>
-                    <span>Mon-Sat: 8:30-19:00</span>
+                    <span>{% trans 'Mon-Sat: 8:30-19:00' %}</span>
                 </div>
             </div>
         </div>

@@ -18,16 +18,36 @@ class Home(models.Model):
     def __str__(self):
         return self.name
     
-class Latest(models.Model):
-    category_name = models.CharField(max_length=100)
-    browse_link_name = models.CharField(max_length=100)
-    latest_image = models.ImageField(upload_to='latest', blank=True, null=True)
-    latest_title = models.CharField(max_length=200)
-    latest_date = models.DateTimeField(auto_now_add=True)
-    latest_desc = models.TextField()
+class Messages(models.Model):
+    name = models.CharField(max_length=200)
+    title = models.CharField(max_length=50)
+    desc = models.TextField()
+    image = models.ImageField(upload_to='message/', blank=True, null=True)
+    button = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.category_name
+        return self.name
     
+class Latest(models.Model):
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    desc = models.TextField()
+    image = models.ImageField(upload_to='latest', blank=True, null=True)
+    button = models.CharField(max_length=100)
+
     def __str__(self):
-        return self.latest_date.strftime("%d-%m-%y")
+        return self.name
+    
+class Slide(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='members', blank=True, null=True)
+
+    def __str_(self):
+        return self.name
+    
+class Slides(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='part', blank=True, null=True)
+
+    def __str_(self):
+        return self.name

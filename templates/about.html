@@ -83,75 +83,70 @@
 </header>
 
 <div class="container">
+    {% for vision in about %}
     <section class="vision-section">
-        <img src="{% static 'assets/img/itm.jpg' %}" alt="Vision Image" class="vision-image">
-        <h1>Vision</h1>
+        <img src="{{ vision.image.url }}" alt="Vision Image" class="vision-image">
+        <h1>{{ vision.name }}</h1>
         <div class="vision-text">
-            <p>For over 60 years the members of The International Solar Energy Society (ISES) have undertaken the product research that has helped the renewable energy industry to grow. ISES, through its knowledge sharing and community building programs, helps its global membership provide the technical answers to accelerate the transformation to 100% renewable energy and thereby achieve the following vision: The International Solar Energy Society (ISES) envisions a world with 100% renewable energy for everyone used wisely and efficiently.</p>
+            <p>{{ vision.desc }}</p>
         </div>
     </section>
+    {% endfor %}
 
     <section class="key-advocacy">
-        <h2>Key advocacy role</h2>
+        {% for k in key %}
+        <h2>{{ k.name }}</h2>
         <div class="two-columns">
-            <div class="column">
-                <p>ISES is the largest international solar organization, with extensive membership worldwide. ISES has members in more than 110 countries, and Global contacts and partners in over 50 countries with thousands of associate members, and almost 100 company and institutional members throughout the world. Young ISES, a network of students and young professional ISES members, is now connecting young solar professionals worldwide.</p>
-                <p>ISES has a track record of strongly supporting the solar industry, helping shape public opinion through education and outreach activities and providing informed comment on global issues.</p>
+            <div class="column">{{ k.desc }}</p>
             </div>
             <div class="column">
-                <h3>ISES advocates</h3>
-                <span class="checkmark">✔</span> Knowledge sharing on renewable energy and energy efficiency technologies<br>
-                <span class="checkmark">✔</span> Universal energy access, including:<br>
-                <span class="checkmark">✔</span> Decentralized energy systems<br>
-                <span class="checkmark">✔</span> Smart grids<br>
-                <span class="checkmark">✔</span> Village and community power<br>
-                <span class="checkmark">✔</span> Renewable systems integration<br>
-                <span class="checkmark">✔</span> International cooperation<br>
-                <span class="checkmark">✔</span> Comprehensive assessments/roadmaps<br>
+                <h3>{{ k.title }}</h3>
+                <span class="checkmark">{{ k.ches }}</span>
             </div>
         </div>
+        {% endfor %}
     </section>
 </div>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
-            <h3>About</h3>
-            <p>ITM smart panel</p>
+            <h3>{% trans 'About' %}</h3>
+            <p>{% trans 'ITM smart panel' %}</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/InnovationTechnologiesCenter"><i class="fab fa-facebook"></i></a>
-                <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
-                <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://itm.uz/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
         <div class="footer-column">
-            <h3>What we do</h3>
+            <h3>{% trans 'What we do' %}</h3>
             <ul>
-                <li><a href="{% url 'award' %}"> Award </a></li>
-                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
-                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+                <li><a href="{% url 'award' %}"> {% trans 'Award' %} </a></li>
+                <li><a href="{% url 'daniel' %}"> {% trans 'Daniel' %} </a></li>
+                <li><a href="{% url 'webinar' %}"> {% trans 'Webinar' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Who we are</h3>
+            <h3>{% trans 'Who we are' %}</h3>
             <ul>
-                <li><a href="{% url 'about' %}"> About </a></li>
-                <li><a href="{% url 'structure' %}"> Structure </a></li>
-                <li><a href="{% url 'board' %}"> Board </a></li>
-                <li><a href="{% url 'team' %}"> Team </a></li>
+                <li><a href="{% url 'about' %}"> {% trans 'About' %} </a></li>
+                <li><a href="{% url 'structure' %}"> {% trans 'Structure' %} </a></li>
+                <li><a href="{% url 'board' %}"> {% trans 'Board' %} </a></li>
+                <li><a href="{% url 'team' %}"> {% trans 'Team' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Contact</h3>
+            <h3>{% trans 'Contact' %}</h3>
             <div class="contact-info">
                 <div>
                     <i class="fas fa-home"></i>
-                    <span>Tashkent city, Almazar district</span>
+                    <span>{% trans 'Tashkent city, Almazar district' %}</span>
                 </div>
                 <div>
                     <i class="fas fa-envelope"></i>
@@ -163,7 +158,7 @@
                 </div>
                 <div>
                     <i class="fas fa-clock"></i>
-                    <span>Mon-Sat: 8:30-19:00</span>
+                    <span>{% trans 'Mon-Sat: 8:30-19:00' %}</span>
                 </div>
             </div>
         </div>

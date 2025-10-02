@@ -3,4 +3,4 @@ from .models import Contact
 
 @register(Contact)
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('name', 'desc', 'adverb_desc', 'adverb_more',)
+    fields = ('name', 'address',)

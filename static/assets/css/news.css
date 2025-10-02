@@ -380,7 +380,7 @@ body {
 .read-more-btn {
   display: inline-flex;
   align-items: center;
-  background: #ff0000; /* Qizil rang — rasmdagidek */
+  background: red;
   color: white;
   padding: 6px 14px;
   border-radius: 4px;
@@ -389,10 +389,6 @@ body {
   font-weight: 600;
   transition: background 0.2s ease;
   align-self: flex-start;
-}
-
-.read-more-btn:hover {
-  background: #cc0000;
 }
 
 .pagination {
@@ -418,17 +414,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.pagination a:hover {
+.pagination .active {
   color: black;
-}
-
-.pagination .current {
-  background: black;
-  color: black;
-  pointer-events: none;
-}
-
-.pagination .disabled {
-  color: black;
-  pointer-events: none;
+  font-weight: bold;
 }

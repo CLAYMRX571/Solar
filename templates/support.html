@@ -135,42 +135,42 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
-            <h3>About</h3>
-            <p>ITM smart panel</p>
+            <h3>{% trans 'About' %}</h3>
+            <p>{% trans 'ITM smart panel' %}</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/InnovationTechnologiesCenter"><i class="fab fa-facebook"></i></a>
-                <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
-                <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://itm.uz/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
         <div class="footer-column">
-            <h3>What we do</h3>
+            <h3>{% trans 'What we do' %}</h3>
             <ul>
-                <li><a href="{% url 'award' %}"> Award </a></li>
-                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
-                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+                <li><a href="{% url 'award' %}"> {% trans 'Award' %} </a></li>
+                <li><a href="{% url 'daniel' %}"> {% trans 'Daniel' %} </a></li>
+                <li><a href="{% url 'webinar' %}"> {% trans 'Webinar' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Who we are</h3>
+            <h3>{% trans 'Who we are' %}</h3>
             <ul>
-                <li><a href="{% url 'about' %}"> About </a></li>
-                <li><a href="{% url 'structure' %}"> Structure </a></li>
-                <li><a href="{% url 'board' %}"> Board </a></li>
-                <li><a href="{% url 'team' %}"> Team </a></li>
+                <li><a href="{% url 'about' %}"> {% trans 'About' %} </a></li>
+                <li><a href="{% url 'structure' %}"> {% trans 'Structure' %} </a></li>
+                <li><a href="{% url 'board' %}"> {% trans 'Board' %} </a></li>
+                <li><a href="{% url 'team' %}"> {% trans 'Team' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Contact</h3>
+            <h3>{% trans 'Contact' %}</h3>
             <div class="contact-info">
                 <div>
                     <i class="fas fa-home"></i>
-                    <span>Tashkent city, Almazar district</span>
+                    <span>{% trans 'Tashkent city, Almazar district' %}</span>
                 </div>
                 <div>
                     <i class="fas fa-envelope"></i>
@@ -182,7 +182,7 @@
                 </div>
                 <div>
                     <i class="fas fa-clock"></i>
-                    <span>Mon-Sat: 8:30-19:00</span>
+                    <span>{% trans 'Mon-Sat: 8:30-19:00' %}</span>
                 </div>
             </div>
         </div>

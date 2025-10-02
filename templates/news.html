@@ -83,128 +83,81 @@
 </header>
 
 <div class="container">
-    <h1 class="section-title">News</h1>
+    {% for n in news %}
+    <h1 class="section-title">{{ n.name }}</h1>
+    {% endfor %}
     <div class="news-grid">
+        {% for s in new %}
         <div class="news-card">
-            <img src="{% static 'assets/img/cost.jpg' %}" alt="CIES 2026" class="news-image">
+            <img src="{{ s.image.url }}" alt="CIES 2026" class="news-image">
             <div class="news-content">
-                <h3 class="news-title">CIES 2026 - 20th Iberian and 16th Ibero-American Congress on Solar Energy</h3>
-                <p class="news-excert">About the Congress The Iberian Congress on Solar Energy (CIES) has a longstanding tradition as one of the most important scientific and professional...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
+                <h3 class="news-title">{{ s.title }}</h3>
+                <p class="news-excert">{{ s.desc }}</p>
+                <a href="{{ s.file.url }}" target="_blank" class="read-more-btn">{{ s.button }}</a>
             </div>
         </div>
-
-        <div class="news-card">
-            <img src="{% static 'assets/img/out.png' %}" alt="ISES Awards 2025" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">ISES Awards 2025 - Winners announced!</h3>
-                <p class="news-excert">ISES Awards - Honouring Excellence Since 1976. ISES has been honouring those who have made significant...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
-
-        <div class="news-card">
-            <img src="{% static 'assets/img/panels.png' %}" alt="pv magazine" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">ISES Column in pv magazine - SWC 2025 in Brazil</h3>
-                <p class="news-excert">Immediate Past ISES Board Directors and Leads of the ISES PV Strategy Committee Prof. Andrei Basara (ANU) and Prof. Ricardo Ruther (UFSC) are...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
-
-        <div class="news-card">
-            <img src="{% static 'assets/img/cost.jpg' %}" alt="RTC 2025 Winner" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">RTC 2025 Winner is AgriSol from</h3>
-                <p class="news-excert">Basler and the International Solar Energy Society (ISES) are pleased to announce the Indonesian project AgriSol as the winners of the 2025 Renewable...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
-        <div class="news-card">
-            <img src="{% static 'assets/img/cost.jpg' %}" alt="RTC 2025 Winner" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">RTC 2025 Winner is AgriSol from</h3>
-                <p class="news-excert">Basler and the International Solar Energy Society (ISES) are pleased to announce the Indonesian project AgriSol as the winners of the 2025 Renewable...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
-        <div class="news-card">
-            <img src="{% static 'assets/img/cost.jpg' %}" alt="RTC 2025 Winner" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">RTC 2025 Winner is AgriSol from</h3>
-                <p class="news-excert">Basler and the International Solar Energy Society (ISES) are pleased to announce the Indonesian project AgriSol as the winners of the 2025 Renewable...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
-        <div class="news-card">
-            <img src="{% static 'assets/img/cost.jpg' %}" alt="RTC 2025 Winner" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">RTC 2025 Winner is AgriSol from</h3>
-                <p class="news-excert">Basler and the International Solar Energy Society (ISES) are pleased to announce the Indonesian project AgriSol as the winners of the 2025 Renewable...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
-        <div class="news-card">
-            <img src="{% static 'assets/img/cost.jpg' %}" alt="RTC 2025 Winner" class="news-image">
-            <div class="news-content">
-                <h3 class="news-title">RTC 2025 Winner is AgriSol from</h3>
-                <p class="news-excert">Basler and the International Solar Energy Society (ISES) are pleased to announce the Indonesian project AgriSol as the winners of the 2025 Renewable...</p>
-                <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more-btn">Read more</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="pagination" id="pagination">
-        <a href="#" id="prevBtn" class="arrow">←</a>
-        <a href="#" id="prevBtn" class="arrow">Previous</a>
-        <a href="#" class="page-link" data-page="1">1</a>
-        <a href="#" class="page-link" data-page="2">2</a>
-        <a href="#" class="page-link" data-page="3">3</a>
-        <a href="#" class="page-link" data-page="4">4</a>
-        <a href="#" class="page-link" data-page="3">5</a>
-        <a href="#" id="prevBtn" class="arrow">Next</a>
-        <a href="#" id="nextBtn" class="arrow">→</a>
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="arrow">←</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="arrow">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if num == page_obj.number %}
+                <span class="page-link active">{{ num }}</span>
+            {% else %}
+                <a href="?page={{ num }}" class="page-link">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" id="prevBtn" class="arrow">Next</a>
+            <a href="?page={{ page_obj.next_page_number }}" id="nextBtn" class="arrow">→</a>
+        {% endif %}
     </div>
 </div>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
-            <h3>About</h3>
-            <p>ITM smart panel</p>
+            <h3>{% trans 'About' %}</h3>
+            <p>{% trans 'ITM smart panel' %}</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/InnovationTechnologiesCenter"><i class="fab fa-facebook"></i></a>
-                <a href="https://t.me/ITMRasmiy"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/itm_mchj/"><i class="fab fa-instagram"></i></a>
-                <a href="https://itm.uz/"><i class="fab fa-google"></i></a>
-                <a href="itm.mchj@itm-llc.uz"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/itm_mchj/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://itm.uz/" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="itm.mchj@itm-llc.uz" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
         </div>
 
         <div class="footer-column">
-            <h3>What we do</h3>
+            <h3>{% trans 'What we do' %}</h3>
             <ul>
-                <li><a href="{% url 'award' %}"> Award </a></li>
-                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
-                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+                <li><a href="{% url 'award' %}"> {% trans 'Award' %} </a></li>
+                <li><a href="{% url 'daniel' %}"> {% trans 'Daniel' %} </a></li>
+                <li><a href="{% url 'webinar' %}"> {% trans 'Webinar' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Who we are</h3>
+            <h3>{% trans 'Who we are' %}</h3>
             <ul>
-                <li><a href="{% url 'about' %}"> About </a></li>
-                <li><a href="{% url 'structure' %}"> Structure </a></li>
-                <li><a href="{% url 'board' %}"> Board </a></li>
-                <li><a href="{% url 'team' %}"> Team </a></li>
+                <li><a href="{% url 'about' %}"> {% trans 'About' %} </a></li>
+                <li><a href="{% url 'structure' %}"> {% trans 'Structure' %} </a></li>
+                <li><a href="{% url 'board' %}"> {% trans 'Board' %} </a></li>
+                <li><a href="{% url 'team' %}"> {% trans 'Team' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Contact</h3>
+            <h3>{% trans 'Contact' %}</h3>
             <div class="contact-info">
                 <div>
                     <i class="fas fa-home"></i>
-                    <span>Tashkent city, Almazar district</span>
+                    <span>{% trans 'Tashkent city, Almazar district' %}</span>
                 </div>
                 <div>
                     <i class="fas fa-envelope"></i>
@@ -216,7 +169,7 @@
                 </div>
                 <div>
                     <i class="fas fa-clock"></i>
-                    <span>Mon-Sat: 8:30-19:00</span>
+                    <span>{% trans 'Mon-Sat: 8:30-19:00' %}</span>
                 </div>
             </div>
         </div>

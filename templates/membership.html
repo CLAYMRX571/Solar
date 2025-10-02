@@ -83,66 +83,51 @@
 </header>
 
 <div class="container">
-    <h1 style="text-align:center;">Join our global solar community!</h1>
+    {% for mem in membership %}
+    <h1 style="text-align:center;">{{ mem.name }}</h1>
 
-    <div class="intro-text">
-      The journey towards advancing renewable energy technology, fostering acceptance, and driving education is a shared mission—one that requires passion and dedication. But you don’t have to do it alone. By becoming part of our global community, you’ll connect with a vibrant network of like-minded individuals and organizations, all working together to bring about meaningful change.
-      <br><br>
-      Here, you'll find endless opportunities for collaboration, idea exchange, and support as we unite to accelerate the transition to a 100% renewable energy future. Whether you’re a researcher, an innovator, or a passionate advocate, you’ll be welcomed with open arms into a community that’s committed to making a lasting impact on our planet.
-      <br><br>
-      Together, we can make this vision a reality—join us and be part of the solar revolution!
-    </div>
+    <div class="intro-text">{{ mem.desc }}</div>
 
     <div class="section">
         <div class="column">
-            <h2>Professionals and students</h2>
-            <p>Professionals and students can register as ISES Individual Members. Categories include Gold (lifetime), Silver (5 years) and standard professional (1-4 years).</p>
-            <a href="{% url 'membership' %}" class="btn">Individual membership</a>
-        </div>
-
-        <div class="column">
-            <h2>Companies and institutions</h2>
-            <p>Companies and institutions can register as ISES Corporate Members. Categories include Company (over 20 staff), Small Company (less than 20 staff) and Institution (Universities, NGO’s). Silver memberships, that are valid for 5 years are also available.</p>
-            <a href="{% url 'membership' %}" class="btn">Corporate membership</a>
+            <h2>{{ mem.column_name }}</h2>
+            <p>{{ mem.column_desc }}</p>
+            <a href="{% url 'membership' %}" class="btn">{{ mem.column_button }}</a>
         </div>
     </div>
+    {% endfor %}
 </div>
 
 <div class="container">
+    {% for mems in text %}
     <div class="text-content">
-      <p><strong>The International Solar Energy Society (ISES)</strong> is a non-profit, UN-accredited organization founded in 1954, with a proud history of being a trusted global advisor on renewable energy. At the heart of ISES’s mission is a commitment to achieving 100% renewable energy for all, used wisely and efficiently.</p>
-
-      <p>Our community is vast and diverse, with a growing network of members, partners, and collaborators from all corners of the world. One of the most exciting aspects of ITM today is Young ITM, a dynamic network that connects students and young professionals passionate about solar energy. This network is helping to empower the next generation of solar leaders, providing them with valuable opportunities for collaboration and growth.</p>
-
-      <p>We’d love to stay connected with you! Subscribe to the ISES mailing list at the bottom of this page and stay up-to-date with all the latest news, events, and opportunities from ISES. Join us on this exciting journey towards a brighter, sustainable future!</p>
+      <p>{{ mems.desc }}</p>
     </div>
+    {% endfor %}
 </div>
 
 <div class="image-container">
+    {% for pic in image %}
     <div class="image-box">
-        <img src="{% static 'assets/img/panels.png' %}" alt="" />
+        <img src="{{ pic.image.url }}" alt="" />
     </div>
-    <div class="image-box">
-        <img src="{% static 'assets/img/cost.jpg' %}" alt=""/>
-    </div>
+    {% endfor %}
 </div>
 
 <div class="board-section" style="text-align: center;">
-    <h1>Make a Board</h1>
-    <p>Join us in shaping a brighter, more sustainable future!</p>
-    <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need your support</p>
-    <p>If membership is not for you, we invite you to donate and help us amplify our impact.</p>
-    <p>
-      Board today and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
-    </p>
-    <a href="{% url 'board' %}" target="_blank" class="board-btn">Make a Board</a>
+    {% for b in board %}
+    <h1>{{ b.name }}</h1>
+    <p>{{ b.title }}</p>
+    <p>{{ b.desc }}</p>
+    <a href="{% url 'board' %}" target="_blank" class="board-btn">{{ b.button }}</a>
+    {% endfor %}
 </div>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
-            <h3>About</h3>
-            <p>ITM smart panel</p>
+            <h3>{% trans 'About' %}</h3>
+            <p>{% trans 'ITM smart panel' %}</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/InnovationTechnologiesCenter" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://t.me/ITMRasmiy" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -153,30 +138,30 @@
         </div>
 
         <div class="footer-column">
-            <h3>What we do</h3>
+            <h3>{% trans 'What we do' %}</h3>
             <ul>
-                <li><a href="{% url 'award' %}"> Award </a></li>
-                <li><a href="{% url 'daniel' %}"> Daniel </a></li>
-                <li><a href="{% url 'webinar' %}"> Webinar </a></li>
+                <li><a href="{% url 'award' %}"> {% trans 'Award' %} </a></li>
+                <li><a href="{% url 'daniel' %}"> {% trans 'Daniel' %} </a></li>
+                <li><a href="{% url 'webinar' %}"> {% trans 'Webinar' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Who we are</h3>
+            <h3>{% trans 'Who we are' %}</h3>
             <ul>
-                <li><a href="{% url 'about' %}"> About </a></li>
-                <li><a href="{% url 'structure' %}"> Structure </a></li>
-                <li><a href="{% url 'board' %}"> Board </a></li>
-                <li><a href="{% url 'team' %}"> Team </a></li>
+                <li><a href="{% url 'about' %}"> {% trans 'About' %} </a></li>
+                <li><a href="{% url 'structure' %}"> {% trans 'Structure' %} </a></li>
+                <li><a href="{% url 'board' %}"> {% trans 'Board' %} </a></li>
+                <li><a href="{% url 'team' %}"> {% trans 'Team' %} </a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h3>Contact</h3>
+            <h3>{% trans 'Contact' %}</h3>
             <div class="contact-info">
                 <div>
                     <i class="fas fa-home"></i>
-                    <span>Tashkent city, Almazar district</span>
+                    <span>{% trans 'Tashkent city, Almazar district' %}</span>
                 </div>
                 <div>
                     <i class="fas fa-envelope"></i>
@@ -188,7 +173,7 @@
                 </div>
                 <div>
                     <i class="fas fa-clock"></i>
-                    <span>Mon-Sat: 8:30-19:00</span>
+                    <span>{% trans 'Mon-Sat: 8:30-19:00' %}</span>
                 </div>
             </div>
         </div>
