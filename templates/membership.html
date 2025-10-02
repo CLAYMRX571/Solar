@@ -83,7 +83,7 @@
 </header>
 
 <div class="container">
-    <h1>Join our global solar community!</h1>
+    <h1 style="text-align:center;">Join our global solar community!</h1>
 
     <div class="intro-text">
       The journey towards advancing renewable energy technology, fostering acceptance, and driving education is a shared mission—one that requires passion and dedication. But you don’t have to do it alone. By becoming part of our global community, you’ll connect with a vibrant network of like-minded individuals and organizations, all working together to bring about meaningful change.
@@ -97,13 +97,13 @@
         <div class="column">
             <h2>Professionals and students</h2>
             <p>Professionals and students can register as ISES Individual Members. Categories include Gold (lifetime), Silver (5 years) and standard professional (1-4 years).</p>
-            <a href="#" class="btn">Individual membership</a>
+            <a href="{% url 'membership' %}" class="btn">Individual membership</a>
         </div>
 
         <div class="column">
             <h2>Companies and institutions</h2>
             <p>Companies and institutions can register as ISES Corporate Members. Categories include Company (over 20 staff), Small Company (less than 20 staff) and Institution (Universities, NGO’s). Silver memberships, that are valid for 5 years are also available.</p>
-            <a href="#" class="btn">Corporate membership</a>
+            <a href="{% url 'membership' %}" class="btn">Corporate membership</a>
         </div>
     </div>
 </div>
@@ -127,15 +127,15 @@
     </div>
 </div>
 
-<div class="donation-section" style="text-align: center;">
-    <h1>Make a donation</h1>
+<div class="board-section" style="text-align: center;">
+    <h1>Make a Board</h1>
     <p>Join us in shaping a brighter, more sustainable future!</p>
     <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need your support</p>
     <p>If membership is not for you, we invite you to donate and help us amplify our impact.</p>
     <p>
-      Donate today and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
+      Board today and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
     </p>
-    <a href="#" class="donate-btn">Make a Donation</a>
+    <a href="{% url 'board' %}" target="_blank" class="board-btn">Make a Board</a>
 </div>
 
 <footer class="footer">

@@ -318,6 +318,7 @@ main {
 }
 
 .intro h2 {
+  text-align:center;
   color: black;
   margin-bottom: 15px;
   padding-bottom: 10px;
@@ -364,7 +365,7 @@ main {
   margin-right: 8px;
 }
 
-.mission h3 {
+.mission h3 { 
   text-align: center;
   color: black;
   margin: 25px 0 15px;

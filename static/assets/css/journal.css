@@ -306,11 +306,6 @@ body {
   white-space: nowrap;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
-}
-
 header h1 {
   font-size: 2.5rem;
   color: black;
@@ -323,6 +318,7 @@ main {
 }
 
 .pricing-table {
+  text-align:center;
   margin-bottom: 20px;
   overflow-x: auto;
 }
@@ -351,14 +347,8 @@ main {
   color: black;
 }
 
-.note {
-  font-style: italic;
-  color: black;
-  margin-top: 5px;
-  font-size: 0.9em;
-}
-
 .details p {
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -368,6 +358,7 @@ main {
 }
 
 .callout {
+  text-align:center;
   padding: 15px;
   margin: 20px 0;
   border-radius: 5px;
@@ -375,12 +366,14 @@ main {
 }
 
 .library-note {
+  text-align:center;
   padding: 15px;
   margin: 20px 0;
   border-radius: 5px;
 }
 
 .disclaimer {
+  text-align:center;
   padding: 15px;
   margin: 20px 0;
   border-radius: 5px;
@@ -389,6 +382,7 @@ main {
 }
 
 .text-block {
+  text-align:center;
   flex: 1;
   min-width: 300px;
 }
@@ -435,7 +429,7 @@ main {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  transform: translateY(-240px);
+  transform: translateY(-15px);
 }
 
 .award-image img {
@@ -446,7 +440,6 @@ main {
 
 /* Rasmga qog'oz effekti (agar kerak bo'lsa) */
 .award-image::before {
-  content: "";
   position: absolute;
   top: -10px;
   left: -10px;

@@ -257,93 +257,37 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.section-title {
-  text-align: center;
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #e74c3c;
-  margin: 10px auto;
-}
-
-.carousel-container {
-  position: relative;
-  margin: 30px 0;
+.slider-container {
+  width: 90%;
+  margin: auto;
   overflow: hidden;
+  position: relative;
 }
 
-.carousel {
+.slider-track {
   display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
-  padding: 10px 0;
-  width: max-content;
+  width: calc(200px * 10); /* logo soniga qarab kenglik */
+  animation: scroll 15s linear infinite;
 }
 
-.carousel-item {
-  flex: 0 0 calc(20% - 20px);
-  border-radius: 8px;
-  padding: 20px;
+.slide {
+  min-width: 250px;
+  margin: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  align-items: center;
 }
 
-.carousel-item:hover {
-  transform: scale(1.05);
-}
-
-.carousel-item img {
-  max-width: 100%;
-  max-height: 80px;
+.slide img {
+  max-width: 250px;
+  max-height: 200px;
   object-fit: contain;
-  filter: grayscale(0%);
-  transition: filter 0.3s;
+  margin: 10px;
 }
 
-.carousel-item:hover img {
-  filter: grayscale(10%);
-}
-
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  border: 1px solid #ddd;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 20px;
-  color: #555;
-  transition: background 0.2s;
-}
-
-.carousel-arrow:hover {
-  background: #e74c3c;
-  color: white;
-}
-
-.carousel-arrow.prev {
-  left: 10px;
-}
-
-.carousel-arrow.next {
-  right: 10px;
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .footer {

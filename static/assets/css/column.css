@@ -306,11 +306,6 @@ body {
   white-space: nowrap;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
-}
-
 header h1 {
   font-size: 2.5rem;
   color: black;
@@ -368,15 +363,4 @@ main {
 .title {
   color: black;
   flex: 1;
-}
-
-.magazine-logo {
-  text-align: right;
-  margin-top: 30px;
-}
-
-.magazine-logo img {
-  width: 250px;
-  height: auto;
-  border-radius: 5px;
 }
