@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-17 21:01+0500\n"
+"POT-Creation-Date: 2025-10-04 01:20+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,329 +18,770 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\core\settings.py:127
+#: .\core\settings.py:140
 msgid "Uzbek"
 msgstr ""
 
-#: .\core\settings.py:128
+#: .\core\settings.py:141
 msgid "English"
 msgstr ""
 
-#: .\core\settings.py:129
+#: .\core\settings.py:142
 msgid "Qozoqcha"
 msgstr ""
 
-#: .\core\settings.py:130
+#: .\core\settings.py:143
 msgid "Tojikcha"
 msgstr ""
 
-#: .\core\settings.py:131
+#: .\core\settings.py:144
 msgid "Turkcha"
 msgstr ""
 
-#: .\templates\about.html:24 .\templates\data.html:24 .\templates\eco.html:24
-#: .\templates\education.html:24 .\templates\events.html:24
-#: .\templates\finance.html:24 .\templates\index.html:24
-#: .\templates\innovation.html:24 .\templates\membership.html:24
-#: .\templates\news.html:24 .\templates\outlook.html:23
-#: .\templates\part.html:24 .\templates\plan.html:24 .\templates\policy.html:23
-#: .\templates\project.html:24 .\templates\techno.html:24
-msgid "ENERGY TRANSITION"
-msgstr "ENERJİ GEÇİŞİ"
+#: .\templates\about.html:28 .\templates\achievement.html:28
+#: .\templates\advance.html:28 .\templates\award.html:28
+#: .\templates\board.html:28 .\templates\challenge.html:28
+#: .\templates\column.html:28 .\templates\contact.html:28
+#: .\templates\daniel.html:28 .\templates\eurosun.html:28
+#: .\templates\event.html:28 .\templates\fellow.html:28
+#: .\templates\history.html:28 .\templates\incore.html:28
+#: .\templates\index.html:28 .\templates\jobs.html:28
+#: .\templates\journal.html:28 .\templates\leader.html:28
+#: .\templates\membership.html:28 .\templates\museum.html:28
+#: .\templates\news.html:28 .\templates\part.html:28 .\templates\public.html:28
+#: .\templates\structure.html:28 .\templates\support.html:28
+#: .\templates\team.html:28 .\templates\webinar.html:28
+#: .\templates\young.html:28
+msgid "WHO ARE WE"
+msgstr "Biz kimiz"
 
-#: .\templates\about.html:28 .\templates\data.html:28 .\templates\eco.html:28
-#: .\templates\education.html:28 .\templates\events.html:28
-#: .\templates\finance.html:28 .\templates\index.html:28
-#: .\templates\innovation.html:28 .\templates\membership.html:28
-#: .\templates\news.html:28 .\templates\outlook.html:27
-#: .\templates\part.html:28 .\templates\plan.html:28 .\templates\policy.html:27
-#: .\templates\project.html:28 .\templates\techno.html:28
-msgid "OUTLOOK"
-msgstr "BEKLENTİLER"
-
-#: .\templates\about.html:29 .\templates\data.html:29 .\templates\eco.html:29
-#: .\templates\education.html:29 .\templates\events.html:29
-#: .\templates\finance.html:29 .\templates\index.html:29
-#: .\templates\innovation.html:29 .\templates\membership.html:29
-#: .\templates\news.html:29 .\templates\outlook.html:28
-#: .\templates\part.html:29 .\templates\plan.html:29 .\templates\policy.html:28
-#: .\templates\project.html:29 .\templates\techno.html:29
-msgid "PLANNING"
-msgstr "PLANLAMA"
-
-#: .\templates\about.html:30 .\templates\data.html:30 .\templates\eco.html:30
-#: .\templates\education.html:30 .\templates\events.html:30
-#: .\templates\finance.html:30 .\templates\index.html:30
-#: .\templates\innovation.html:30 .\templates\membership.html:30
-#: .\templates\news.html:30 .\templates\outlook.html:29
-#: .\templates\part.html:30 .\templates\plan.html:30 .\templates\policy.html:29
-#: .\templates\project.html:30 .\templates\techno.html:30
-msgid "POLICY"
-msgstr "POLİTİKA"
-
-#: .\templates\about.html:31 .\templates\data.html:31 .\templates\eco.html:31
-#: .\templates\education.html:31 .\templates\events.html:31
-#: .\templates\finance.html:31 .\templates\index.html:31
-#: .\templates\innovation.html:31 .\templates\membership.html:31
-#: .\templates\news.html:31 .\templates\outlook.html:30
-#: .\templates\part.html:31 .\templates\plan.html:31 .\templates\policy.html:30
-#: .\templates\project.html:31 .\templates\techno.html:31
-msgid "TECHNOLOGY"
-msgstr "TEKNOLOJİ"
-
-#: .\templates\about.html:32 .\templates\data.html:32 .\templates\eco.html:32
-#: .\templates\education.html:32 .\templates\events.html:32
-#: .\templates\finance.html:32 .\templates\index.html:32
-#: .\templates\innovation.html:32 .\templates\membership.html:32
-#: .\templates\news.html:32 .\templates\outlook.html:31
-#: .\templates\part.html:32 .\templates\plan.html:32 .\templates\policy.html:31
-#: .\templates\project.html:32 .\templates\techno.html:32
-msgid "ECONOMIC IMPACT"
-msgstr "EKONOMİK ETKİ"
-
-#: .\templates\about.html:33 .\templates\data.html:33 .\templates\eco.html:33
-#: .\templates\education.html:33 .\templates\events.html:33
-#: .\templates\finance.html:33 .\templates\index.html:33
-#: .\templates\innovation.html:33 .\templates\membership.html:33
-#: .\templates\news.html:33 .\templates\outlook.html:32
-#: .\templates\part.html:33 .\templates\plan.html:33 .\templates\policy.html:32
-#: .\templates\project.html:33 .\templates\techno.html:33
-msgid "FINANCE INVESTMENT"
-msgstr "FİNANS YATIRIM"
-
-#: .\templates\about.html:39 .\templates\about.html:42 .\templates\data.html:39
-#: .\templates\data.html:42 .\templates\eco.html:39 .\templates\eco.html:42
-#: .\templates\education.html:39 .\templates\education.html:42
-#: .\templates\events.html:39 .\templates\events.html:42
-#: .\templates\finance.html:39 .\templates\finance.html:42
-#: .\templates\index.html:39 .\templates\index.html:42
-#: .\templates\innovation.html:39 .\templates\innovation.html:42
-#: .\templates\membership.html:39 .\templates\membership.html:42
-#: .\templates\news.html:39 .\templates\news.html:42
-#: .\templates\outlook.html:38 .\templates\outlook.html:41
-#: .\templates\part.html:39 .\templates\part.html:42 .\templates\plan.html:39
-#: .\templates\plan.html:42 .\templates\policy.html:38
-#: .\templates\policy.html:41 .\templates\project.html:39
-#: .\templates\project.html:42 .\templates\techno.html:39
-#: .\templates\techno.html:42
+#: .\templates\about.html:32 .\templates\achievement.html:32
+#: .\templates\advance.html:32 .\templates\award.html:32
+#: .\templates\board.html:32 .\templates\challenge.html:32
+#: .\templates\column.html:32 .\templates\contact.html:32
+#: .\templates\daniel.html:32 .\templates\eurosun.html:32
+#: .\templates\event.html:32 .\templates\fellow.html:32
+#: .\templates\history.html:32 .\templates\incore.html:32
+#: .\templates\index.html:32 .\templates\jobs.html:32
+#: .\templates\journal.html:32 .\templates\leader.html:32
+#: .\templates\membership.html:32 .\templates\museum.html:32
+#: .\templates\news.html:32 .\templates\part.html:32 .\templates\public.html:32
+#: .\templates\structure.html:32 .\templates\support.html:32
+#: .\templates\team.html:32 .\templates\webinar.html:32
+#: .\templates\young.html:32
 msgid "ABOUT"
-msgstr "HAKKINDA"
+msgstr "Hakkında"
 
-#: .\templates\about.html:43 .\templates\data.html:43 .\templates\eco.html:43
-#: .\templates\education.html:43 .\templates\events.html:43
-#: .\templates\finance.html:43 .\templates\index.html:43
-#: .\templates\innovation.html:43 .\templates\membership.html:43
-#: .\templates\news.html:43 .\templates\outlook.html:42
-#: .\templates\part.html:43 .\templates\plan.html:43 .\templates\policy.html:42
-#: .\templates\project.html:43 .\templates\techno.html:43
-msgid "PARTNERSHIPS"
-msgstr "ORTAKLIKLAR"
+#: .\templates\about.html:33 .\templates\achievement.html:33
+#: .\templates\advance.html:33 .\templates\award.html:33
+#: .\templates\board.html:33 .\templates\challenge.html:33
+#: .\templates\column.html:33 .\templates\contact.html:33
+#: .\templates\daniel.html:33 .\templates\eurosun.html:33
+#: .\templates\event.html:33 .\templates\fellow.html:33
+#: .\templates\history.html:33 .\templates\incore.html:33
+#: .\templates\index.html:33 .\templates\jobs.html:33
+#: .\templates\journal.html:33 .\templates\leader.html:33
+#: .\templates\membership.html:33 .\templates\museum.html:33
+#: .\templates\news.html:33 .\templates\part.html:33 .\templates\public.html:33
+#: .\templates\structure.html:33 .\templates\support.html:33
+#: .\templates\team.html:33 .\templates\webinar.html:33
+#: .\templates\young.html:33
+msgid "JOBS"
+msgstr "İşler"
 
-#: .\templates\about.html:44 .\templates\data.html:44 .\templates\eco.html:44
-#: .\templates\education.html:44 .\templates\events.html:44
-#: .\templates\finance.html:44 .\templates\index.html:44
-#: .\templates\innovation.html:44 .\templates\membership.html:44
-#: .\templates\news.html:44 .\templates\outlook.html:43
-#: .\templates\part.html:44 .\templates\plan.html:44 .\templates\policy.html:43
-#: .\templates\project.html:44 .\templates\techno.html:44
-msgid "MEMBERSHIP"
-msgstr "ÜYELİK"
+#: .\templates\about.html:34 .\templates\achievement.html:34
+#: .\templates\advance.html:34 .\templates\award.html:34
+#: .\templates\board.html:34 .\templates\challenge.html:34
+#: .\templates\column.html:34 .\templates\contact.html:34
+#: .\templates\daniel.html:34 .\templates\eurosun.html:34
+#: .\templates\event.html:34 .\templates\fellow.html:34
+#: .\templates\history.html:34 .\templates\incore.html:34
+#: .\templates\index.html:34 .\templates\jobs.html:34
+#: .\templates\journal.html:34 .\templates\leader.html:34
+#: .\templates\membership.html:34 .\templates\museum.html:34
+#: .\templates\news.html:34 .\templates\part.html:34 .\templates\public.html:34
+#: .\templates\structure.html:34 .\templates\support.html:34
+#: .\templates\team.html:34 .\templates\webinar.html:34
+#: .\templates\young.html:34
+msgid "STRUCTURE"
+msgstr "Yapı"
 
-#: .\templates\about.html:45 .\templates\data.html:45 .\templates\eco.html:45
-#: .\templates\education.html:45 .\templates\events.html:45
-#: .\templates\finance.html:45 .\templates\index.html:45
-#: .\templates\innovation.html:45 .\templates\membership.html:45
-#: .\templates\news.html:45 .\templates\outlook.html:44
-#: .\templates\part.html:45 .\templates\plan.html:45 .\templates\policy.html:44
-#: .\templates\project.html:45 .\templates\techno.html:45
-msgid "PROJECT"
-msgstr "PROJE"
+#: .\templates\about.html:35 .\templates\achievement.html:35
+#: .\templates\advance.html:35 .\templates\award.html:35
+#: .\templates\board.html:35 .\templates\challenge.html:35
+#: .\templates\column.html:35 .\templates\contact.html:35
+#: .\templates\daniel.html:35 .\templates\eurosun.html:35
+#: .\templates\event.html:35 .\templates\fellow.html:35
+#: .\templates\history.html:35 .\templates\incore.html:35
+#: .\templates\index.html:35 .\templates\jobs.html:35
+#: .\templates\journal.html:35 .\templates\leader.html:35
+#: .\templates\membership.html:35 .\templates\museum.html:35
+#: .\templates\news.html:35 .\templates\part.html:35 .\templates\public.html:35
+#: .\templates\structure.html:35 .\templates\support.html:35
+#: .\templates\team.html:35 .\templates\webinar.html:35
+#: .\templates\young.html:35
+msgid "BOARD"
+msgstr "Kurul"
 
-#: .\templates\about.html:46 .\templates\data.html:46 .\templates\eco.html:46
-#: .\templates\education.html:46 .\templates\events.html:46
-#: .\templates\finance.html:46 .\templates\index.html:46
-#: .\templates\innovation.html:46 .\templates\membership.html:46
-#: .\templates\news.html:46 .\templates\outlook.html:45
-#: .\templates\part.html:46 .\templates\plan.html:46 .\templates\policy.html:45
-#: .\templates\project.html:46 .\templates\techno.html:46
-msgid "INNOVATION"
-msgstr "YENİLİK"
+#: .\templates\about.html:36 .\templates\achievement.html:36
+#: .\templates\advance.html:36 .\templates\award.html:36
+#: .\templates\board.html:36 .\templates\challenge.html:36
+#: .\templates\column.html:36 .\templates\contact.html:36
+#: .\templates\daniel.html:36 .\templates\eurosun.html:36
+#: .\templates\event.html:36 .\templates\fellow.html:36
+#: .\templates\history.html:36 .\templates\incore.html:36
+#: .\templates\index.html:36 .\templates\jobs.html:36
+#: .\templates\journal.html:36 .\templates\leader.html:36
+#: .\templates\membership.html:36 .\templates\museum.html:36
+#: .\templates\news.html:36 .\templates\part.html:36 .\templates\public.html:36
+#: .\templates\structure.html:36 .\templates\support.html:36
+#: .\templates\team.html:36 .\templates\webinar.html:36
+#: .\templates\young.html:36
+msgid "TEAM"
+msgstr "Takım"
 
-#: .\templates\about.html:51 .\templates\data.html:51 .\templates\eco.html:51
-#: .\templates\education.html:51 .\templates\events.html:51
-#: .\templates\finance.html:51 .\templates\index.html:51
-#: .\templates\innovation.html:51 .\templates\membership.html:51
-#: .\templates\news.html:51 .\templates\outlook.html:50
-#: .\templates\part.html:51 .\templates\plan.html:51 .\templates\policy.html:50
-#: .\templates\project.html:51 .\templates\techno.html:51
-msgid "LANGUAGES"
-msgstr "DİLLER"
+#: .\templates\about.html:37 .\templates\achievement.html:37
+#: .\templates\advance.html:37 .\templates\award.html:37
+#: .\templates\board.html:37 .\templates\challenge.html:37
+#: .\templates\column.html:37 .\templates\contact.html:37
+#: .\templates\daniel.html:37 .\templates\eurosun.html:37
+#: .\templates\event.html:37 .\templates\fellow.html:37
+#: .\templates\history.html:37 .\templates\incore.html:37
+#: .\templates\index.html:37 .\templates\jobs.html:37
+#: .\templates\journal.html:37 .\templates\leader.html:37
+#: .\templates\membership.html:37 .\templates\museum.html:37
+#: .\templates\news.html:37 .\templates\part.html:37 .\templates\public.html:37
+#: .\templates\structure.html:37 .\templates\support.html:37
+#: .\templates\team.html:37 .\templates\webinar.html:37
+#: .\templates\young.html:37
+msgid "PARTNERSHIP"
+msgstr "Ortaklık"
 
-#: .\templates\about.html:62 .\templates\data.html:62 .\templates\eco.html:62
-#: .\templates\education.html:62 .\templates\events.html:62
-#: .\templates\finance.html:62 .\templates\index.html:62
-#: .\templates\innovation.html:62 .\templates\membership.html:62
-#: .\templates\news.html:62 .\templates\outlook.html:61
-#: .\templates\part.html:62 .\templates\plan.html:62 .\templates\policy.html:61
-#: .\templates\project.html:62 .\templates\techno.html:62
-msgid "NEWS"
-msgstr "HABERLER"
+#: .\templates\about.html:38 .\templates\achievement.html:38
+#: .\templates\advance.html:38 .\templates\award.html:38
+#: .\templates\board.html:38 .\templates\challenge.html:38
+#: .\templates\column.html:38 .\templates\contact.html:38
+#: .\templates\daniel.html:38 .\templates\eurosun.html:38
+#: .\templates\event.html:38 .\templates\fellow.html:38
+#: .\templates\history.html:38 .\templates\incore.html:38
+#: .\templates\index.html:38 .\templates\jobs.html:38
+#: .\templates\journal.html:38 .\templates\leader.html:38
+#: .\templates\membership.html:38 .\templates\museum.html:38
+#: .\templates\news.html:38 .\templates\part.html:38 .\templates\public.html:38
+#: .\templates\structure.html:38 .\templates\support.html:38
+#: .\templates\team.html:38 .\templates\webinar.html:38
+#: .\templates\young.html:38
+msgid "HISTORY"
+msgstr "Tarih"
 
-#: .\templates\about.html:63 .\templates\data.html:63 .\templates\eco.html:63
-#: .\templates\education.html:63 .\templates\events.html:63
-#: .\templates\finance.html:63 .\templates\index.html:63
-#: .\templates\innovation.html:63 .\templates\membership.html:63
-#: .\templates\news.html:63 .\templates\outlook.html:62
-#: .\templates\part.html:63 .\templates\plan.html:63 .\templates\policy.html:62
-#: .\templates\project.html:63 .\templates\techno.html:63
-msgid "EDUCATION"
-msgstr "EĞİTİM"
+#: .\templates\about.html:44 .\templates\achievement.html:44
+#: .\templates\advance.html:44 .\templates\award.html:44
+#: .\templates\board.html:44 .\templates\challenge.html:44
+#: .\templates\column.html:44 .\templates\contact.html:44
+#: .\templates\daniel.html:44 .\templates\eurosun.html:44
+#: .\templates\event.html:44 .\templates\fellow.html:44
+#: .\templates\history.html:44 .\templates\incore.html:44
+#: .\templates\index.html:44 .\templates\jobs.html:44
+#: .\templates\journal.html:44 .\templates\leader.html:44
+#: .\templates\membership.html:44 .\templates\museum.html:44
+#: .\templates\news.html:44 .\templates\part.html:44 .\templates\public.html:44
+#: .\templates\structure.html:44 .\templates\support.html:44
+#: .\templates\team.html:44 .\templates\webinar.html:44
+#: .\templates\young.html:44
+msgid "WHAT WE DO"
+msgstr "Ne yapıyoruz"
 
-#: .\templates\about.html:64 .\templates\data.html:64 .\templates\eco.html:64
-#: .\templates\education.html:64 .\templates\events.html:64
-#: .\templates\finance.html:64 .\templates\index.html:64
-#: .\templates\innovation.html:64 .\templates\membership.html:64
-#: .\templates\news.html:64 .\templates\outlook.html:63
-#: .\templates\part.html:64 .\templates\plan.html:64 .\templates\policy.html:63
-#: .\templates\project.html:64 .\templates\techno.html:64
-msgid "DATA"
-msgstr "VERİ"
+#: .\templates\about.html:47 .\templates\achievement.html:47
+#: .\templates\advance.html:47 .\templates\award.html:47
+#: .\templates\board.html:47 .\templates\challenge.html:47
+#: .\templates\column.html:47 .\templates\contact.html:47
+#: .\templates\daniel.html:47 .\templates\eurosun.html:47
+#: .\templates\event.html:47 .\templates\fellow.html:47
+#: .\templates\history.html:47 .\templates\incore.html:47
+#: .\templates\index.html:47 .\templates\jobs.html:47
+#: .\templates\journal.html:47 .\templates\leader.html:47
+#: .\templates\membership.html:47 .\templates\museum.html:47
+#: .\templates\news.html:47 .\templates\part.html:47 .\templates\public.html:47
+#: .\templates\structure.html:47 .\templates\support.html:47
+#: .\templates\team.html:47 .\templates\webinar.html:47
+#: .\templates\young.html:47
+msgid "AWARDS"
+msgstr "Ödüller"
 
-#: .\templates\about.html:65 .\templates\data.html:65 .\templates\eco.html:65
-#: .\templates\education.html:65 .\templates\events.html:65
-#: .\templates\finance.html:65 .\templates\index.html:65
-#: .\templates\innovation.html:65 .\templates\membership.html:65
-#: .\templates\news.html:65 .\templates\outlook.html:64
-#: .\templates\part.html:65 .\templates\plan.html:65 .\templates\policy.html:64
-#: .\templates\project.html:65 .\templates\techno.html:65
+#: .\templates\about.html:48 .\templates\achievement.html:48
+#: .\templates\advance.html:48 .\templates\award.html:48
+#: .\templates\board.html:48 .\templates\challenge.html:48
+#: .\templates\column.html:48 .\templates\contact.html:48
+#: .\templates\daniel.html:48 .\templates\eurosun.html:48
+#: .\templates\event.html:48 .\templates\fellow.html:48
+#: .\templates\history.html:48 .\templates\incore.html:48
+#: .\templates\index.html:48 .\templates\jobs.html:48
+#: .\templates\journal.html:48 .\templates\leader.html:48
+#: .\templates\membership.html:48 .\templates\museum.html:48
+#: .\templates\news.html:48 .\templates\part.html:48 .\templates\public.html:48
+#: .\templates\structure.html:48 .\templates\support.html:48
+#: .\templates\team.html:48 .\templates\webinar.html:48
+#: .\templates\young.html:48
+msgid "DANIELS"
+msgstr "Daniels"
+
+#: .\templates\about.html:49 .\templates\achievement.html:49
+#: .\templates\advance.html:49 .\templates\award.html:49
+#: .\templates\board.html:49 .\templates\challenge.html:49
+#: .\templates\column.html:49 .\templates\contact.html:49
+#: .\templates\daniel.html:49 .\templates\eurosun.html:49
+#: .\templates\event.html:49 .\templates\fellow.html:49
+#: .\templates\history.html:49 .\templates\incore.html:49
+#: .\templates\index.html:49 .\templates\jobs.html:49
+#: .\templates\journal.html:49 .\templates\leader.html:49
+#: .\templates\membership.html:49 .\templates\museum.html:49
+#: .\templates\news.html:49 .\templates\part.html:49 .\templates\public.html:49
+#: .\templates\structure.html:49 .\templates\support.html:49
+#: .\templates\team.html:49 .\templates\webinar.html:49
+#: .\templates\young.html:49
+msgid "ACHIEVEMENT"
+msgstr "Başarı"
+
+#: .\templates\about.html:50 .\templates\achievement.html:50
+#: .\templates\advance.html:50 .\templates\award.html:50
+#: .\templates\board.html:50 .\templates\challenge.html:50
+#: .\templates\column.html:50 .\templates\contact.html:50
+#: .\templates\daniel.html:50 .\templates\eurosun.html:50
+#: .\templates\event.html:50 .\templates\fellow.html:50
+#: .\templates\history.html:50 .\templates\incore.html:50
+#: .\templates\index.html:50 .\templates\jobs.html:50
+#: .\templates\journal.html:50 .\templates\leader.html:50
+#: .\templates\membership.html:50 .\templates\museum.html:50
+#: .\templates\news.html:50 .\templates\part.html:50 .\templates\public.html:50
+#: .\templates\structure.html:50 .\templates\support.html:50
+#: .\templates\team.html:50 .\templates\webinar.html:50
+#: .\templates\young.html:50
+msgid "LEADERSHIP"
+msgstr "Liderlik"
+
+#: .\templates\about.html:51 .\templates\achievement.html:51
+#: .\templates\advance.html:51 .\templates\award.html:51
+#: .\templates\board.html:51 .\templates\challenge.html:51
+#: .\templates\column.html:51 .\templates\contact.html:51
+#: .\templates\daniel.html:51 .\templates\eurosun.html:51
+#: .\templates\event.html:51 .\templates\fellow.html:51
+#: .\templates\history.html:51 .\templates\incore.html:51
+#: .\templates\index.html:51 .\templates\jobs.html:51
+#: .\templates\journal.html:51 .\templates\leader.html:51
+#: .\templates\membership.html:51 .\templates\museum.html:51
+#: .\templates\news.html:51 .\templates\part.html:51 .\templates\public.html:51
+#: .\templates\structure.html:51 .\templates\support.html:51
+#: .\templates\team.html:51 .\templates\webinar.html:51
+#: .\templates\young.html:51
+msgid "FELLOWS"
+msgstr "Arkadaşlar"
+
+#: .\templates\about.html:52 .\templates\achievement.html:52
+#: .\templates\advance.html:52 .\templates\award.html:52
+#: .\templates\board.html:52 .\templates\challenge.html:52
+#: .\templates\column.html:52 .\templates\contact.html:52
+#: .\templates\daniel.html:52 .\templates\eurosun.html:52
+#: .\templates\event.html:52 .\templates\fellow.html:52
+#: .\templates\history.html:52 .\templates\incore.html:52
+#: .\templates\index.html:52 .\templates\jobs.html:52
+#: .\templates\journal.html:52 .\templates\leader.html:52
+#: .\templates\membership.html:52 .\templates\museum.html:52
+#: .\templates\news.html:52 .\templates\part.html:52 .\templates\public.html:52
+#: .\templates\structure.html:52 .\templates\support.html:52
+#: .\templates\team.html:52 .\templates\webinar.html:52
+#: .\templates\young.html:52
+msgid "CHALLENGE"
+msgstr "Meydan okuma"
+
+#: .\templates\about.html:53 .\templates\achievement.html:53
+#: .\templates\advance.html:53 .\templates\award.html:53
+#: .\templates\board.html:53 .\templates\challenge.html:53
+#: .\templates\column.html:53 .\templates\contact.html:53
+#: .\templates\daniel.html:53 .\templates\eurosun.html:53
+#: .\templates\event.html:53 .\templates\fellow.html:53
+#: .\templates\history.html:53 .\templates\incore.html:53
+#: .\templates\index.html:53 .\templates\jobs.html:53
+#: .\templates\journal.html:53 .\templates\leader.html:53
+#: .\templates\membership.html:53 .\templates\museum.html:53
+#: .\templates\news.html:53 .\templates\part.html:53 .\templates\public.html:53
+#: .\templates\structure.html:53 .\templates\support.html:53
+#: .\templates\team.html:53 .\templates\webinar.html:53
+#: .\templates\young.html:53
 msgid "EVENTS"
-msgstr "OLAYLAR"
+msgstr "Etkinlikler"
 
-#: .\templates\about.html:90 .\templates\data.html:126 .\templates\eco.html:90
-#: .\templates\education.html:101 .\templates\events.html:113
-#: .\templates\finance.html:90 .\templates\index.html:163
-#: .\templates\innovation.html:86 .\templates\membership.html:136
-#: .\templates\news.html:105 .\templates\outlook.html:93
-#: .\templates\part.html:84 .\templates\plan.html:89 .\templates\policy.html:89
-#: .\templates\project.html:86 .\templates\techno.html:90
+#: .\templates\about.html:54 .\templates\achievement.html:54
+#: .\templates\advance.html:54 .\templates\award.html:54
+#: .\templates\board.html:54 .\templates\challenge.html:54
+#: .\templates\column.html:54 .\templates\contact.html:54
+#: .\templates\daniel.html:54 .\templates\eurosun.html:54
+#: .\templates\event.html:54 .\templates\fellow.html:54
+#: .\templates\history.html:54 .\templates\incore.html:54
+#: .\templates\index.html:54 .\templates\jobs.html:54
+#: .\templates\journal.html:54 .\templates\leader.html:54
+#: .\templates\membership.html:54 .\templates\museum.html:54
+#: .\templates\news.html:54 .\templates\part.html:54 .\templates\public.html:54
+#: .\templates\structure.html:54 .\templates\support.html:54
+#: .\templates\team.html:54 .\templates\webinar.html:54
+#: .\templates\young.html:54
+msgid "EUROSUN"
+msgstr "Eurosun"
+
+#: .\templates\about.html:55 .\templates\achievement.html:55
+#: .\templates\advance.html:55 .\templates\award.html:55
+#: .\templates\board.html:55 .\templates\challenge.html:55
+#: .\templates\column.html:55 .\templates\contact.html:55
+#: .\templates\daniel.html:55 .\templates\eurosun.html:55
+#: .\templates\event.html:55 .\templates\fellow.html:55
+#: .\templates\history.html:55 .\templates\incore.html:55
+#: .\templates\index.html:55 .\templates\jobs.html:55
+#: .\templates\journal.html:55 .\templates\leader.html:55
+#: .\templates\membership.html:55 .\templates\museum.html:55
+#: .\templates\news.html:55 .\templates\part.html:55 .\templates\public.html:55
+#: .\templates\structure.html:55 .\templates\support.html:55
+#: .\templates\team.html:55 .\templates\webinar.html:55
+#: .\templates\young.html:55
+msgid "INCORE"
+msgstr "Incore"
+
+#: .\templates\about.html:56 .\templates\achievement.html:56
+#: .\templates\advance.html:56 .\templates\award.html:56
+#: .\templates\board.html:56 .\templates\challenge.html:56
+#: .\templates\column.html:56 .\templates\contact.html:56
+#: .\templates\daniel.html:56 .\templates\eurosun.html:56
+#: .\templates\event.html:56 .\templates\fellow.html:56
+#: .\templates\history.html:56 .\templates\incore.html:56
+#: .\templates\index.html:56 .\templates\jobs.html:56
+#: .\templates\journal.html:56 .\templates\leader.html:56
+#: .\templates\membership.html:56 .\templates\museum.html:56
+#: .\templates\news.html:56 .\templates\part.html:56 .\templates\public.html:56
+#: .\templates\structure.html:56 .\templates\support.html:56
+#: .\templates\team.html:56 .\templates\webinar.html:56
+#: .\templates\young.html:56
+msgid "WEBINAR"
+msgstr "Çevrimiçi seminer"
+
+#: .\templates\about.html:57 .\templates\achievement.html:57
+#: .\templates\advance.html:57 .\templates\award.html:57
+#: .\templates\board.html:57 .\templates\challenge.html:57
+#: .\templates\column.html:57 .\templates\contact.html:57
+#: .\templates\daniel.html:57 .\templates\eurosun.html:57
+#: .\templates\event.html:57 .\templates\fellow.html:57
+#: .\templates\history.html:57 .\templates\incore.html:57
+#: .\templates\index.html:57 .\templates\jobs.html:57
+#: .\templates\journal.html:57 .\templates\leader.html:57
+#: .\templates\membership.html:57 .\templates\museum.html:57
+#: .\templates\news.html:57 .\templates\part.html:57 .\templates\public.html:57
+#: .\templates\structure.html:57 .\templates\support.html:57
+#: .\templates\team.html:57 .\templates\webinar.html:57
+#: .\templates\young.html:57
+msgid "MUSEUM"
+msgstr "Müze"
+
+#: .\templates\about.html:58 .\templates\achievement.html:58
+#: .\templates\advance.html:58 .\templates\award.html:58
+#: .\templates\board.html:58 .\templates\challenge.html:58
+#: .\templates\column.html:58 .\templates\contact.html:58
+#: .\templates\daniel.html:58 .\templates\eurosun.html:58
+#: .\templates\event.html:58 .\templates\fellow.html:58
+#: .\templates\history.html:58 .\templates\incore.html:58
+#: .\templates\index.html:58 .\templates\jobs.html:58
+#: .\templates\journal.html:58 .\templates\leader.html:58
+#: .\templates\membership.html:58 .\templates\museum.html:58
+#: .\templates\news.html:58 .\templates\part.html:58 .\templates\public.html:58
+#: .\templates\structure.html:58 .\templates\support.html:58
+#: .\templates\team.html:58 .\templates\webinar.html:58
+#: .\templates\young.html:58
+msgid "YOUNG"
+msgstr "Genç"
+
+#: .\templates\about.html:59 .\templates\achievement.html:59
+#: .\templates\advance.html:59 .\templates\award.html:59
+#: .\templates\board.html:59 .\templates\challenge.html:59
+#: .\templates\column.html:59 .\templates\contact.html:59
+#: .\templates\daniel.html:59 .\templates\eurosun.html:59
+#: .\templates\event.html:59 .\templates\fellow.html:59
+#: .\templates\history.html:59 .\templates\incore.html:59
+#: .\templates\index.html:59 .\templates\jobs.html:59
+#: .\templates\journal.html:59 .\templates\leader.html:59
+#: .\templates\membership.html:59 .\templates\museum.html:59
+#: .\templates\news.html:59 .\templates\part.html:59 .\templates\public.html:59
+#: .\templates\structure.html:59 .\templates\support.html:59
+#: .\templates\team.html:59 .\templates\webinar.html:59
+#: .\templates\young.html:59
+msgid "PUBLICATION"
+msgstr "Yayın"
+
+#: .\templates\about.html:60 .\templates\achievement.html:60
+#: .\templates\advance.html:60 .\templates\award.html:60
+#: .\templates\board.html:60 .\templates\challenge.html:60
+#: .\templates\column.html:60 .\templates\contact.html:60
+#: .\templates\daniel.html:60 .\templates\eurosun.html:60
+#: .\templates\event.html:60 .\templates\fellow.html:60
+#: .\templates\history.html:60 .\templates\incore.html:60
+#: .\templates\index.html:60 .\templates\jobs.html:60
+#: .\templates\journal.html:60 .\templates\leader.html:60
+#: .\templates\membership.html:60 .\templates\museum.html:60
+#: .\templates\news.html:60 .\templates\part.html:60 .\templates\public.html:60
+#: .\templates\structure.html:60 .\templates\support.html:60
+#: .\templates\team.html:60 .\templates\webinar.html:60
+#: .\templates\young.html:60
+msgid "ADVANCE"
+msgstr "Gelişme"
+
+#: .\templates\about.html:61 .\templates\achievement.html:61
+#: .\templates\advance.html:61 .\templates\award.html:61
+#: .\templates\board.html:61 .\templates\challenge.html:61
+#: .\templates\column.html:61 .\templates\contact.html:61
+#: .\templates\daniel.html:61 .\templates\eurosun.html:61
+#: .\templates\event.html:61 .\templates\fellow.html:61
+#: .\templates\history.html:61 .\templates\incore.html:61
+#: .\templates\index.html:61 .\templates\jobs.html:61
+#: .\templates\journal.html:61 .\templates\leader.html:61
+#: .\templates\membership.html:61 .\templates\museum.html:61
+#: .\templates\news.html:61 .\templates\part.html:61 .\templates\public.html:61
+#: .\templates\structure.html:61 .\templates\support.html:61
+#: .\templates\team.html:61 .\templates\webinar.html:61
+#: .\templates\young.html:61
+msgid "JOURNAL"
+msgstr "Dergi"
+
+#: .\templates\about.html:62 .\templates\achievement.html:62
+#: .\templates\advance.html:62 .\templates\award.html:62
+#: .\templates\board.html:62 .\templates\challenge.html:62
+#: .\templates\column.html:62 .\templates\contact.html:62
+#: .\templates\daniel.html:62 .\templates\eurosun.html:62
+#: .\templates\event.html:62 .\templates\fellow.html:62
+#: .\templates\history.html:62 .\templates\incore.html:62
+#: .\templates\index.html:62 .\templates\jobs.html:62
+#: .\templates\journal.html:62 .\templates\leader.html:62
+#: .\templates\membership.html:62 .\templates\museum.html:62
+#: .\templates\news.html:62 .\templates\part.html:62 .\templates\public.html:62
+#: .\templates\structure.html:62 .\templates\support.html:62
+#: .\templates\team.html:62 .\templates\webinar.html:62
+#: .\templates\young.html:62
+msgid "COLUMN"
+msgstr "Sütun"
+
+#: .\templates\about.html:63 .\templates\achievement.html:63
+#: .\templates\advance.html:63 .\templates\award.html:63
+#: .\templates\board.html:63 .\templates\challenge.html:63
+#: .\templates\column.html:63 .\templates\contact.html:63
+#: .\templates\daniel.html:63 .\templates\eurosun.html:63
+#: .\templates\event.html:63 .\templates\fellow.html:63
+#: .\templates\history.html:63 .\templates\incore.html:63
+#: .\templates\index.html:63 .\templates\jobs.html:63
+#: .\templates\journal.html:63 .\templates\leader.html:63
+#: .\templates\membership.html:63 .\templates\museum.html:63
+#: .\templates\news.html:63 .\templates\part.html:63 .\templates\public.html:63
+#: .\templates\structure.html:63 .\templates\support.html:63
+#: .\templates\team.html:63 .\templates\webinar.html:63
+#: .\templates\young.html:63
+msgid "SUPPORT"
+msgstr "Destek"
+
+#: .\templates\about.html:67 .\templates\achievement.html:67
+#: .\templates\advance.html:67 .\templates\award.html:67
+#: .\templates\board.html:67 .\templates\challenge.html:67
+#: .\templates\column.html:67 .\templates\contact.html:67
+#: .\templates\daniel.html:67 .\templates\eurosun.html:67
+#: .\templates\event.html:67 .\templates\fellow.html:79
+#: .\templates\history.html:67 .\templates\incore.html:79
+#: .\templates\index.html:67 .\templates\jobs.html:67
+#: .\templates\journal.html:67 .\templates\leader.html:67
+#: .\templates\membership.html:67 .\templates\museum.html:67
+#: .\templates\news.html:67 .\templates\part.html:67 .\templates\public.html:67
+#: .\templates\structure.html:67 .\templates\support.html:67
+#: .\templates\team.html:67 .\templates\webinar.html:67
+#: .\templates\young.html:67
+msgid "MEMBERSHIP"
+msgstr "Üyelik"
+
+#: .\templates\about.html:68 .\templates\achievement.html:68
+#: .\templates\advance.html:68 .\templates\award.html:68
+#: .\templates\board.html:68 .\templates\challenge.html:68
+#: .\templates\column.html:68 .\templates\contact.html:68
+#: .\templates\daniel.html:68 .\templates\eurosun.html:68
+#: .\templates\event.html:68 .\templates\fellow.html:80
+#: .\templates\history.html:68 .\templates\incore.html:80
+#: .\templates\index.html:68 .\templates\jobs.html:68
+#: .\templates\journal.html:68 .\templates\leader.html:68
+#: .\templates\membership.html:68 .\templates\museum.html:68
+#: .\templates\news.html:68 .\templates\part.html:68 .\templates\public.html:68
+#: .\templates\structure.html:68 .\templates\support.html:68
+#: .\templates\team.html:68 .\templates\webinar.html:68
+#: .\templates\young.html:68
+msgid "NEWS"
+msgstr "Haberler"
+
+#: .\templates\about.html:69 .\templates\achievement.html:69
+#: .\templates\advance.html:69 .\templates\award.html:69
+#: .\templates\board.html:69 .\templates\challenge.html:69
+#: .\templates\column.html:69 .\templates\contact.html:69
+#: .\templates\daniel.html:69 .\templates\eurosun.html:69
+#: .\templates\event.html:69 .\templates\fellow.html:81
+#: .\templates\history.html:69 .\templates\incore.html:81
+#: .\templates\index.html:69 .\templates\jobs.html:69
+#: .\templates\journal.html:69 .\templates\leader.html:69
+#: .\templates\membership.html:69 .\templates\museum.html:69
+#: .\templates\news.html:69 .\templates\part.html:69 .\templates\public.html:69
+#: .\templates\structure.html:69 .\templates\support.html:69
+#: .\templates\team.html:69 .\templates\webinar.html:69
+#: .\templates\young.html:69
+msgid "CONTACT"
+msgstr "İletişim"
+
+#: .\templates\about.html:71 .\templates\achievement.html:71
+#: .\templates\advance.html:71 .\templates\award.html:71
+#: .\templates\board.html:71 .\templates\challenge.html:71
+#: .\templates\column.html:71 .\templates\contact.html:71
+#: .\templates\daniel.html:71 .\templates\eurosun.html:71
+#: .\templates\event.html:71 .\templates\fellow.html:68
+#: .\templates\history.html:71 .\templates\incore.html:68
+#: .\templates\index.html:71 .\templates\jobs.html:71
+#: .\templates\journal.html:71 .\templates\leader.html:71
+#: .\templates\membership.html:71 .\templates\museum.html:71
+#: .\templates\news.html:71 .\templates\part.html:71 .\templates\public.html:71
+#: .\templates\structure.html:71 .\templates\support.html:71
+#: .\templates\team.html:71 .\templates\webinar.html:71
+#: .\templates\young.html:71
+msgid "LANGUAGES"
+msgstr "Diller"
+
+#: .\templates\about.html:113 .\templates\about.html:136
+#: .\templates\achievement.html:116 .\templates\achievement.html:139
+#: .\templates\advance.html:114 .\templates\advance.html:137
+#: .\templates\award.html:118 .\templates\award.html:141
+#: .\templates\board.html:154 .\templates\board.html:177
+#: .\templates\challenge.html:120 .\templates\challenge.html:143
+#: .\templates\column.html:116 .\templates\column.html:139
+#: .\templates\contact.html:112 .\templates\contact.html:135
+#: .\templates\daniel.html:118 .\templates\daniel.html:141
+#: .\templates\eurosun.html:112 .\templates\eurosun.html:135
+#: .\templates\event.html:113 .\templates\event.html:136
+#: .\templates\fellow.html:159 .\templates\fellow.html:182
+#: .\templates\history.html:119 .\templates\history.html:142
+#: .\templates\incore.html:128 .\templates\incore.html:151
+#: .\templates\index.html:167 .\templates\index.html:190
+#: .\templates\jobs.html:154 .\templates\jobs.html:177
+#: .\templates\journal.html:135 .\templates\journal.html:158
+#: .\templates\leader.html:124 .\templates\leader.html:147
+#: .\templates\membership.html:129 .\templates\membership.html:152
+#: .\templates\museum.html:132 .\templates\museum.html:155
+#: .\templates\news.html:125 .\templates\news.html:148
+#: .\templates\part.html:121 .\templates\part.html:144
+#: .\templates\public.html:120 .\templates\public.html:143
+#: .\templates\structure.html:113 .\templates\structure.html:136
+#: .\templates\support.html:122 .\templates\support.html:145
+#: .\templates\team.html:122 .\templates\team.html:145
+#: .\templates\webinar.html:132 .\templates\webinar.html:155
+#: .\templates\young.html:127 .\templates\young.html:150
 msgid "About"
 msgstr "Hakkında"
 
-#: .\templates\about.html:91 .\templates\data.html:127 .\templates\eco.html:91
-#: .\templates\education.html:102 .\templates\events.html:114
-#: .\templates\finance.html:91 .\templates\index.html:164
-#: .\templates\innovation.html:87 .\templates\membership.html:137
-#: .\templates\news.html:106 .\templates\outlook.html:94
-#: .\templates\part.html:85 .\templates\plan.html:90 .\templates\policy.html:90
-#: .\templates\project.html:87 .\templates\techno.html:91
-msgid "Economic"
-msgstr "Ekonomik"
+#: .\templates\about.html:114 .\templates\achievement.html:117
+#: .\templates\advance.html:115 .\templates\award.html:119
+#: .\templates\board.html:155 .\templates\challenge.html:121
+#: .\templates\column.html:117 .\templates\contact.html:113
+#: .\templates\daniel.html:119 .\templates\eurosun.html:113
+#: .\templates\event.html:114 .\templates\fellow.html:160
+#: .\templates\history.html:120 .\templates\incore.html:129
+#: .\templates\index.html:168 .\templates\jobs.html:155
+#: .\templates\journal.html:136 .\templates\leader.html:125
+#: .\templates\membership.html:130 .\templates\museum.html:133
+#: .\templates\news.html:126 .\templates\part.html:122
+#: .\templates\public.html:121 .\templates\structure.html:114
+#: .\templates\support.html:123 .\templates\team.html:123
+#: .\templates\webinar.html:133 .\templates\young.html:128
+msgid "ITM smart panel"
+msgstr "Akıllı panel"
 
-#: .\templates\about.html:92 .\templates\data.html:128 .\templates\eco.html:92
-#: .\templates\education.html:103 .\templates\events.html:115
-#: .\templates\finance.html:92 .\templates\index.html:165
-#: .\templates\innovation.html:88 .\templates\membership.html:138
-#: .\templates\news.html:107 .\templates\outlook.html:95
-#: .\templates\part.html:86 .\templates\plan.html:91 .\templates\policy.html:91
-#: .\templates\project.html:88 .\templates\techno.html:92
-msgid "Project"
-msgstr "Proje"
+#: .\templates\about.html:125 .\templates\achievement.html:128
+#: .\templates\advance.html:126 .\templates\award.html:130
+#: .\templates\board.html:166 .\templates\challenge.html:132
+#: .\templates\column.html:128 .\templates\contact.html:124
+#: .\templates\daniel.html:130 .\templates\eurosun.html:124
+#: .\templates\event.html:125 .\templates\fellow.html:171
+#: .\templates\history.html:131 .\templates\incore.html:140
+#: .\templates\index.html:179 .\templates\jobs.html:166
+#: .\templates\journal.html:147 .\templates\leader.html:136
+#: .\templates\membership.html:141 .\templates\museum.html:144
+#: .\templates\news.html:137 .\templates\part.html:133
+#: .\templates\public.html:132 .\templates\structure.html:125
+#: .\templates\support.html:134 .\templates\team.html:134
+#: .\templates\webinar.html:144 .\templates\young.html:139
+msgid "What we do"
+msgstr "Ne yapıyoruz"
 
-#: .\templates\about.html:93 .\templates\data.html:129 .\templates\eco.html:93
-#: .\templates\education.html:104 .\templates\events.html:116
-#: .\templates\finance.html:93 .\templates\index.html:166
-#: .\templates\innovation.html:89 .\templates\membership.html:139
-#: .\templates\news.html:108 .\templates\outlook.html:96
-#: .\templates\part.html:87 .\templates\plan.html:92 .\templates\policy.html:92
-#: .\templates\project.html:89 .\templates\techno.html:93
-msgid "Event"
-msgstr "Etkinlik"
+#: .\templates\about.html:127 .\templates\achievement.html:130
+#: .\templates\advance.html:128 .\templates\award.html:132
+#: .\templates\board.html:168 .\templates\challenge.html:134
+#: .\templates\column.html:130 .\templates\contact.html:126
+#: .\templates\daniel.html:132 .\templates\eurosun.html:126
+#: .\templates\event.html:127 .\templates\fellow.html:173
+#: .\templates\history.html:133 .\templates\incore.html:142
+#: .\templates\index.html:181 .\templates\jobs.html:168
+#: .\templates\journal.html:149 .\templates\leader.html:138
+#: .\templates\membership.html:143 .\templates\museum.html:146
+#: .\templates\news.html:139 .\templates\part.html:135
+#: .\templates\public.html:134 .\templates\structure.html:127
+#: .\templates\support.html:136 .\templates\team.html:136
+#: .\templates\webinar.html:146 .\templates\young.html:141
+msgid "Award"
+msgstr "Ödüller"
 
-#: .\templates\about.html:98 .\templates\data.html:134 .\templates\eco.html:98
-#: .\templates\education.html:109 .\templates\events.html:121
-#: .\templates\finance.html:98 .\templates\index.html:171
-#: .\templates\innovation.html:94 .\templates\membership.html:144
-#: .\templates\news.html:113 .\templates\outlook.html:101
-#: .\templates\part.html:92 .\templates\plan.html:97 .\templates\policy.html:97
-#: .\templates\project.html:94 .\templates\techno.html:98
-msgid "Membership"
-msgstr "Üyelik"
+#: .\templates\about.html:128 .\templates\achievement.html:131
+#: .\templates\advance.html:129 .\templates\award.html:133
+#: .\templates\board.html:169 .\templates\challenge.html:135
+#: .\templates\column.html:131 .\templates\contact.html:127
+#: .\templates\daniel.html:133 .\templates\eurosun.html:127
+#: .\templates\event.html:128 .\templates\fellow.html:174
+#: .\templates\history.html:134 .\templates\incore.html:143
+#: .\templates\index.html:182 .\templates\jobs.html:169
+#: .\templates\journal.html:150 .\templates\leader.html:139
+#: .\templates\membership.html:144 .\templates\museum.html:147
+#: .\templates\news.html:140 .\templates\part.html:136
+#: .\templates\public.html:135 .\templates\structure.html:128
+#: .\templates\support.html:137 .\templates\team.html:137
+#: .\templates\webinar.html:147 .\templates\young.html:142
+msgid "Daniel"
+msgstr "Daniels"
 
-#: .\templates\about.html:99 .\templates\data.html:135 .\templates\eco.html:99
-#: .\templates\education.html:110 .\templates\events.html:122
-#: .\templates\finance.html:99 .\templates\index.html:172
-#: .\templates\innovation.html:95 .\templates\membership.html:145
-#: .\templates\news.html:114 .\templates\outlook.html:102
-#: .\templates\part.html:93 .\templates\plan.html:98 .\templates\policy.html:98
-#: .\templates\project.html:95 .\templates\techno.html:99
-msgid "Innovation"
-msgstr "Yenilik"
+#: .\templates\about.html:129 .\templates\achievement.html:132
+#: .\templates\advance.html:130 .\templates\award.html:134
+#: .\templates\board.html:170 .\templates\challenge.html:136
+#: .\templates\column.html:132 .\templates\contact.html:128
+#: .\templates\daniel.html:134 .\templates\eurosun.html:128
+#: .\templates\event.html:129 .\templates\fellow.html:175
+#: .\templates\history.html:135 .\templates\incore.html:144
+#: .\templates\index.html:183 .\templates\jobs.html:170
+#: .\templates\journal.html:151 .\templates\leader.html:140
+#: .\templates\membership.html:145 .\templates\museum.html:148
+#: .\templates\news.html:141 .\templates\part.html:137
+#: .\templates\public.html:136 .\templates\structure.html:129
+#: .\templates\support.html:138 .\templates\team.html:138
+#: .\templates\webinar.html:148 .\templates\young.html:143
+msgid "Webinar"
+msgstr "Çevrimiçi seminer"
 
-#: .\templates\about.html:100 .\templates\data.html:136
-#: .\templates\eco.html:100 .\templates\education.html:111
-#: .\templates\events.html:123 .\templates\finance.html:100
-#: .\templates\index.html:173 .\templates\innovation.html:96
-#: .\templates\membership.html:146 .\templates\news.html:115
-#: .\templates\outlook.html:103 .\templates\part.html:94
-#: .\templates\plan.html:99 .\templates\policy.html:99
-#: .\templates\project.html:96 .\templates\techno.html:100
-msgid "Partnerships"
-msgstr "Ortaklıklar"
+#: .\templates\about.html:134 .\templates\achievement.html:137
+#: .\templates\advance.html:135 .\templates\award.html:139
+#: .\templates\board.html:175 .\templates\challenge.html:141
+#: .\templates\column.html:137 .\templates\contact.html:133
+#: .\templates\daniel.html:139 .\templates\eurosun.html:133
+#: .\templates\event.html:134 .\templates\fellow.html:180
+#: .\templates\history.html:140 .\templates\incore.html:149
+#: .\templates\index.html:188 .\templates\jobs.html:175
+#: .\templates\journal.html:156 .\templates\leader.html:145
+#: .\templates\membership.html:150 .\templates\museum.html:153
+#: .\templates\news.html:146 .\templates\part.html:142
+#: .\templates\public.html:141 .\templates\structure.html:134
+#: .\templates\support.html:143 .\templates\team.html:143
+#: .\templates\webinar.html:153 .\templates\young.html:148
+msgid "Who we are"
+msgstr "Biz kimiz"
 
-#: .\templates\about.html:101 .\templates\data.html:137
-#: .\templates\eco.html:101 .\templates\education.html:112
-#: .\templates\events.html:124 .\templates\finance.html:101
-#: .\templates\index.html:174 .\templates\innovation.html:97
-#: .\templates\membership.html:147 .\templates\news.html:116
-#: .\templates\outlook.html:104 .\templates\part.html:95
-#: .\templates\plan.html:100 .\templates\policy.html:100
-#: .\templates\project.html:97 .\templates\techno.html:101
-msgid "Outlook"
-msgstr "Görünüm"
+#: .\templates\about.html:137 .\templates\achievement.html:140
+#: .\templates\advance.html:138 .\templates\award.html:142
+#: .\templates\board.html:178 .\templates\challenge.html:144
+#: .\templates\column.html:140 .\templates\contact.html:136
+#: .\templates\daniel.html:142 .\templates\eurosun.html:136
+#: .\templates\event.html:137 .\templates\fellow.html:183
+#: .\templates\history.html:143 .\templates\incore.html:152
+#: .\templates\index.html:191 .\templates\jobs.html:178
+#: .\templates\journal.html:159 .\templates\leader.html:148
+#: .\templates\membership.html:153 .\templates\museum.html:156
+#: .\templates\news.html:149 .\templates\part.html:145
+#: .\templates\public.html:144 .\templates\structure.html:137
+#: .\templates\support.html:146 .\templates\team.html:146
+#: .\templates\webinar.html:156 .\templates\young.html:151
+msgid "Structure"
+msgstr "Yapı"
 
-#: .\templates\about.html:106 .\templates\data.html:142
-#: .\templates\eco.html:106 .\templates\education.html:117
-#: .\templates\events.html:129 .\templates\finance.html:106
-#: .\templates\index.html:179 .\templates\innovation.html:102
-#: .\templates\membership.html:152 .\templates\news.html:121
-#: .\templates\outlook.html:109 .\templates\part.html:100
-#: .\templates\plan.html:105 .\templates\policy.html:105
-#: .\templates\project.html:102 .\templates\techno.html:106
-msgid "News"
-msgstr "Haberler"
+#: .\templates\about.html:138 .\templates\achievement.html:141
+#: .\templates\advance.html:139 .\templates\award.html:143
+#: .\templates\board.html:179 .\templates\challenge.html:145
+#: .\templates\column.html:141 .\templates\contact.html:137
+#: .\templates\daniel.html:143 .\templates\eurosun.html:137
+#: .\templates\event.html:138 .\templates\fellow.html:184
+#: .\templates\history.html:144 .\templates\incore.html:153
+#: .\templates\index.html:192 .\templates\jobs.html:179
+#: .\templates\journal.html:160 .\templates\leader.html:149
+#: .\templates\membership.html:154 .\templates\museum.html:157
+#: .\templates\news.html:150 .\templates\part.html:146
+#: .\templates\public.html:145 .\templates\structure.html:138
+#: .\templates\support.html:147 .\templates\team.html:147
+#: .\templates\webinar.html:157 .\templates\young.html:152
+msgid "Board"
+msgstr "Kurul"
 
-#: .\templates\about.html:107 .\templates\data.html:143
-#: .\templates\eco.html:107 .\templates\education.html:118
-#: .\templates\events.html:130 .\templates\finance.html:107
-#: .\templates\index.html:180 .\templates\innovation.html:103
-#: .\templates\membership.html:153 .\templates\news.html:122
-#: .\templates\outlook.html:110 .\templates\part.html:101
-#: .\templates\plan.html:106 .\templates\policy.html:106
-#: .\templates\project.html:103 .\templates\techno.html:107
-msgid "Technology"
-msgstr "Teknoloji"
+#: .\templates\about.html:139 .\templates\achievement.html:142
+#: .\templates\advance.html:140 .\templates\award.html:144
+#: .\templates\board.html:180 .\templates\challenge.html:146
+#: .\templates\column.html:142 .\templates\contact.html:138
+#: .\templates\daniel.html:144 .\templates\eurosun.html:138
+#: .\templates\event.html:139 .\templates\fellow.html:185
+#: .\templates\history.html:145 .\templates\incore.html:154
+#: .\templates\index.html:193 .\templates\jobs.html:180
+#: .\templates\journal.html:161 .\templates\leader.html:150
+#: .\templates\membership.html:155 .\templates\museum.html:158
+#: .\templates\news.html:151 .\templates\part.html:147
+#: .\templates\public.html:146 .\templates\structure.html:139
+#: .\templates\support.html:148 .\templates\team.html:148
+#: .\templates\webinar.html:158 .\templates\young.html:153
+msgid "Team"
+msgstr "Takım"
 
-#: .\templates\about.html:108 .\templates\data.html:144
-#: .\templates\eco.html:108 .\templates\education.html:119
-#: .\templates\events.html:131 .\templates\finance.html:108
-#: .\templates\index.html:181 .\templates\innovation.html:104
-#: .\templates\membership.html:154 .\templates\news.html:123
-#: .\templates\outlook.html:111 .\templates\part.html:102
-#: .\templates\plan.html:107 .\templates\policy.html:107
-#: .\templates\project.html:104 .\templates\techno.html:108
-msgid "Data"
-msgstr "Veri"
+#: .\templates\about.html:144 .\templates\achievement.html:147
+#: .\templates\advance.html:145 .\templates\award.html:149
+#: .\templates\board.html:185 .\templates\challenge.html:151
+#: .\templates\column.html:147 .\templates\contact.html:143
+#: .\templates\daniel.html:149 .\templates\eurosun.html:143
+#: .\templates\event.html:144 .\templates\fellow.html:190
+#: .\templates\history.html:150 .\templates\incore.html:159
+#: .\templates\index.html:198 .\templates\jobs.html:185
+#: .\templates\journal.html:166 .\templates\leader.html:155
+#: .\templates\membership.html:160 .\templates\museum.html:163
+#: .\templates\news.html:156 .\templates\part.html:152
+#: .\templates\public.html:151 .\templates\structure.html:144
+#: .\templates\support.html:153 .\templates\team.html:153
+#: .\templates\webinar.html:163 .\templates\young.html:158
+msgid "Contact"
+msgstr "İletişim"
 
-#: .\templates\about.html:109 .\templates\data.html:145
-#: .\templates\eco.html:109 .\templates\education.html:120
-#: .\templates\events.html:132 .\templates\finance.html:109
-#: .\templates\index.html:182 .\templates\innovation.html:105
-#: .\templates\membership.html:155 .\templates\news.html:124
-#: .\templates\outlook.html:112 .\templates\part.html:103
-#: .\templates\plan.html:108 .\templates\policy.html:108
-#: .\templates\project.html:105 .\templates\techno.html:109
-msgid "Education"
-msgstr "Eğitim"
+#: .\templates\about.html:148 .\templates\achievement.html:151
+#: .\templates\advance.html:149 .\templates\award.html:153
+#: .\templates\board.html:189 .\templates\challenge.html:155
+#: .\templates\column.html:151 .\templates\contact.html:147
+#: .\templates\daniel.html:153 .\templates\eurosun.html:147
+#: .\templates\event.html:148 .\templates\fellow.html:194
+#: .\templates\history.html:154 .\templates\incore.html:163
+#: .\templates\index.html:202 .\templates\jobs.html:189
+#: .\templates\journal.html:170 .\templates\leader.html:159
+#: .\templates\membership.html:164 .\templates\museum.html:167
+#: .\templates\news.html:160 .\templates\part.html:156
+#: .\templates\public.html:155 .\templates\structure.html:148
+#: .\templates\support.html:157 .\templates\team.html:157
+#: .\templates\webinar.html:167 .\templates\young.html:162
+msgid "Tashkent city, Almazar district"
+msgstr "Taşkent şehri, Almazar ilçesi"
+
+#: .\templates\about.html:160 .\templates\achievement.html:163
+#: .\templates\advance.html:161 .\templates\award.html:165
+#: .\templates\board.html:201 .\templates\challenge.html:167
+#: .\templates\column.html:163 .\templates\contact.html:159
+#: .\templates\daniel.html:165 .\templates\eurosun.html:159
+#: .\templates\event.html:160 .\templates\fellow.html:206
+#: .\templates\history.html:166 .\templates\incore.html:175
+#: .\templates\index.html:214 .\templates\jobs.html:201
+#: .\templates\journal.html:182 .\templates\leader.html:171
+#: .\templates\membership.html:176 .\templates\museum.html:179
+#: .\templates\news.html:172 .\templates\part.html:168
+#: .\templates\public.html:167 .\templates\structure.html:160
+#: .\templates\support.html:169 .\templates\team.html:169
+#: .\templates\webinar.html:179 .\templates\young.html:174
+msgid "Mon-Sat: 8:30-19:00"
+msgstr "Pazartesi-Cumartesi: 08:30-19:00"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -1564,6 +2005,27 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django_ckeditor_5\permissions.py:18
+msgid "You do not have permission to upload files."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django_ckeditor_5\permissions.py:25
+msgid "You must be logged in to upload files."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django_ckeditor_5\validators.py:17
+#, python-format
+msgid "File should be at most %(max_size)s MB."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django_ckeditor_5\views.py:41
+msgid "Invalid form data"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django_ckeditor_5\widgets.py:43
+msgid "Check the correct settings.CKEDITOR_5_CONFIGS "
 msgstr ""
 
 #: .\venv\Lib\site-packages\modeltranslation\tests\models.py:14
