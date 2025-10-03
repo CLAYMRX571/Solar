@@ -11,7 +11,7 @@ class Team(models.Model):
 class Cd(models.Model):
     name = models.CharField(max_length=200)
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='jamoa/', blank=True, null=True)
+    image = models.ImageField(upload_to='jamoa', blank=True, null=True)
     telegram = models.CharField(max_length=100)
     linkedin = models.CharField(max_length=100)
     instagram = models.CharField(max_length=100)

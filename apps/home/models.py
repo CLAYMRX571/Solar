@@ -8,7 +8,7 @@ class Banner(models.Model):
     
 class Home(models.Model):
     name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='itm/', blank=True, null=True)
+    image = models.ImageField(upload_to='itm', blank=True, null=True)
     desc = models.TextField()
     button_name = models.CharField(max_length=100)
     buttons_name = models.CharField(max_length=100)
@@ -22,7 +22,7 @@ class Messages(models.Model):
     name = models.CharField(max_length=200)
     title = models.CharField(max_length=50)
     desc = models.TextField()
-    image = models.ImageField(upload_to='message/', blank=True, null=True)
+    image = models.ImageField(upload_to='message', blank=True, null=True)
     button = models.CharField(max_length=50)
 
     def __str__(self):

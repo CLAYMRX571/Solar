@@ -92,7 +92,7 @@
     <div class="award-image-wrapper">
         <div>
             <img src="{{ aw.image.url }}" alt="Farrington Daniels" class="award-image">
-            <div class="award-signature">{{ aw.title }}</div>
+            <div class="award-signature">{{ aw.title|safe }}</div>
         </div>
     </div>
     {% endfor %}

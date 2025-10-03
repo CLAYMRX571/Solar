@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jazzmin',
-    'ckeditor',
     'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_ckeditor_5',
 
     'apps.about',
     'apps.achievement',
@@ -208,6 +208,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': {
+            'items': [
+                'heading', 'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'removeFormat',
+                'bulletedList', 'numberedList', 'outdent', 'indent', 'link', 'blockQuote', 'insertTable', 'mediaEmbed', 'imageUpload',
+                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'undo', 'redo', 'sourceEditing'
+            ],
+        },
+        'height': 600,
+        'width': '100%',
+    }
+}
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)

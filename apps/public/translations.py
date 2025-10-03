@@ -7,4 +7,4 @@ class CategoryTranslationOptions(TranslationOptions):
 
 @register(Pub)
 class CategoryTranslationOptions(TranslationOptions):
-    fields = ('name', 'desc', 'button',)
+    fields = ('name', 'desc',)

@@ -9,7 +9,7 @@ class Part(models.Model):
 class Cards(models.Model):
     name = models.CharField(max_length=200)
     desc = models.TextField()
-    image = models.ImageField(upload_to='part/', blank=True, null=True)
+    image = models.ImageField(upload_to='part', blank=True, null=True)
     link = models.CharField(max_length=255)
     button = models.CharField(max_length=255)
 

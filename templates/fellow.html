@@ -90,7 +90,7 @@
     <div class="aims-section">
         <h3>{{ f.name }}</h3>
         <ul class="aims-list">
-            <li>{{ f.title }}</li>
+            <li>{{ f.title|safe }}</li>
         </ul>
     </div>
     {% endfor %}
@@ -142,7 +142,7 @@
     <p>{{ u.desc|safe }}</p>
 
     <div class="recipient-name">{{ u.name }}</div>
-    <div class="recipient-bio">{{ u.bio }}</div>
+    <div class="recipient-bio">{{ u.bio|safe }}</div>
     {% endfor %}
 </div>
 

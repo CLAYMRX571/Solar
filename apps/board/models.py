@@ -15,7 +15,7 @@ class Ses(models.Model):
 class Member(models.Model):
     name = models.CharField(max_length=200)
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='hamkasb/', blank=True, null=True)
+    image = models.ImageField(upload_to='hamkasb', blank=True, null=True)
     telegram = models.CharField(max_length=100)
     linkedin = models.CharField(max_length=100)
     instagram = models.CharField(max_length=100)
@@ -33,7 +33,7 @@ class Bar(models.Model):
 class Car(models.Model):
     name = models.CharField(max_length=200)
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='ischilar/', blank=True, null=True)
+    image = models.ImageField(upload_to='ishchilar', blank=True, null=True)
     telegram = models.CharField(max_length=100)
     linkedin = models.CharField(max_length=100)
     instagram = models.CharField(max_length=100)

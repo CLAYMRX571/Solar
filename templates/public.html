@@ -93,7 +93,7 @@
     <section class="intro">
         <p>{{ ns.desc|safe }}</p>
         <ul class="topics">
-            <li>{{ ns.topic }}</li>
+            <li>{{ ns.topic|safe }}</li>
         </ul> 
         <p style="text-align: center; font-weight: bold; font-size: 1.1em;">
             <a href="{% url 'public' %}">{{ ns.link }}</a>
@@ -107,7 +107,7 @@
             <img src="{{ bs.image.url }}" alt="ISES Solar Energy Journal">
             <div class="pub-info">
                 <h3>{{ bs.name }}</h3>
-                <a href="{{ bs.file.url }}" target="_blank">{{ bs.button }}</a>
+                <a href="{{ bs.file.url }}" target="_blank">{{ bs.desc|safe }}</a>
             </div>
         </div>
         {% endfor %}
