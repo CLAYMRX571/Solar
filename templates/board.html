@@ -84,7 +84,7 @@
 
 <div class="intro-text">
     {% for inro in board %}
-        <p>{{ inro.desc }}</p>
+        <p>{{ inro.desc|safe }}</p>
     {% endfor %}
 </div>
 
@@ -100,16 +100,16 @@
             <h3>{{ grid.name }}</h3>
             <p>{{ grid.title }}</p>
             <div class="social-links">
-                <a href="{{ grid.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram">
+                <a href="{{ grid.telegram.url }}" target="_blank" rel="noopener noreferrer" title="Telegram">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="{{ grid.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <a href="{{ grid.linkedin.url }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="{{ grid.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="{{ grid.instagram.url }}" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="{{ grid.mail }}" title="Email">
+                <a href="{{ grid.mail.url }}" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -130,16 +130,16 @@
             <h3>{{ c.name }}</h3>
             <p>{{ c.title }}</p>
             <div class="social-links">
-                 <a href="{{ c.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram">
+                 <a href="{{ c.telegram.url }}" target="_blank" rel="noopener noreferrer" title="Telegram">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="{{ c.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <a href="{{ c.linkedin.url }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="{{ c.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="{{ c.instagram.url }}" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="{{ c.mail }}" title="Email">
+                <a href="{{ c.mail.url }}" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>

@@ -95,7 +95,7 @@
 <section id="about-role">
     {% for t in abs %}
     <h2>{{ t.name }}</h2>
-    <p>{{ t.desc }}</p>
+    <p>{{ t.desc|safe }}</p>
     {% endfor %}
 </section>
 
@@ -103,7 +103,7 @@
     {% for n in res %}
     <h2>{{ n.name }}</h2>
     <ul>
-        <strong>{{ n.desc }}</strong>
+        <strong>{{ n.desc|safe }}</strong>
     </ul>
     {% endfor %}
 </section>
@@ -112,7 +112,7 @@
     {% for l in look %}
     <h2>{{ l.name }}</h2>
     <ul>
-        <strong>{{ l.desc }}</strong>
+        <strong>{{ l.desc|safe }}</strong>
     </ul>
     {% endfor %}
 </section>
@@ -121,7 +121,7 @@
     {% for we in offer %}
     <h2>{{ we.name }}</h2>
     <ul>
-       {{ we.desc }}
+       {{ we.desc|safe }}
     </ul>
     {% endfor %}
 </section>
@@ -129,21 +129,21 @@
 <section id="how-to-apply">
     {% for app in apply %}
     <h2>{{ app.name }}</h2>
-    <p>{{ app.desc }}</p>
+    <p>{{ app.desc|safe }}</p>
     {% endfor %}
 </section>
 
 <div class="info">
     {% for i in info %}
     <h3>{{ i.name }}</h3>
-    <p>{{ i.desc }}</p>
-    <a href="mailto:itm.mchj@itm-llc.uz" style="color: var(--accent);" target="_blank">{{ i.mail }}</a></p>
+    <p>{{ i.desc|safe }}</p>
+    <a href="{{ i.button.url }}" style="color: var(--accent);" target="_blank">{{ i.mail }}</a></p>
     {% endfor %}
 </div>
 
 <div class="foot">
     {% for f in foot %}
-    <p>{{ f.desc }}</p>
+    <p>{{ f.desc|safe }}</p>
     <a href="{{ f.file.url }}" style="color: var(--accent);" target="_blank">{{ f.button }}</a>
     {% endfor %}
 </div>

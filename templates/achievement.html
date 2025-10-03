@@ -85,7 +85,7 @@
 <div class="award-container">
   {% for a in achievement %}
     <h2>{{ a.name }}</h2>
-    <p> {{ a.desc }}</p>
+    <p> {{ a.desc|safe }}</p>
   {% endfor %}
 </div>
 
@@ -93,7 +93,7 @@
   {% for n in recept %}
   <div class="recipient-content">
     <h2>{{ n.name }}</h2>
-    <p>{{ n.desc }}</p>
+    <p>{{ n.desc|safe }}</p>
   </div>
   <div class="recipient-image-wrapper">
     <img src="{{ n.image.url }}" alt="Harish Hande, 2025 Recipient" class="recipient-image">
@@ -105,7 +105,7 @@
   {% for s in past %}
   <div class="recipient-content">
     <h2>{{ s.name }}</h2>
-    <a href="{{ s.file }}" target="_blank">{{ s.desc }}</a>
+    <a href="{{ s.file.url }}" target="_blank">{{ s.desc|safe }}</a>
   </div>
   {% endfor %}
 </div>

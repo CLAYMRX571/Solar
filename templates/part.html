@@ -85,7 +85,7 @@
 <div class="container">
     {% for con in part %}
     <div class="intro-text">
-     {{ con.desc }}
+     {{ con.desc|safe }}
     </div>
     {% endfor %}
     <div class="partner-card">
@@ -94,7 +94,7 @@
         <div class="partner-info">
             <h3 class="partner-title">{{ ca.name }}</h3>
             <p class="partner-description">
-            {{ ca.desc }}
+            {{ ca.desc|safe }}
             </p>
             <a href="{{ ca.link.url }}" class="partner-link" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-globe"></i> {{ ca.button }}
@@ -110,7 +110,7 @@
     <p class="intro-text">
         {{ sect.title }}
     <ul class="partners-list">
-        <li>{{ sect.desc }}</li>
+        <li>{{ sect.desc|safe }}</li>
     </ul>
     {% endfor %}
 </div>

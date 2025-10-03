@@ -84,14 +84,14 @@
 
 <div class="container">
     {% for ner in history %}
-    <div class="intro-text">{{ ner.desc }}</div>
+    <div class="intro-text">{{ ner.desc|safe }}</div>
     {% endfor %}
 
     <div class="vision-section">
         <div class="vision-content">
             {% for vis in col %}
             <div class="vision-column">
-                <p>{{ vis.desc }}</p>
+                <p>{{ vis.desc|safe }}</p>
             </div>
             {% endfor %}
         </div>
@@ -106,7 +106,7 @@
             <img src="{{ c.image.url }}" alt="Solar Energy Cover" class="timeline-image">
             <div class="card-year">{{ c.year }}</div>
             <div class="card-content">
-                <p>{{ c.desc }}</p>
+                <p>{{ c.desc|safe }}</p>
             </div>
         </div>
     </div>

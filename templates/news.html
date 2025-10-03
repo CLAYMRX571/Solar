@@ -92,7 +92,7 @@
             <img src="{{ s.image.url }}" alt="CIES 2026" class="news-image">
             <div class="news-content">
                 <h3 class="news-title">{{ s.title }}</h3>
-                <p class="news-excert">{{ s.desc }}</p>
+                <p class="news-excert">{{ s.desc|safe }}</p>
                 <a href="{{ s.file.url }}" target="_blank" class="read-more-btn">{{ s.button }}</a>
             </div>
         </div>

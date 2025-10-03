@@ -89,8 +89,8 @@
     {% for c in conf %}
     <div class="conference-header" onclick="toggleContent('overview')">{{ c.name }}</div>
     <div id="overview" class="conference-content">
-        <p>{{ c.desc }}</p>
-        <a href="{{ c.mail }}">{{ c.button }}</a>
+        <p>{{ c.desc|safe }}</p>
+        <a href="{{ c.mail.url }}">{{ c.button }}</a>
     </div>
     {% endfor %}
 </div>
@@ -101,7 +101,7 @@
       <img src="{{ d.image.url }}" alt="EuroSun 2026 Logo" class="logo">
     </div>
     <div id="eurosun2026" class="conference-content">
-      <p>{{ d.desc }}</p>
+      <p>{{ d.desc|safe }}</p>
     </div>
     {% endfor %}
 </div>

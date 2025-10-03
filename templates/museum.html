@@ -91,7 +91,7 @@
 <main>
     {% for into in ms %}
     <section class="intro">
-        <p>{{ into.desc }}</p>
+        <p>{{ into.desc|safe }}</p>
     </section>
 
     <div class="museum-image">
@@ -99,7 +99,7 @@
     </div>
 
     <div class="cta">
-        <a href="{{ into.file }}" target="_blank" class="btn">{{ into.name }}</a>
+        <a href="{{ into.file.url }}" target="_blank" class="btn">{{ into.name }}</a>
     </div>
     {% endfor %}
 </main>
@@ -120,8 +120,8 @@
     <section class="support">
         {% for p in supa %}
             <h2>{{ p.name }}</h2>
-            <p>{{ p.desc }}</p>
-            <a href="{{ p.file }}" target="_blank">{{ p.button }}</a>
+            <p>{{ p.desc|safe }}</p>
+            <a href="{{ p.file.url }}" target="_blank">{{ p.button }}</a>
         {% endfor %}
     </section>
 </main>

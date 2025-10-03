@@ -87,7 +87,7 @@
     <div class="award-content">
         <h2>{{ abs.name }}</h2>
         <p></p>
-        <div class="notice">{{ abs.desc }}</div>
+        <div class="notice">{{ abs.desc|safe }}</div>
     </div>
     <div class="award-image">
       <img src="{{ abs.image.url }}" alt="Dr. Hermann Scheer" />
@@ -100,7 +100,7 @@
     <div class="recipient-content">
         <h1>{{ hh.name }}</h1>
         <p>
-            <strong>{{ hh.desc }}</strong>
+            <strong>{{ hh.desc|safe }}</strong>
         </p>
     </div>
     <div class="recipient-image">
@@ -113,7 +113,7 @@
     {% for sd in win %}
     <div class="recipient-content">
         <h2>{{ sd.name }}</h2>
-        <a href="{{ sd.file }}" target="_blank"> {{ sd.desc }}</a>
+        <a href="{{ sd.file.url }}" target="_blank"> {{ sd.desc|safe }}</a>
     </div>
     {% endfor %}
 </div>

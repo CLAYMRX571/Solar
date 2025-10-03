@@ -85,7 +85,7 @@
 <div class="section">
     {% for new in award %}
     <p>
-      {{ new.desc }}
+      {{ new.desc|safe }}
     </p>
     {% endfor %}
 </div>

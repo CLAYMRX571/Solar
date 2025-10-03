@@ -86,7 +86,7 @@
     {% for chal in challenge %}
     <div class="challenge-text">
         <h1>{{ chal.name }}</h1>
-        <p>{{ chal.desc }}</p>
+        <p>{{ chal.desc|safe }}</p>
     </div>
     {% endfor %}
 
@@ -99,7 +99,7 @@
 
 <div class="announcement">
     {% for an in anno %}
-    <p>{{ an.desc }}</p>
+    <p>{{ an.desc|safe }}</p>
     {% endfor %}
 </div>
 
@@ -107,7 +107,7 @@
     {% for w in wins %}
     <div class="winner-content">
         <h2>{{ w.name }}</h2>
-        <p>{{ w.desc }}</p>
+        <p>{{ w.desc|safe }}</p>
         <a href="{% url 'news' %}" target="_blank" class="link-text">{{ w.title }}</a>
     </div>
     <img src="{{ w.image.url }}" alt="Agrisol Solar Panels" class="winner-image">

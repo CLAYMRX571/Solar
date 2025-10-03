@@ -88,7 +88,7 @@
         <img src="{{ vision.image.url }}" alt="Vision Image" class="vision-image">
         <h1>{{ vision.name }}</h1>
         <div class="vision-text">
-            <p>{{ vision.desc }}</p>
+            <p>{{ vision.desc|safe }}</p>
         </div>
     </section>
     {% endfor %}
@@ -97,8 +97,7 @@
         {% for k in key %}
         <h2>{{ k.name }}</h2>
         <div class="two-columns">
-            <div class="column">{{ k.desc }}</p>
-            </div>
+            <div class="column">{{ k.desc|safe }}</div>
             <div class="column">
                 <h3>{{ k.title }}</h3>
                 <span class="checkmark">{{ k.ches }}</span>

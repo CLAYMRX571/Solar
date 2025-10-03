@@ -102,7 +102,7 @@
 
     <section class="details">
         {% for data in detail %}
-        <p>{{ data.desc }}</p>
+        <p>{{ data.desc|safe }}</p>
         <div class="callout">
             <a href="{% url 'membership' %}" target="_blank">{{ data.name }}</a>
         </div>
@@ -114,7 +114,7 @@
     {% for s in text %}
     <div class="text-block">
         <h2>{{ s.name }}</h2>
-        <p>{{ s.desc }}</p>
+        <p>{{ s.desc|safe }}</p>
         <div class="categories-list">
             <ul>
                 <li>{{ s.list }}</li>

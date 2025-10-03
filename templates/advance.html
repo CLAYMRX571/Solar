@@ -92,7 +92,7 @@
     {% for i in advance %}
     <section class="journal-intro">
         <div class="journal-content">
-            <p>{{ i.desc }}</p>
+            <p>{{ i.desc|safe }}</p>
             <ul class="topics-list">
                 <li>{{ i.topic }}</li>
             </ul>

@@ -85,7 +85,7 @@
 <div class="team-intro">
     {% for ino in team %}
     <h2>{{ ino.name }}</h2>
-    <p>{{ ino.desc }}</p>
+    <p>{{ ino.desc|safe }}</p>
     <a href="{% url 'event' %}" target="_blank">{{ ino.button }}</a></strong>
     {% endfor %}
 </div>
@@ -98,16 +98,16 @@
             <h3>{{ grd.name }}</h3>
             <p>{{ grd.title }}</p>
             <div class="social-links">
-                <a href="{{ grd.telegram }}" target="_blank" rel="noopener noreferrer" title="Telegram">
+                <a href="{{ grd.telegram.url }}" target="_blank" rel="noopener noreferrer" title="Telegram">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="{{ grd.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <a href="{{ grd.linkedin.url }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="{{ grd.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="{{ grd.instagram.url }}" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="{{ grd.mail }}" title="Email">
+                <a href="{{ grd.mail.url }}" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>

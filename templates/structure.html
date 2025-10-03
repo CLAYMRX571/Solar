@@ -84,14 +84,14 @@
 
 <div class="intro-text">
     {% for int in structure %}
-    <p>{{ int.desc }}</p>
+    <p>{{ int.desc|safe }}</p>
     {% endfor %}
 </div>
 
 <div class="two-column">
     {% for two in column %}
     <div class="column">
-        <p>{{ two.desc }}</p>
+        <p>{{ two.desc|safe }}</p>
         <a href="{% url 'board' %}" class="btn">{{ two.button }}</a>
     </div>
     {% endfor %}
@@ -101,7 +101,7 @@
     {% for three in card %}
     <div class="card">
         <h2>{{ three.name }}</h2>
-        <p>{{ three.desc }}</p>
+        <p>{{ three.desc|safe }}</p>
         <a href="{% url 'board' %}" class="btn">{{ three.button }}</a>
     </div>
     {% endfor %}

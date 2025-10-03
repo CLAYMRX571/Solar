@@ -98,14 +98,14 @@
         <img src="{{ item.image.url }}" alt="Solar Panels on Water" id="hero-img"/>
         <div class="hero-content">
             <p id="hero-type"> {{ item.name }} </p>
-            <h2 id="hero-title">{{ item.desc }}</h2>
+            <h2 id="hero-title">{{ item.desc|safe }}</h2>
             <a href="{% url 'news' %}" id="hero-link">{{ item.button_name }}</a>
         </div>
     </div>
     <div class="cards" style="margin-top:40px;">
         <div class="card" data-img="{{ item.buttons_image.url }}" data-title="91% of New Renewable Projects Now Cheaper Than Fossil Fuels Alternatives" data-type="PRESS RELEASE" data-link="Read more">
             <h3 style="color:white">{{ item.buttons_name }}</h3>
-            <p style="color:white">{{ item.buttons_desc }}</p>
+            <p style="color:white">{{ item.buttons_desc|safe }}</p>
         </div>
     </div>
     {% endfor %}
@@ -116,7 +116,7 @@
     <div class="article-content">
         <h1>{{ send.name }}</h1>
         <p class="author">{{ send.title }}</p>
-        <div class="excert">{{ send.desc }}</div>
+        <div class="excert">{{ send.desc|safe }}</div>
         <div class="button-center">
             <a href="{% url 'news' %}" target="_blank" class="read-more">{{ send.button }}</a>
         </div>
@@ -135,7 +135,7 @@
             <img src="{{ new.image.url }}" alt="CIES 2026" class="news-image">
             <div class="news-content">
                 <h3 class="news-title">{{ new.title }}</h3>
-                <p class="news-excert">{{ new.desc }}</p>
+                <p class="news-excert">{{ new.desc|safe }}</p>
                 <a href="{% url 'news' %}" target="_blank" class="read-more-btn">{{ new.button }}</a>
             </div>
         </div>

@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
-from .models import Column
+from .models import Column, Data, Mons
 
 def Columnviews(request):
     column = Column.objects.all()  
+    data = Data.objects.all()
+    mons = Mons.objects.all()
 
     context = {
         'column': column,
+        'data': data,
+        'mons': mons,
     }
 
     return render(request, 'column.html', context)

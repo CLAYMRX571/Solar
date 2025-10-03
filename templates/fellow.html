@@ -85,7 +85,7 @@
 <div class="fellow-container">
     {% for f in fellow %}
     <div class="fellow-content">
-        <p>{{ f.desc }}</p>
+        <p>{{ f.desc|safe }}</p>
     </div>
     <div class="aims-section">
         <h3>{{ f.name }}</h3>
@@ -103,7 +103,7 @@
         <div class="fellow-content">
             <img src="{{ t.image.url }}" alt="Geoff Stapleton" class="fellow-image" />
             <div class="fellow-text">
-                <p>{{ t.desc }}</p>
+                <p>{{ t.desc|safe }}</p>
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@
         <div class="fellow-content">
             <img src="{{ b.image.url }}" alt="Prof. Lars Broman" class="main-image" />
             <div class="fellow-text">
-                <p>{{ b.desc }}</p>
+                <p>{{ b.desc|safe }}</p>
             </div>
         </div>
     </div>
@@ -139,7 +139,7 @@
 <div class="recipient-section">
     {% for u in cent %}
     <h1>{{ u.title }}</h1>
-    <p>{{ u.desc }}</p>
+    <p>{{ u.desc|safe }}</p>
 
     <div class="recipient-name">{{ u.name }}</div>
     <div class="recipient-bio">{{ u.bio }}</div>
@@ -149,7 +149,7 @@
 <div class="recipient-section">
     {% for ls in run %}
         <h1>{{ ls.name }}</h1>
-        <p><a href="{{ ls.file }}" class="link-text" target="_blank">{{ ls.desc }}</a></p>
+        <p><a href="{{ ls.file.url }}" class="link-text" target="_blank">{{ ls.desc|safe }}</a></p>
     {% endfor %}
 </div> 
 

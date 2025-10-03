@@ -91,12 +91,12 @@
       <img src="{{ sec.image.url }}" alt="InCoRE Logo" class="logo">
     </div>
     <div id="incore-overview" class="section-content">
-        <p>{{ sec.desc }}</p>
+        <p>{{ sec.desc|safe }}</p>
         <div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
             <img src="{{ sec.core_image.url }}" alt="InCoRE Banner" style="max-width: 100%;">
             <div>
                 <h3>{{ sec.core_name }}</h3>
-                <p>{{ sec.core_desc }}</p>
+                <p>{{ sec.core_desc|safe }}</p>
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@
         <div class="testimonial">
             <img src="{{ t.image.url }}" alt="Marah Al-Manastreh">
             <div>
-                <p>{{ t.desc }}</p>
+                <p>{{ t.desc|safe }}</p>
             </div>
         </div>
         <div>

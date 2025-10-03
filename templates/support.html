@@ -83,52 +83,36 @@
 </header>
 
 <header>
-    <h1 style="text-align:center;">Support Solar - Empowering a Sustainable Future!</h1>
+    {% for d in support %}
+    <h1 style="text-align:center;">{{ d.name }}</h1>
+    {% endfor %}
 </header>
 
 <main>
     <section class="intro">
-        <h2>Join Us in Shaping a Brighter, More Sustainable Future!</h2>
-        <p>At the International Solar Energy Society, ISES, we are dedicated to advancing solar energy and creating a world powered by clean, renewable resources. But to continue this vital work, we need your support.</p>
-        <p>We invite you to donate or become a member today and help us amplify our impact. Whether you contribute financially or lend your voice to our cause, you’ll be joining a community of passionate individuals driving change.</p>
-    </section>
-
-    <section class="ways-to-support">
-        <div class="support-item">
-            <span class="check">✓</span>
-            Donate today and fund solar energy research (in the form our our academic journals and conferences), education programs (in the form of the organization of our free webinars and project InCORE), and outreach work carried out by ISES headquarters staff and volunteer Board Members.
-        </div>
-        <div class="support-item">
-            <span class="check">✓</span>
-            Spread the word: Every share or recommendation helps us reach more people passionate about making an impact.
-        </div>
+        {% for l in support %}
+            <h2>{{ l.title }}</h2>
+            <p>{{ l.desc|safe }}</p>
+        {% endfor %}
     </section>
 
     <section class="mission">
-        <h3>Support the International Solar Energy Society, ISES to:</h3>
+        {% for y in miss %}
+        <h3>{{ y.name }}</h3>
         <ul class="mission-list">
-            <li>Contribute to solar energy publications, projects and research</li>
-            <li>Educate and engage communities about the benefits of renewable energy</li>
-            <li>Advocate for policy changes that support renewable energy on a global scale</li>
+            <li>{{ y.desc|safe }}</li>
         </ul>
+        {% endfor %}
     </section>
 
     <section class="get-involved">
-        <h3>How you can get involved:</h3>
+        {% for get in invol %}
+        <h3>{{ get.name }}</h3>
+        <div class="involve-item">{{ get.desc|safe }}</div>
         <div class="involve-item">
-            <span class="check">✓</span>
-            Donate: Every contribution, big or small, fuels our mission and helps us reach more people.
+            <a href="{% url 'board' %}" target="_blank">{{ get.link }}</a>
         </div>
-        <div class="involve-item">
-            <span class="check">✓</span>
-            Become a member: Join the International Solar Energy Society, ISES, as a member and stand behind our efforts to expand solar energy adoption. As a member, you’ll have access to exclusive updates, events, and opportunities to influence the future of solar energy. More information on membership here: <a href="{% url 'board' %}" target="_blank">Board</a>
-        </div>
-    </section>
-
-    <section class="call-to-action">
-        <p>Together, we can create a world that’s more sustainable, more empowered, and more connected.</p>
-        <p>We need more voices like yours. Stand with us, donate today, or become a member and make your impact!</p>
-        <p>The anonymous donation form is right here!</p>
+        {% endfor %}
     </section>
 </main>
 

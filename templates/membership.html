@@ -86,12 +86,12 @@
     {% for mem in membership %}
     <h1 style="text-align:center;">{{ mem.name }}</h1>
 
-    <div class="intro-text">{{ mem.desc }}</div>
+    <div class="intro-text">{{ mem.desc|safe }}</div>
 
     <div class="section">
         <div class="column">
             <h2>{{ mem.column_name }}</h2>
-            <p>{{ mem.column_desc }}</p>
+            <p>{{ mem.column_desc|safe }}</p>
             <a href="{% url 'membership' %}" class="btn">{{ mem.column_button }}</a>
         </div>
     </div>
@@ -101,7 +101,7 @@
 <div class="container">
     {% for mems in text %}
     <div class="text-content">
-      <p>{{ mems.desc }}</p>
+      <p>{{ mems.desc|safe }}</p>
     </div>
     {% endfor %}
 </div>
@@ -118,7 +118,7 @@
     {% for b in board %}
     <h1>{{ b.name }}</h1>
     <p>{{ b.title }}</p>
-    <p>{{ b.desc }}</p>
+    <p>{{ b.desc|safe }}</p>
     <a href="{% url 'board' %}" target="_blank" class="board-btn">{{ b.button }}</a>
     {% endfor %}
 </div>

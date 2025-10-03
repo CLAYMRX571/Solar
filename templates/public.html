@@ -91,7 +91,7 @@
 <main>
     {% for ns in public %}
     <section class="intro">
-        <p>{{ ns.desc }}</p>
+        <p>{{ ns.desc|safe }}</p>
         <ul class="topics">
             <li>{{ ns.topic }}</li>
         </ul> 
@@ -107,7 +107,7 @@
             <img src="{{ bs.image.url }}" alt="ISES Solar Energy Journal">
             <div class="pub-info">
                 <h3>{{ bs.name }}</h3>
-                <a href="{{ bs.file }}" target="_blank">{{ bs.button }}</a>
+                <a href="{{ bs.file.url }}" target="_blank">{{ bs.button }}</a>
             </div>
         </div>
         {% endfor %}

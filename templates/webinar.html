@@ -85,14 +85,14 @@
 <div class="container">
     {% for w in webinar %}
         <h1>{{ w.name }}</h1>
-        <p style="text-align:center;">{{ w.desc }}</p>
+        <p style="text-align:center;">{{ w.desc|safe }}</p>
     {% endfor %}
 
     <div class="section">
         {% for v in bros %}
         <div class="card">
             <h2>{{ v.name }}</h2>
-            <p>{{ v.desc }}</p>
+            <p>{{ v.desc|safe }}</p>
             <a href="{% url 'webinar' %}">{{ v.link }}</a>
         </div>
         {% endfor %}
@@ -100,7 +100,7 @@
         <div class="card">
             {% for w in bobs %}
                 <h2>{{ w.name }}</h2>
-                <p>{{ w.desc }}</p>
+                <p>{{ w.desc|safe }}</p>
             {% endfor %}
         </div>
     </div>
@@ -116,9 +116,9 @@
             <img src="{{ s.image.url }}" alt="Webinar Image" class="card-image">
             <div class="card-content">
                 <h3 class="card-title">{{ s.title }}</h3>
-                <p class="card-desc">{{ s.desc }}</p>
+                <p class="card-desc">{{ s.desc|safe }}</p>
                 <div class="read-more-container">
-                    <a href="{{ s.file }}" target="_blank" class="read-more">{{ s.button }}</a>
+                    <a href="{{ s.file.url }}" target="_blank" class="read-more">{{ s.button }}</a>
                 </div>
             </div>
         </div>

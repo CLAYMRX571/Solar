@@ -91,9 +91,9 @@
 <main>
     {% for inr in fol %}
     <section class="intro">
-        <p>{{ inr.desc}}</p>  
+        <p>{{ inr.desc|safe }}</p>  
         <p style="text-align: center;">
-            <a href="{{ inr.link }}" target="_blank">{{ inr.name }}</a>.
+            <a href="{{ inr.link.url }}" target="_blank">{{ inr.name }}</a>.
         </p>
     </section>
     {% endfor %}
@@ -101,8 +101,8 @@
     <section class="meeting">
         {% for m in met %}
         <h2>{{ m.name }}</h2>
-        <p>{{ m.desc }}</p>    
-        <a href="{{ m.file }}" class="btn">{{ m.button }}</a>
+        <p>{{ m.desc|safe }}</p>    
+        <a href="{{ m.file.url }}" class="btn">{{ m.button }}</a>
         {% endfor %}
     </section>
 </main>

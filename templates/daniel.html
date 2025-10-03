@@ -86,7 +86,7 @@
     {% for aw in daniel %}
     <div class="award-content">
         <h2>{{ aw.name }}</h2>
-        <p>{{ aw.desc }}</p>
+        <p>{{ aw.desc|safe }}</p>
     </div>
 
     <div class="award-image-wrapper">
@@ -103,7 +103,7 @@
     <div class="recipient-section">
         <div class="recipient-content">
             <h2>{{ p.name }}</h2>
-            <p>{{ p.desc }}</p>
+            <p>{{ p.desc|safe }}</p>
         </div>
         <div class="recipient-image-wrapper">
             <img src="{{ p.image.url }}" alt="2025 Recipient" class="recipient-image">
