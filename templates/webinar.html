@@ -83,134 +83,46 @@
 </header>
 
 <div class="container">
-    <h1>ISES Webinars</h1>
-    <p style="text-align:center;">
-      ISES organizes monthly webinars and invites everybody to join (free-of-charge). Focusing on solar energy related topics of high relevance in science, technology development, market and industrial implementation, social issues, training and education our webinars offer something for everyone.
-    </p>
+    {% for w in webinar %}
+        <h1>{{ w.name }}</h1>
+        <p style="text-align:center;">{{ w.desc }}</p>
+    {% endfor %}
 
     <div class="section">
+        {% for v in bros %}
         <div class="card">
-            <h2>Sponsor an ISES webinar</h2>
-            <p>
-            The International Solar Energy Society (ISES) invites your organization to be a sponsor of our webinar series. Focusing on solar energy related topics of high relevance in science, technology development, market and industrial implementation, social issues, training and education our webinars offer something for everyone. ISES initiated these online seminars in 2012 and since then, they enjoy a great popularity and increasing number of participants. Please contact <a href="mailto:itm.mchj@itm-llc.uz">itm.mchj@itm-llc.uz</a> for further information.
-            </p>
-            <p>
-            <a href="{% url 'webinar' %}">View our webinar sponsoring flyer here.</a>
-            </p>
+            <h2>{{ v.name }}</h2>
+            <p>{{ v.desc }}</p>
+            <a href="{% url 'webinar' %}">{{ v.link }}</a>
         </div>
+        {% endfor %}
 
         <div class="card">
-            <h2>Become a webinar panelist</h2>
-            <p>
-            Webinar panelists are distinguished experts from research, academia and industry. Panelists share their knowledge and passion during the webinar on a voluntary basis and answer participants questions during and after the live webinar. We welcome new panelist speakers who are experts in their fields to participate in an ISES webinar. Please contact <a href="mailto:itm.mchj@itm-llc.uz">itm.mchj@itm-llc.uz</a> for further information.
-            </p>
+            {% for w in bobs %}
+                <h2>{{ w.name }}</h2>
+                <p>{{ w.desc }}</p>
+            {% endfor %}
         </div>
     </div>
 </div>
 
 <div class="container">
-    <h1>Next Webinars</h1>
+    {% for n in next %}
+        <h1>{{ n.name }}</h1>
+    {% endfor %}
     <div class="grid-container">
+        {% for s in crd %}
         <div class="card">
-            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Image" class="card-image">
+            <img src="{{ s.image.url }}" alt="Webinar Image" class="card-image">
             <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (2)</h3>
-                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
+                <h3 class="card-title">{{ s.title }}</h3>
+                <p class="card-desc">{{ s.desc }}</p>
                 <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+                    <a href="{{ s.file }}" target="_blank" class="read-more">{{ s.button }}</a>
                 </div>
             </div>
         </div>
-
-        <div class="card">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Speaker" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (1)</h3>
-                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
-                <div class="card-meta">
-                    Hosted by: SOLAR ACADEMY & ISES
-                </div>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster 2" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
-                <div class="card-meta">
-                    Hosted by: SOLAR ACADEMY & ISES
-                </div>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <h2 class="section-title">Recent and Past Events</h2>
-    <div class="grid-container">
-        <div class="card">
-            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Image" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (2)</h3>
-                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'assets/img/fullstack.jpg' %}" alt="Speaker" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review (1)</h3>
-                <p class="card-desc">Hot water demand for kitchen and sanitary use is continuously growing globally and as countries...</p>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
-                <div class="card-meta">
-                    Hosted by: SOLAR ACADEMY & ISES
-                </div>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'assets/img/award.png' %}" alt="Webinar Poster 2" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">IEA SHC Solar Academy: Solar Hot Water for 2030: An IEA SHC Task in Review</h3>
-                <div class="card-meta">
-                    Hosted by: SOLAR ACADEMY & ISES
-                </div>
-                <div class="read-more-container">
-                    <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 

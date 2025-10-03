@@ -83,37 +83,29 @@
 </header>
 
 <header>
-    <h1>ISES and Elsevier fully OPEN ACCESS Journal - Solar Energy Advances</h1>
+    {% for im in advance %}
+    <h1>{{ im.name }}</h1>
+    {% endfor %}
 </header>
 
 <main>
+    {% for i in advance %}
     <section class="journal-intro">
         <div class="journal-content">
-            <p>In 2021, ISES and Elsevier launched the new open access journal, <a href="{% url 'advance' %}" class="highlight">Solar Energy Advances</a>. Solar Energy Advances is a high-quality journal reflecting the work of ISES in transforming our energy production and consumption into a fully renewable system. The new journal complements the successful <a href="{% url 'journal' %}" target="_blank" class="highlight">ISES Solar Energy Journal</a>, launched in 1957, and which remains the flagship scientific journal for solar energy.</p>
-            <p>Solar Energy Advances aims to provide a forum for the presentation of fundamental scientific advances in the understanding on any aspect of solar energy research, development, application, measurement or policy. The journal welcomes the submissions of articles at the forefront of solar energy research, truly advancing the field.</p>
-            <p>Solar Energy Advances covers a broad range of themes relevant to solar energy technology, systems, policy, applications, and its impact on sustainable development, climate change, resilience, circular economy, and social justice.</p>
-
-            <p>Each issue of Solar Energy Advances will focus on specific topics, such as:</p>
+            <p>{{ i.desc }}</p>
             <ul class="topics-list">
-                <li>Solar energy systems and applications</li>
-                <li>Research and development in solar energy utilisation</li>
-                <li>Applications of solar energy measurements, assessments, and forecasting methods</li>
-                <li>Planning of active and passive solar energy utilization in urban environments</li>
-                <li>Solar energy policy and legislation</li>
-                <li>Solar energy markets and public support</li>
-                <li>Other direct and indirect applications of solar energy such as energy storage, hybrid systems, sector integration</li>
-                <li>Other renewable energy uses</li>
+                <li>{{ i.topic }}</li>
             </ul>
             <div class="performance">
-                <h3>Journal Performance:</h3>
-                <h3>CiteScore: 4.0</h3>
+                <h3>{{ i.performance }}</h3>
             </div>
         </div>
 
         <div class="journal-cover">
-            <img src="{% static 'assets/img/award.png' %}" alt="Solar Energy Advances Cover">
+            <img src="{{ i.image.url }}" alt="Solar Energy Advances Cover">
         </div>
     </section>
+    {% endfor %}
 </main>
 
 <footer class="footer">

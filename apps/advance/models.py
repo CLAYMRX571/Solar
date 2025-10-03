@@ -2,12 +2,10 @@ from django.db import models
 
 class Advance(models.Model):
     name = models.CharField(max_length=200)
-    see_more = models.CharField(max_length=50)
-    category_name = models.CharField(max_length=50)
     desc = models.TextField()
-    image = models.ImageField(upload_to='technical', blank=True, null=True)
-    edu_name = models.CharField(max_length=200)
-    edu_desc = models.TextField()
+    topic = models.CharField(max_length=100)
+    performance = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='advance', blank=True, null=True)
     
     def __str__(self):
         return self.name

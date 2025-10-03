@@ -83,92 +83,27 @@
 </header>
 
 <div class="ises-events-container">
-    <h1>ISES Events</h1>
-    <p>
-        The International Solar Energy Society, ISES, events provide excellent opportunities to connect and network with fellow members, stay updated on the latest advancements in solar energy research and development, and gain insights into industry trends and policies. Organized by ISES and its global network of Sections, these events bring together leading scientists, engineers, architects, and professionals from industry and business to discuss cutting-edge research, technological innovations, and emerging opportunities in solar energy.
-    </p>
-    <p>
-        ISES Members are eligible for discounts at many of these events - please see the individual events below and log into your ISES account and visit the <a href="{% url 'event' %}" class="highlight-link">ISES Members Area > Event discounts for ISES Members.</a>
-    </p>
-    <p>
-        ISES supports events organized by our Corporate Members and our <a href="{% url 'part' %}" target="_blank" class="highlight-link">Partner Organizations</a>. All events must have a focus on solar or renewable energy. If you are interested in partnering with ISES on an event, please <a href="{% url 'contact' %}" target="_blank" class="highlight-link">contact us.</a>
-    </p>
+    {% for itm in event %}
+    <h1>{{ itm.name }}</h1>
+    <p>{{ itm.desc }}</p>
+    <a href="{% url 'event' %}" class="highlight-link">{{ itm.area }}</a>
+    <a href="{% url 'part' %}" target="_blank" class="highlight-link">{{ itm.part }}</a><a href="{% url 'contact' %}" target="_blank" class="highlight-link">{{ itm.contact }}</a>
+    {% endfor %}
 </div>
 
-<h1>Upcoming ISES Events and ISES Supported Events</h1>
+{% for u in text %}
+<h1>{{ u.name }}</h1>
+{% endfor %}
 <div class="events-grid">
     <div class="event-card">
+        {% for ev in greeb %}
         <div class="event-info">
-            <h3 class="event-title">6th International Conference on Solar Technologies and Hybrid Mini-Grids for Energy Access</h3>
-            <p class="event-desc">The 6th International Conference on Solar Technologies and Hybrid Mini-Grids for Energy Access ...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
+            <h3 class="event-title">{{ ev.name }}</h3>
+            <p class="event-desc">{{ ev.desc }}</p>
+            <a href="{{ ev.file }}" target="_blank" class="read-more">{{ ev.button }}</a>
         </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="6th International Conference" class="event-image">
-    </div>
-
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">25th World Renewable Energy Congress (WREC)</h3>
-            <p class="event-desc">The 25th World Renewable Energy Congress (WREC), takes place in Perth, Western Australia from 8-13...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="WREC 2026" class="event-image">
-    </div>
-
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">Solar World Congress 2025</h3>
-            <p class="event-desc">ISES and ABENS, the Brazilian Association for Solar Energy and the official ISES section in Brazil...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="Solar World Congress 2025" class="event-image">
-    </div>
-
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">ISES AGM</h3>
-            <p class="event-desc">Join Us for the ISES Annual General Meeting 2025 – Online on July 15! ISES is pleased to invite all...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="ISES AGM" class="event-image">
-    </div>
-</div>
-
-<div class="events-grid" style="margin-top: 40px;">
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">International Conference on Energy & Meteorology (ICEM)</h3>
-            <p class="event-desc">Participate at the 8th International Conference on Energy & Meteorology (2-5 June 2025, Padua,...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="ICEM 2025" class="event-image">
-    </div>
-
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">Tanzania Renewable Energy Week 2025</h3>
-            <p class="event-desc">The Renewable Energy Week 2025 (REW2025) is a premier platform designed to accelerate Tanzania’s...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="REW 2025" class="event-image">
-    </div>
-
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">CONSOLFOOD 2025</h3>
-            <p class="event-desc">CONSOLFOOD 2025 is being planned for Marseille (Aix Marseille University and Le Présage solar...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="CONSOLFOOD 2025" class="event-image">
-    </div>
-
-    <div class="event-card">
-        <div class="event-info">
-            <h3 class="event-title">IcoSES 2025 International Conference on Sustainable Energy Systems</h3>
-            <p class="event-desc">This "ON-LINE" edition of the International Conference on sustainable energy systems is the first...</p>
-            <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="read-more">Read more</a>
-        </div>
-        <img src="{% static 'assets/img/award.png' %}" alt="IcoSES 2025" class="event-image">
+        <img src="{{ ev.image.url }}" alt="6th International Conference" class="event-image">
+        {% endfor %}
     </div>
 </div>
 

@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
-from .models import Incore
+from .models import Incore, Core, Tess
 
 def Incoreviews(request):
     incore = Incore.objects.all()
+    core = Core.objects.all()
+    tess = Tess.objects.all()
 
     context = {
         'incore': incore,
+        'core': core,
+        'tess': tess,
     }
 
     return render(request, 'incore.html', context)

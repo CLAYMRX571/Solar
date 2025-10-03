@@ -82,61 +82,44 @@
     </ul>
 </header>
 
-<h1>International Cooperation in Higher Education on Renewable Energy</h1>
+{% for i in incore %}
+    <h1>{{ i.name }}</h1>
+{% endfor %}
 <div class="section">
-    <div class="section-header" onclick="toggleSection('incore-overview')">
-      What is InCoRE?
-      <img src="{% static 'assets/img/award.png' %}" alt="InCoRE Logo" class="logo">
+    {% for sec in core %}
+    <div class="section-header" onclick="toggleSection('incore-overview')"> {{ sec.name }}
+      <img src="{{ sec.image.url }}" alt="InCoRE Logo" class="logo">
     </div>
     <div id="incore-overview" class="section-content">
-        <p>The International Solar Energy Society, ISES, is thrilled to have launched the InCoRE Initiative, a groundbreaking program designed to foster global collaboration in renewable energy education. This initiative aims to strengthen international connections in renewable energy research, facilitate knowledge exchange, and ensure that students worldwide have access to the latest scientific advancements in their respective fields of study.</p>
-        <p>With its vast network of global experts and the invaluable scientific insights shared through ISES’s two prestigious academic journals, the Society is perfectly positioned to lead this initiative, driving forward a new era of international cooperation in renewable energy education.</p>
-        <p>Please note that the InCoRE Initiative is currently on hold. We will update this page with any new developments as they arise. Stay tuned!</p>
-        <h3>What is InCoRE?</h3>
-        <p>InCoRE is your gateway to global academic collaboration! This initiative connects students working on their theses or research projects with renowned international advisors from around the world.</p>
-        <h4>Why join?</h4>
-        <p>Because fresh global perspectives can elevate your research! Whether your thesis involves foreign technology, policy, or economic models, or you’re simply looking for expert insights from another region, InCoRE provides the international support and mentorship you need.</p>
-        <p>By participating, you’ll not only gain valuable academic guidance but also contribute to a worldwide exchange of knowledge, helping advisors stay updated on emerging research from different parts of the globe.</p>
-        <p>🔗 Expand your research. Connect with global experts. Shape the future!</p>
-        <p>Join InCoRE today!</p>
+        <p>{{ sec.desc }}</p>
         <div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
-            <img src="{% static 'assets/img/award.png' %}" alt="InCoRE Banner" style="max-width: 100%;">
+            <img src="{{ sec.core_image.url }}" alt="InCoRE Banner" style="max-width: 100%;">
             <div>
-                <h3>How does it work?</h3>
-                <p>InCoRE works by matching up students and advisors from different world regions to support creating international connections for thesis projects. The matching process is done based on information the participants provide in specific student and advisor questionnaires which you can find below. Please note that we only proceed with the matching process if the student’s main supervisor at their home university approves of the student’s participation.</p>
-                <p>There are no formal requirements for an InCoRE match — it can be arranged individually according to the students’ needs and the advisors capacities. The global availability of web-conferences offers great opportunities for an InCoRE match, connecting researchers around the world.</p>
-                <p>Participation is free of charge, however we do encourage all participants to register as ISES members to make the most out of the experience and fully immerse with our global solar energy society.</p>
+                <h3>{{ sec.core_name }}</h3>
+                <p>{{ sec.core_desc }}</p>
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
 
 <div class="section">
-    <div class="section-header" onclick="toggleSection('incore-experiences')">
-        InCoRE Experiences
-    </div>
+    {% for t in tess %}
+    <div class="section-header" onclick="toggleSection('incore-experiences')">{{ t.name }}</div>
     <div id="incore-experiences" class="section-content">
         <div class="testimonial">
-            <img src="{% static 'assets/img/award.png' %}" alt="Marah Al-Manastreh">
+            <img src="{{ t.image.url }}" alt="Marah Al-Manastreh">
             <div>
-                <p><em>"My experience with the InCoRE Project went beyond expectations! Participating in InCoRE proved its effectiveness day by day. I absolutely recommend it to anyone who is looking for professional support and supervision in the renewable energy sector."</em></p>
-                <p><strong>Marah Al-Manastreh</strong>, Master’s in Environmental and Renewable Energy Engineering at the School of Natural Resources Engineering and Management at the German Jordanian University (Jordan)</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <img src="{% static 'assets/img/award.png' %}" alt="Prof. Dr.-Ing. Christoph Menke">
-            <div>
-                <p><em>"I am enthusiastic about InCoRE exchange because I believe it offers a wonderful opportunity to exchange experiences so that professors from one country can share their working experience with students from other countries without having all the traveling nowadays. I hope that this will encourage much more students to look for such kind of additional exchange professors from other countries to widen their perspective and the way they try to solve their problems. I wish my students a lot of success and I hope many will follow."</em></p>
-                <p><strong>Prof. Dr.-Ing. Christoph Menke</strong>, University of Applied Sciences Trier (Germany)</p>
+                <p>{{ t.desc }}</p>
             </div>
         </div>
         <div>
-            <a class="video-thumb" href="https://www.youtube.com/watch?v=JlDJVOnEM8o" target="_blank">
-            <img src="https://img.youtube.com/vi/JlDJVOnEM8o/maxresdefault.jpg" alt="YouTube Video">
+            <a class="video-thumb" href="{{ t.link }}" target="_blank">
+                <img src="{{ t.img.url }}" alt="YouTube Video">
             </a>
         </div>
     </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

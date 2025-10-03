@@ -82,91 +82,28 @@
     </ul>
 </header>
 
-<h1>EuroSun Conferences</h1>
+{% for e in eurosun %}
+    <h1>{{ e.name }}</h1>
+{% endfor %}
 <div class="conference">
-    <div class="conference-header" onclick="toggleContent('overview')">
-      About EuroSun Conferences
-    </div>
+    {% for c in conf %}
+    <div class="conference-header" onclick="toggleContent('overview')">{{ c.name }}</div>
     <div id="overview" class="conference-content">
-      <p>Since its inception in 1996, the EuroSun conferences, hosted every two years across vibrant cities throughout Europe, have become one of the most dynamic and inspiring gatherings in the solar energy community!</p>
-      <p>At EuroSun conferences, we offer an exciting global platform where scientists, researchers, engineers, architects, and industry leaders come together to share their latest breakthroughs, developments, and visions for the future of solar energy. It’s the perfect opportunity to showcase your work, connect with fellow pioneers, exchange ideas, and engage with key stakeholders from business, research, and government. By the end of the conference, you’ll be energized and driven to help accelerate the transition to a 100% renewable energy world!</p>
-      <p>Since 2022, EuroSun has been jointly organized by ISES and the IEA SHC Solar Heating and Cooling Programme (IEA SHC), bringing even more expertise and global reach to this incredible event.</p>
-      <p>Are you interested in hosting a EuroSun conference? Keep an eye out for our upcoming call for proposals, which will be launched two years ahead of the next event.</p>
-      <p>Got questions? Reach out to us at <a href="mailto:itm.mchj@itm-llc.uz">eurosun(at)itm-llc.uz</a>—we’d love to hear from you!</p>
+        <p>{{ c.desc }}</p>
+        <a href="{{ c.mail }}">{{ c.button }}</a>
     </div>
+    {% endfor %}
 </div>
 
 <div class="conference">
-    <div class="conference-header" onclick="toggleContent('eurosun2026')">
-      EuroSun 2026: Save the Date!
-      <img src="{% static 'assets/img/award.png' %}" alt="EuroSun 2026 Logo" class="logo">
+    {% for d in sun %}
+    <div class="conference-header" onclick="toggleContent('eurosun2026')">{{ d.name }}
+      <img src="{{ d.image.url }}" alt="EuroSun 2026 Logo" class="logo">
     </div>
     <div id="eurosun2026" class="conference-content">
-      <p>ITM, the International Solar Energy Society and IEA SHC, the IEA Solar Heating and Cooling Programme are pleased to announce that EuroSun 2026 - the ISES and IEA SHC International Conference for Sustainable and Solar Energy for Buildings and Industry will take place in Freiburg, Germany from 14-18 September 2026.</p>
-      <p>The organizers are especially pleased to announce that the Fraunhofer Institute for Solar Energy Systems ISE will join the conference as its scientific host!</p>
-      <p>2026 will also mark the 30th birthday of the EuroSun conference series and a solar home coming at the same time as the first ever EuroSun conference took place in Freiburg in 1996.</p>
-      <p>The call for papers for EuroSun 2026 will be released in late 2025.</p>
+      <p>{{ d.desc }}</p>
     </div>
-</div>
-
-<div class="conference">
-    <div class="conference-header" onclick="toggleContent('eurosun2024')">
-      EuroSun 2024: Limassol (Cyprus)
-      <img src="{% static 'assets/img/award.png' %}" alt="EuroSun 2024 Logo" class="logo">
-    </div>
-    <div id="eurosun2024" class="conference-content">
-      <p>EuroSun 2024 - the ISES and IEA SHC International Conference on Sustainable and Solar Energy for Buildings and Industry took place from 26 - 30 August 2024 in Limassol, Cyprus.</p>
-      <p>EuroSun 2024 was jointly organized by ISES and IEA SHC and the local hosts were the Cyprus University of Technology and the local ISES section, ISES Cyprus.</p>
-      <p>At EuroSun 2024, we welcomed solar researchers, experts, industry representatives, students, and practitioners from Europe and all around the world. The programme featured dedicated technical sessions on the congress themes, high-level keynotes by expert speakers, workshops, technical tours and more. Since the first EuroSun Conference took place in 1996, the conference has become one of the main events on solar energy for buildings and industry in Europe. The role of PV, solar cooling, storage and grid integration is especially crucial for isolated sunny islands like Cyprus, and the organizers were especially pleased to offer a full programme and dedicated networking opportunities with senior experts from research and industry.</p>
-      <p><a href="{% static 'assets/file/job.pdf' %}" target="_blank">Visit the conference homepage for photos and impressions from sunny Cyprus!</a></p>
-    </div>
-</div>
-
-<div class="conference">
-    <div class="conference-header" onclick="toggleContent('eurosun2022')">
-      EuroSun 2022
-      <img src="{% static 'assets/img/award.png' %}" alt="EuroSun 2022 Logo" class="logo">
-    </div>
-    <div id="eurosun2022" class="conference-content">
-      <p>Organized by the International Solar Energy Society and the IEA Solar Heating and Cooling Programme and hosted by the Department of Solar and Systems Engineering at the University of Kassel, this first in-person EuroSun conference since the COVID-pandemic welcomed 486 attendees from 54 countries all around the world.</p>
-      <p>Throughout the four conference days, attendees joined 5 plenary sessions, 10 keynotes, oral sessions across 20 conference themes, three poster sessions, workshops, technical sessions, and more.</p>
-      <p>In 2022, a special focus of the organizers was to support young scientists and students, and a wide range of events for these young attendees was offered such as the Masters Course in Solar Energy including free accommodation, free conference attendees for 75 students, a dedicated networking session for junior scientists and senior experts and much more.</p>
-      <p>The conference was made possible by the generous support from public supporters such as the German Federal Ministry for Economic Affairs and Climate Action, the University of Kassel and the state energy agency of Hesse as well as by the conference Gold Sponsor Viessmann and the Supporting Sponsors Enersolve, Qconcept, Stadtwerke Kassel and the cdw foundation.</p>
-    </div>
-</div>
-
-<div class="conference">
-    <div class="conference-header" onclick="toggleContent('eurosun2020')">
-      EuroSun 2020
-      <img src="{% static 'assets/img/award.png' %}" alt="EuroSun 2020 Logo" class="logo">
-    </div>
-    <div id="eurosun2020" class="conference-content">
-      <h3>13th International Conference on Solar Energy for Buildings and Industry</h3>
-      <h4>EuroSun 2020 - it's a wrap!</h4>
-      <p>Over 200 hundred attendees from countries all around the world attended the first-ever virtual EuroSun 2020 and the three conference days were packed with state of the art scientific presentations on the conference’s 13 conference topics, networking sessions, workshops and more.</p>
-      <p>EuroSun 2020 offered a platform to discuss the latest developments with leading solar energy experts as well as policymakers and industry representatives. The programme included distinguished keynote speakers in plenary sessions, specialists meetings in breakout sessions and poster exhibitions as well as social events with the opportunity to network, meet old friends and to make new ones.</p>
-      <p>The Conference was organized by ISES in cooperation with the Cyprus University of Technology, the University of West Attica and supported by the IEA Solar Heating and Cooling Programme.</p>
-      <p>Thank you to everybody who attended EuroSun 2020!</p>
-    </div>
-</div>
-
-<div class="conference">
-    <div class="conference-header" onclick="toggleContent('eurosun2018')">
-      EuroSun 2018
-      <img src="{% static 'assets/img/award.png' %}" alt="EuroSun 2018 Logo" class="logo">
-    </div>
-    <div id="eurosun2018" class="conference-content">
-      <h3>12th International Conference on Solar Energy for Buildings and Industry</h3>
-      <h4>This year's welcoming message:</h4>
-      <p>It is our great pleasure to invite you to EuroSun 2018 in Rapperswil, Switzerland.<br>
-      This year's conference will be held on the beautiful campus of the HSR University of Applied Science Rapperswil on Lake Zürich.</p>
-      <p>The worldwide success of renewable energy technologies, and solar energy in particular, is remarkable, and it is what we all work for. In many cases solar technologies are already the most economical way to produce electricity or heat. But there is still a very long way to go to achieve the goal of a 100% renewable energy supply. Efficiencies must improve and the costs of components and services must be reduced further. We need a shift to thinking in terms of systems and a better understanding of the interaction of the electricity, heat and mobility sectors.</p>
-      <p>In the last few years we have seen a growing competition between solar thermal technologies and solar electricity in the heating sector. It is not yet clear where that competition will lead us. Most certainly our future energy system will have a higher grade of electrification. On the other hand it seems likely that energy systems will be more stable and more efficient if a variety of technologies complement each other.</p>
-      <p>The EuroSun conferences focus on Solar Energy for Buildings and Industry, covering both, heat and electricity.</p>
-      <p>We are pleased to announce that the EuroSun 2018 will be organized in cooperation with the Swissolar Solar Heating Conference, the 2nd SIGES Conference on the Simulation of Energy Systems for Buildings and the 8th International Conference on Solar Air Conditioning.</p>
-      <p>EuroSun 2018 will offer a platform to discuss the latest developments with leading solar energy experts as well as policy makers and industry representatives. The programme will include distinguished keynote speakers in plenary sessions, specialists meetings in breakout sessions and poster exhibitions as well as social events where you will have the opportunity to network, meet old friends and to make new ones.</p>
-      <p>For three days the campus of HSR in Rapperswil will host the “who’s who” in solar energy for buildings and industry. We look forward to welcoming you there for EuroSun 2018.</p>
-    </div>
+    {% endfor %}
 </div>
 
 <footer class="footer">

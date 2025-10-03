@@ -83,69 +83,50 @@
 </header>
 
 <header>
-    <h1 style="text-align:center;">ISES Members Discount on Solar Energy Journal Subscription</h1>
+    {% for j in journal %}
+        <h1 style="text-align:center;">{{ j.name }}</h1>
+    {% endfor %}
 </header>
 
 <main>
     <section class="pricing-table">
         <table>
+            {% for t in table %}
             <tr>
-                <td>Solar Energy Journal - paper version (18 issues/year)</td>
-                <td style="text-align:center;">€ 55</td>
+                <td>{{ t.name }}</td>
+                <td style="text-align:center;">{{ t.price }}</td>
             </tr>
-            <tr>
-                <td>Solar Energy Online - electronic version (18 issues/year)</td>
-                <td style="text-align:center;">€ 48</td>
-            </tr>
+            {% endfor %}
         </table>
     </section>
 
     <section class="details">
-        <p>The online version includes access to 18 regular volumes for the current year and access to back files up to 4 years from start of subscription, plus access to full archive of abstracts.</p>
-        
-        <p><a href="{% url 'journal' %}" class="link">Journal</a></p>
-
+        {% for data in detail %}
+        <p>{{ data.desc }}</p>
         <div class="callout">
-            <strong>Not a member of ITM yet?</strong> If you are not yet a member, you will be offered the opportunity of purchasing a subscription to Solar Energy during your registration process. <a href="{% url 'membership' %}" target="_blank">Please join ITM here.</a>
+            <a href="{% url 'membership' %}" target="_blank">{{ data.name }}</a>
         </div>
-
-        <div class="library-note">
-            For libraries the Journal is available directly from the publisher (<a href="{% url 'journal' %}">Journal</a>). Prices vary from region to region.
-        </div>
-
-        <div class="disclaimer">
-            All subscriptions are for personal use only and may not be shared or placed in institutional or university libraries or other libraries, nor may any personal subscriptions be used for library purposes.
-        </div>
+        {% endfor %}
     </section>
 </main>
 
-<header>
-    <h1 style="text-align:center;">Solar Energy Journal Awards</h1>
-</header>
-
 <div class="container">
+    {% for s in text %}
     <div class="text-block">
-        <h2>Best Paper Award:</h2>
-        <p>This award was initiated in 1981, at that time it was called the Lőf/Duffie Best Paper Award, and since 2007 it has been called the "Solar Energy Journal Best Paper Award". Every two years, the award is presented to authors of papers considered to be outstanding contributions published by Solar Energy. The award is presented to papers that demonstrate significant pioneering contributions to the solar energy literature, for innovative concepts or approaches, and whose quality and presentation have a lasting impact. The papers chosen for this award are selected by the Editor-in-Chief, Subject Area Editors and Associate Editors of the Solar Energy Journal. The award consists of a certificate and a small cash prize funded by Elsevier.</p>
-
-        <h3>Best Paper Awards are presented in the categories of:</h3>
+        <h2>{{ s.name }}</h2>
+        <p>{{ s.desc }}</p>
         <div class="categories-list">
             <ul>
-                <li>Solar Heating and Cooling, Buildings and Other</li>
-                <li>Photovoltaics</li>
-                <li>Resources and Meteorology</li>
-                <li>Solar Environmental, Photocatalytic, and New Areas</li>
-                <li>Concentrating Solar Power and High Temperature Processes</li>
+                <li>{{ s.list }}</li>
             </ul>
         </div>
     </div>
     <div class="image-block">
         <div class="award-image">
-            <img src="{% static 'assets/img/award.png' %}" alt="Award recipients receiving certificates from the Editor-in-Chief">
+            <img src="{{ s.image.url }}" alt="Award recipients receiving certificates from the Editor-in-Chief">
         </div>
     </div>
-    <h2 style="text-align:center;">Associate Editor of the Year Award:</h2>
-    <p style="text-align:center;">Initiated in 2023, this award honours the dedication and commitment of the Associate Editors to promoting the Journal and ensuring the high quality of the articles published. The Journal further recognizes that overseeing the scientific review process in a timely manner takes significant effort and coordination. The award includes a certificate and the opportunity for the awardee to have one peer-reviewed article published in Solar Energy open access for 6 months free of charge. The Associate Editor(s) of the Year is/are selected by the Editor-in-Chief based on nominations received from the Subject Area Editors.</p>
+    {% endfor %}
 </div>
 
 <footer class="footer">

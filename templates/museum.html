@@ -83,119 +83,46 @@
 </header>
 
 <header>
-    <h1 style="text-align:center;">Visit the fully virtual ISES Online Solar Energy Museum!</h1>
+    {% for head in museum %}
+    <h1 style="text-align:center;">{{ head.name }}</h1>
+    {% endfor %}
 </header>
 
 <main>
+    {% for into in ms %}
     <section class="intro">
-        <p>In 2020, to celebrate 50 years of the ISES Solar World Congresses, the ISES Board set out to conquer a new project: creating a fully virtual online museum of solar energy. The museum has been created to highlight and celebrate the many individuals, research institutes, companies, NGOs and many more who made solar what it is today - a booming global industry.</p>  
-        <p>This online museum allows research institutes, companies, and individuals to tell their stories about how they helped develop an industry that has grown from watts to gigawatts.</p>      
-        <p>Starting all the way back in the 1950s, the online museum presents important actors, research, inventions, historical events, displays of early products and solar records from every decade as well as the many individual solar and renewable energy pioneers that pathed the way for the industry to grow to what we know it to be today.</p>       
-        <p>A first version of the museum went online in December 2020 and now, ISES is happy to present a fully updated 3D version of the museum!</p>
+        <p>{{ into.desc }}</p>
     </section>
 
     <div class="museum-image">
-        <img src="{% static 'assets/img/award.png' %}" alt="Museum Preview">
+        <img src="{{ into.image.url }}" alt="Museum Preview">
     </div>
 
     <div class="cta">
-        <a href="{% static 'assets/file/job.pdf' %}" target="_blank" class="btn">Visit the museum here and browse through 70 years of solar research and development!</a>
+        <a href="{{ into.file }}" target="_blank" class="btn">{{ into.name }}</a>
     </div>
-
-    <div class="note">
-        <p>Please Note: due to the size of the museum the program can take a few minutes to upload. ISES apologises for the delay and is working on ways to improve the upload time.</p>
-    </div>
-
-    <div class="submission-call">
-        <p>Do you have historic solar material that should be considered by the museum? Please see the submission guide and use the webform to submit below.</p>
-        <a href="{% url 'museum' %}" class="btn orange">Solar Energy Museum</a>
-    </div>
+    {% endfor %}
 </main>
 
 <header>
-    <h1 style="text-align:center;">Impressions from the Museum</h1>
+    {% for m in mega %}
+        <h1 style="text-align:center;">{{ m.name }}</h1>
+    {% endfor %}
 </header>
 
 <main>
+    {% for i in gall %}
     <section class="gallery">
-        <div class="gallery-item"><img src="{% static 'assets/img/award.png' %}" alt="Exhibit 1"></div>
-        <div class="gallery-item"><img src="{% static 'assets/img/award.png' %}" alt="Exhibit 2"></div>
-        <div class="gallery-item"><img src="{% static 'assets/img/award.png' %}" alt="Exhibit 3"></div>
-        <div class="gallery-item"><img src="{% static 'assets/img/award.png' %}" alt="Exhibit 4"></div>
-        <div class="gallery-item"><img src="{% static 'assets/img/award.png' %}" alt="Exhibit 5"></div>
+        <div class="gallery-item"><img src="{{ i.image.url }}" alt="Exhibit"></div>
     </section>
+    {% endfor %}
 
     <section class="support">
-        <h2>Support the Museum!</h2>
-        <p>You can support the ISES Solar Energy Museum by becoming a friend of the museum (for individuals) or a company/institution supporter of specific rooms or the whole museum. Your donation will be used to maintain and expand the museum. With this, you will actively help to share the great success story of solar over the last 60+ years!</p>
-
-        <h3>Founding Supporter - For Companies and Institutions:</h3>
-        <p>Companies and institutions can show their support for the museum by joining us as founding supporters. In this category, you can support the whole museum or specific rooms. <a href="{% static 'assets/file/job.pdf' %}" target="_blank">Learn more about the different packages available for companies and institutions here.</a></p>
-
-        <h3>Friend of the Museum: For Individuals:</h3>
-        <p>Individuals can support the museum by becoming a friend of the museum by making a donation using the form here.</p>
-    </section>
-</main>
-
-<header>
-    <h1 style="text-align:center;">Submitting Materials to the Museum</h1>
-</header>
-
-<main>
-    <section>
-        <p>ISES is calling for individuals and organizations to submit material for possible inclusion in the museum.</p>
-
-        <h3>Objective of Museum</h3>
-        <p>The objective of the museum is to provide a permanent online location for materials critical to documenting the development and use of solar energy and highlight current and forward-looking topics.</p>
-
-        <h3>Target Audience for the Museum</h3>
-        <p>The target audience is the general public interested in learning about solar energy. Materials submitted to the ISES Online Museum of Solar Energy must appeal to this broad audience, aiming at raising awareness of the many aspects of solar energy, what has been achieved historically and what could be achieved in the future.</p>
-
-        <h3>Room Themes</h3>
-        <ul>
-            ISES History (includes ISES Sections, ISES Pioneers, etc)<br>
-            Solar Architecture<br>
-            Photovoltaic (PV) Technology R&D<br>
-            Off-Grid PV Power<br>
-            On Grid Power<br>
-            Solar Thermal Technologies<br>
-            Solar Resource Measurements and Assessments<br>
-        </ul>
-        <p>Note: Future calls will be made that will address other topics (broader/cross cutting topics) like the emerging technologies, energy storage and the Future of Solar.</p>
-
-        <h3>Relevance</h3>
-        <p>Materials must be related to the advancement of solar energy around the world.</p>
-        <p>The material should refer to, but not limited to:</p>
-        <ul>
-            Significant research breakthroughs;<br>
-            Opening of research centres that have a major contribution to solar energy;<br>
-            New technologies and innovations;<br>
-            New applications/markets including first time installed/initiated; and<br>
-            Significant power capacity installed or significant number of systems installed for a country or region.<br>
-        </ul>
-
-        <h3>Format</h3>
-        <p>The material could be in the following formats:</p>
-        <ul>
-           Brief written articles/stories (word format) preferably including relevant photos (jpeg format) or videos (links only)<br>
-           Photos (jpeg format) (5MB maximum)<br>
-           Videos (links only)<br>
-        </ul>
-        <p>Written articles should be less than 150 words with the photos and videos contributing to the story.</p>
-    </section>
-
-    <section>
-        <h3>Additional Information</h3>
-        <p>Material should be submitted with a note indicating:</p>
-        <ul>
-            Room theme for the material;<br>
-            Description of what is in the material; and<br>
-            Description of the greater context of the material and why it is important to include it in the museum.<br>
-            The submitter must confirm that there are no copyright or permission restrictions on the submitted materials.<br>
-            The submitter must also cite sources of any materials if they are not the sole owner of them.<br>
-        </ul>
-        <h3>Selection of Material to be Included</h3>
-        <p>Submission of material does not automatically mean that the material will be included in the museum. The material will be reviewed by the Museum Committee in relation to the relevance of the material with respect to the chosen room theme and whether the material will appeal to the general public.</p>
+        {% for p in supa %}
+            <h2>{{ p.name }}</h2>
+            <p>{{ p.desc }}</p>
+            <a href="{{ p.file }}" target="_blank">{{ p.button }}</a>
+        {% endfor %}
     </section>
 </main>
 
